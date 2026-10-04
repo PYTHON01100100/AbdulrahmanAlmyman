@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-terminal-bg: #d4c5a0;
+  --color-terminal-text: #3a3a2a;
+  --color-terminal-accent: #8a7a5a;
+  --color-terminal-link: #5a4a2a;
+  --color-terminal-strong: #6a5a3a;
+  --color-terminal-comment: #9a8a6a;
+  --color-terminal-border: #c4b590;
+  --color-terminal-highlight: #7a6a4a;
+}
+
+* {
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #d4c5a0 0%, #c8b890 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main, section, article, div[class*="min-h-screen"] {
+  position: relative;
+  z-index: 10;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.12) 0px,
+      rgba(0, 0, 0, 0.12) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(58, 58, 42, 0.05) 0px,
+      rgba(58, 58, 42, 0.05) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  pointer-events: none;
+  z-index: 1;
+  animation: scanlines 8s linear infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.15) 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(58, 58, 42, 0.02) 0px,
+      rgba(58, 58, 42, 0.02) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(58, 58, 42, 0.03) 2px,
+      rgba(58, 58, 42, 0.03) 4px
+    );
+  pointer-events: none;
+  z-index: 2;
+  animation: grain 0.8s steps(2) infinite;
+}
+.markdown-content {
+  @apply leading-relaxed text-sm sm:text-base lg:text-lg xl:text-xl;
+  color: var(--color-terminal-text);
+  position: relative;
+  z-index: 10;
+}
+
+.markdown-content h1 {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-8 mb-4 pb-3 border-b-2;
+  color: var(--color-terminal-accent);
+  border-color: var(--color-terminal-border);
+  text-shadow:
+    -2px -1px rgba(90, 74, 42, 0.6),
+    2px 1px rgba(138, 122, 90, 0.6),
+    -1px 0 rgba(106, 90, 58, 0.5),
+    1px 0 rgba(154, 138, 106, 0.5),
+    0 0 12px rgba(138, 122, 90, 0.4),
+    0 0 24px rgba(138, 122, 90, 0.2);
+  animation: chromatic-aberration 3s ease-in-out infinite;
+  letter-spacing: 0.05em;
+}
+
+.markdown-content h1:first-child {
+  @apply mt-0;
+}
+
+.markdown-content h2 {
+  @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mt-6 mb-4 pb-2 border-b;
+  color: var(--color-terminal-accent);
+  border-color: var(--color-terminal-border);
+  text-shadow:
+    -2px -1px rgba(90, 74, 42, 0.6),
+    2px 1px rgba(138, 122, 90, 0.6),
+    -1px 0 rgba(106, 90, 58, 0.5),
+    1px 0 rgba(154, 138, 106, 0.5),
+    0 0 10px rgba(138, 122, 90, 0.3),
+    0 0 20px rgba(138, 122, 90, 0.15);
+  animation: chromatic-aberration 3s ease-in-out infinite;
+  letter-spacing: 0.03em;
+}
+
+.markdown-content h3 {
+  @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mt-5 mb-2;
+  color: var(--color-terminal-accent);
+  text-shadow:
+    -1px 0 rgba(90, 74, 42, 0.4),
+    1px 0 rgba(138, 122, 90, 0.4),
+    0 0 6px rgba(138, 122, 90, 0.2);
+  animation: chromatic-aberration 4s ease-in-out infinite;
+}
+
+.markdown-content h4 {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold mt-4 mb-2;
+  color: var(--color-terminal-strong);
+}
+
+.markdown-content p {
+  @apply mb-4;
+  color: var(--color-terminal-text);
+}
+
+.markdown-content span {
+  @apply mb-4;
+  color: var(--color-terminal-text);
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  @apply mb-4 mt-2 pl-6;
+}
+
+.markdown-content li {
+  @apply mb-1;
+  color: var(--color-terminal-text);
+}
+
+.markdown-content li ul li {
+  @apply m-0;
+  color: var(--color-terminal-text);
+}
+
+.markdown-content ul li {
+  @apply list-disc;
+}
+
+.markdown-content ol li {
+  @apply list-decimal;
+}
+
+.markdown-content code {
+  @apply px-1 py-0.5 rounded text-xs sm:text-sm lg:text-base;
+  background-color: var(--color-terminal-border);
+  color: var(--color-terminal-strong);
+  text-shadow: 0 0 4px rgba(106, 90, 58, 0.3);
+  box-shadow: 0 0 6px rgba(106, 90, 58, 0.15) inset;
+}
+
+.markdown-content pre {
+  @apply p-4 rounded-md overflow-x-auto my-4 border;
+  background-color: var(--color-terminal-border);
+  color: var(--color-terminal-text);
+  border-color: var(--color-terminal-border);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2), inset 0 0 12px rgba(0, 255, 255, 0.1);
+}
+
+.markdown-content pre code {
+  @apply p-0 rounded-none;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Syntax Highlighting - Earth & Ocean Palette */
+/* Comments */
+.markdown-content pre code .token.comment,
+.markdown-content pre code .token.prolog,
+.markdown-content pre code .token.doctype,
+.markdown-content pre code .token.cdata {
+  color: #7f7f7f;
+  font-style: italic;
+}
+
+/* Punctuation */
+.markdown-content pre code .token.punctuation {
+  color: #a0a0a0;
+  opacity: 0.7;
+}
+
+/* Keywords (if, else, function, return, etc.) */
+.markdown-content pre code .token.keyword,
+.markdown-content pre code .token.atrule,
+.markdown-content pre code .token.attr-value {
+  color: #9d8ab8;
+  font-weight: 600;
+}
+
+/* Strings */
+.markdown-content pre code .token.string,
+.markdown-content pre code .token.char,
+.markdown-content pre code .token.builtin,
+.markdown-content pre code .token.inserted {
+  color: #6fbf9f;
+}
+
+/* Functions and Classes */
+.markdown-content pre code .token.function,
+.markdown-content pre code .token.class-name {
+  color: #d47c5f;
+  font-weight: 500;
+}
+
+/* Numbers */
+.markdown-content pre code .token.number,
+.markdown-content pre code .token.boolean,
+.markdown-content pre code .token.constant {
+  color: #5eb3b3;
+}
+
+/* Operators */
+.markdown-content pre code .token.operator,
+.markdown-content pre code .token.entity,
+.markdown-content pre code .token.url {
+  color: #c9956b;
+}
+
+/* Properties and Attributes */
+.markdown-content pre code .token.property,
+.markdown-content pre code .token.tag,
+.markdown-content pre code .token.selector,
+.markdown-content pre code .token.attr-name,
+.markdown-content pre code .token.symbol {
+  color: #8e9fb8;
+}
+
+/* Special cases */
+.markdown-content pre code .token.regex,
+.markdown-content pre code .token.important,
+.markdown-content pre code .token.variable {
+  color: #c9956b;
+}
+
+.markdown-content pre code .token.deleted {
+  color: #d47c5f;
+}
+
+.markdown-content pre code .token.important,
+.markdown-content pre code .token.bold {
+  font-weight: bold;
+}
+
+.markdown-content pre code .token.italic {
+  font-style: italic;
+}
+
+.markdown-content a {
+  @apply underline;
+  color: var(--color-terminal-link);
+  transition: all 0.3s ease;
+  text-shadow: 0 0 6px rgba(106, 90, 58, 0.3);
+}
+
+.markdown-content a:hover {
+  @apply no-underline;
+  text-shadow: 0 0 10px rgba(106, 90, 58, 0.6), 0 0 16px rgba(106, 90, 58, 0.3);
+  color: #4a3a1a;
+}
+
+.markdown-content strong {
+  @apply font-bold;
+  color: var(--color-terminal-strong);
+  text-shadow:
+    0 0 6px rgba(138, 122, 90, 0.4),
+    0 0 12px rgba(138, 122, 90, 0.2),
+    0 0 18px rgba(138, 122, 90, 0.1);
+}
+
+.markdown-content em {
+  @apply italic;
+  color: #ff006e;
+  text-shadow: 0 0 8px rgba(255, 0, 110, 0.5);
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 pl-4 my-4 italic text-sm sm:text-base lg:text-lg;
+  border-color: var(--color-terminal-accent);
+  border-left-width: 3px;
+  color: var(--color-terminal-comment);
+  box-shadow: inset 0 0 8px rgba(0, 255, 255, 0.1);
+  padding-left: 1rem;
+}
+
+.markdown-content hr {
+  @apply border-none border-t my-8;
+  border-color: var(--color-terminal-border);
+}
+
+ol > li > div,
+ul > li > div,
+figure > div > div {
+  @apply !mb-0;
+}
+
+.markdown-content div {
+  @apply mb-3;
+}
+
+.markdown-content table {
+  @apply w-full border-collapse my-4;
+}
+
+.markdown-content th,
+.markdown-content td {
+  @apply border p-2 text-left;
+  border-color: var(--color-terminal-border);
+}
+
+.markdown-content th {
+  @apply font-bold;
+  background-color: var(--color-terminal-border);
+  color: var(--color-terminal-accent);
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.5);
+}
+
+.markdown-content td {
+  color: var(--color-terminal-text);
+}
+
+.glitch {
+  position: relative;
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.bounce-dot {
+  animation: bounce-dots 1.4s ease-in-out infinite both;
+}
+
+.bounce-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.bounce-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce-dots {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scanlines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes grain {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes glitch {
+  0%, 100% {
+    clip-path: inset(0);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: inset(0 0 65% 0);
+    text-shadow: -2px 0 rgba(255, 0, 110, 0.8);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    clip-path: inset(25% 0 58% 0);
+    text-shadow: 2px 0 rgba(0, 255, 255, 0.8);
+    transform: translate(2px, -2px);
+  }
+  60% {
+    clip-path: inset(98% 0 1% 0);
+    text-shadow: -1px 0 rgba(255, 0, 110, 0.6);
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    clip-path: inset(40% 0 58% 0);
+    text-shadow: 1px 0 rgba(0, 255, 255, 0.6);
+    transform: translate(1px, -1px);
+  }
+}
+
+@keyframes chromatic-aberration {
+  0%, 100% {
+    text-shadow:
+      -2px 0 rgba(90, 74, 42, 0.6),
+      2px 0 rgba(138, 122, 90, 0.6),
+      0 0 8px rgba(138, 122, 90, 0.3);
+    transform: skewX(0deg);
+  }
+  25% {
+    text-shadow:
+      -3px 0 rgba(106, 90, 58, 0.8),
+      3px 0 rgba(154, 138, 106, 0.8),
+      0 0 12px rgba(138, 122, 90, 0.5);
+    transform: skewX(-0.5deg);
+  }
+  50% {
+    text-shadow:
+      -1px 0 rgba(90, 74, 42, 0.5),
+      1px 0 rgba(138, 122, 90, 0.5),
+      0 0 10px rgba(138, 122, 90, 0.3);
+    transform: skewX(0.5deg);
+  }
+  75% {
+    text-shadow:
+      -4px 0 rgba(106, 90, 58, 0.7),
+      4px 0 rgba(154, 138, 106, 0.7),
+      0 0 14px rgba(138, 122, 90, 0.4);
+    transform: skewX(-0.3deg);
+  }
+}
+
+@keyframes glitch-distort {
+  0%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  20% {
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  }
+  40% {
+    clip-path: polygon(0 5%, 100% 20%, 100% 80%, 0 95%);
+  }
+  60% {
+    clip-path: polygon(0 25%, 100% 10%, 100% 75%, 0 90%);
+  }
+  80% {
+    clip-path: polygon(0 10%, 100% 5%, 100% 95%, 0 85%);
+  }
+}

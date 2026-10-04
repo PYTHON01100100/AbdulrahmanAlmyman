@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>
+      Redirecting... If you are not redirected automatically,
+      <a href="https://alialjaffer.com">click here</a>.
+    </p>
+    <p>
+      جاري إعادة توجيهك للموقع. إذا لم يتم التوجيه تلقائياً
+      <a href="https://alialjaffer.com">إضغط هنا</a>.
+    </p>
+
+    <script>
+      let userInteracted = false;
+
+      ["click", "keydown", "touchstart"].forEach((event) => {
+        document.addEventListener(
+          event,
+          () => {
+            userInteracted = true;
+          },
+          { once: true }
+        );
+      });
+
+      // Redirect after a brief moment to allow screen readers to announce the content
+      setTimeout(() => {
+        if (!userInteracted) {
+          window.location.href = "https://alialjaffer.com";
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>
