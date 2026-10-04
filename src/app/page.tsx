@@ -2,7 +2,9 @@ import Layout from "@/app/components/Layout";
 import Section from "@/app/components/Section";
 import ContactList from "@/app/components/ContactList";
 import CertsList, { Certification } from "@/app/components/CertsList";
-import ProjectList from "@/app/components/ProjectList";
+import IntelList, { IntelEntry } from "@/app/components/IntelList";
+import ArchiveList from "@/app/components/ArchiveList";
+import DataLogs, { DataLog } from "@/app/components/DataLogs";
 // import StatusComment from "@/app/components/StatusComment";
 import { getVisibleCaseStudies } from "@/lib/case-studies";
 
@@ -40,77 +42,42 @@ const contactData = [
 ];
 
 const certsData: Certification[] = [
-  // {
-  //   certification: "Certified Cloud Practitioner",
-  //   provider: "AWS",
-  //   date: "Jan 2025",
-  //   order: 1,
-  // },
-  // {
-  //   certification: "AZ-900 Azure Fundamentals",
-  //   provider: "Microsoft",
-  //   date: "Jun 2025",
-  //   order: 2,
-  // },
-  // {
-  //   certification: "SC-900 Security, Compliance, and Identity Fundamentals",
-  //   provider: "Microsoft",
-  //   date: "Jun 2025",
-  //   order: 3,
-  // },
   {
-    certification: "AWS Solutions Architect - Associate",
+    certification: "AWS ML Engineer - Associate",
     provider: "AWS",
-    date: "July 2025",
-    order: 4,
+    date: "2026",
+    order: 2,
     wip: false,
+    url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/7ed088bc294b40e6b7594ef53d34a407",
   },
   {
-    certification: "Terraform Associate",
-    provider: "Hashicorp",
-    date: "Aug 2025",
-    order: 5,
-    wip: false,
-  },
-  {
-    certification: "Certified Kubernetes Application Developer",
-    provider: "Linux Foundation",
-    date: "Dec 2025",
-    order: 6,
-    wip: false,
-  },
-  {
-    certification: "Certified Kubernetes Administrator",
-    provider: "Linux Foundation",
-    date: "Dec 2025",
-    order: 7,
-    wip: false,
-  },
-  // {
-  //   certification: "DASA DevOps Fundamentals",
-  //   provider: "DevOps Agile Skills Association",
-  //   date: "Jan 2026",
-  //   order: 8,
-  //   wip: false,
-  // },
-  {
-    certification: "Certified Kubernetes Security Specialist",
-    provider: "Linux Foundation",
-    date: "Feb 2026",
-    order: 9,
-    wip: false,
-  },
-  {
-    certification: "GCP Professional Cloud Architect",
-    provider: "Google Cloud Platform",
-    date: "May 2026",
-    order: 10,
+    certification: "ACA Cloud Computing Certification",
+    provider: "Alibaba Cloud",
+    date: "2026",
+    order: 1,
     wip: false,
   },
 ];
 
+// Rolling micro-updates, newest first. Edit freely.
+const dataLogs: DataLog[] = [
+  { timestamp: "2026.10.04_22:59", text: "Portfolio redeployed with NieR interface." },
+  { timestamp: "2026.10.04_21:30", text: "AWS Certified ML Engineer - Associate added to records." },
+  { timestamp: "2026.10.04_21:00", text: "ACA Cloud Computing certification added to records." },
+];
+
+// In-memory Intel entries, newest first. Add href to link to a case-study page.
+const intelData: IntelEntry[] = [
+  { id: "alb-in-ack", title: "Using ALB in Alibaba Container Service for Kubernetes", date: "2026-04-26", description: "Customize an Application Load Balancer and use it with Ingress or Gateway API on Alibaba cloud.", href: "/case-study/alb-in-ack" },
+  { id: "homelab", title: "K3s Cluster Homelab", date: "2026-03-11", description: "Documenting my homelabbing journey! :)", href: "/case-study/homelab" },
+  { id: "deployment-strategies", title: "Application Zero-Downtime Deployment Strategies", date: "2026-02-28", description: "We explore Rolling Updates, Canary Deployments, and Blue/Green Deployments", href: "/case-study/deployment-strategies" },
+  { id: "k8s-adventures-pt2", title: "The end (?) of the Kubernetes learning journey", date: "2026-02-15", description: "After achieving Kubestronaut, am I done with Kubernetes?", href: "/case-study/k8s-adventures-pt2" },
+  { id: "k8s-adventures", title: "The Kubernetes learning journey (so far)", date: "2025-11-22", description: "Sharing thoughts after getting into the administration side of K8s", href: "/case-study/k8s-adventures" },
+  { id: "teamwork-and-collaboration", title: "Collaboration on GitHub", date: "2025-10-13", description: "A session I presented in DevOps bootcamp to help colleagues on how to efficiently collaborate on GitHub.", href: "/case-study/teamwork-and-collaboration" },
+  { id: "author-clock", title: "Author Clock/Entertainment System", date: "2025-09-05", description: "Author Clock replica built on Raspberry Pi with YouTube, Spotify, and Kodi integration", href: "/case-study/author-clock" },
+];
+
 const projectsData = getVisibleCaseStudies("project");
-const blogPosts = getVisibleCaseStudies("blog");
 
 export default function Home() {
   if (!projectsData) return <p>Error occurred with projects data.</p>;
@@ -128,7 +95,8 @@ export default function Home() {
                 <strong className="font-normal text-terminal-strong">
                   Abdulrahman Almyman 🙋🏽‍♂️😊&nbsp;
                 </strong>
-                an AI Engineer passionate about building intelligent systems,
+                a King Saud University graduate (2025) and an AI Engineer
+                passionate about building intelligent systems,
                 cloud infrastructure, and DevOps. I specialize in Alibaba Cloud,
                 AWS, Azure, and GCP with hands-on expertise in Kubernetes and
                 Docker. I love designing scalable, cloud-native architectures.
@@ -138,14 +106,16 @@ export default function Home() {
                 <ContactList contacts={contactData} />
               </Section>
             </Section>
-            <Section title="Blog Posts" className="lg:pl-4">
-              {/* <em className="pl-6">~ Newest to oldest ~</em> */}
-              <ProjectList projects={blogPosts!} />
+            <Section title="Data Logs" className="lg:pl-4">
+              <DataLogs logs={dataLogs} />
+            </Section>
+            <Section title="InMemory Intel" className="lg:pl-4">
+              <IntelList entries={intelData} />
             </Section>
           </div>
           {/* Projects Section */}
-          <Section title="Projects" className="w-full md:w-1/2 lg:pl-4">
-            <ProjectList projects={projectsData} />
+          <Section title="Archives" className="w-full md:w-1/2 lg:pl-4">
+            <ArchiveList projects={projectsData} />
             <Section title="Certifications">
               <CertsList certs={certsData} />
             </Section>
