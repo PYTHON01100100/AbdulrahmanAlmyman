@@ -4,24 +4,50 @@ import "./globals.css";
 import { Roboto_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
+const SITE_URL = "https://abdulrahmanalmyman.dev";
+const SITE_TITLE = "Abdulrahman Almyman | عبدالرحمن الميمان";
+const SITE_DESCRIPTION =
+  "الموقع الشخصي للمهندس عبدالرحمن الميمان - متخصص في الذكاء الاصطناعي التوليدي، النماذج اللغوية الكبيرة، والحوسبة السحابية المتعددة. AI & DevOps Engineer specializing in GenAI, LLMOps, and Multi-Cloud architectures.";
+
 export const metadata: Metadata = {
-  title: "AbdulrahmanAlmyman",
-  description:
-    "الموقع الشخصي للمهندس عبدالرحمن الميمان - مبرمج ذكاء اصطناعي وحوسبة سحابية. Abdulrahman Almyman: AI & cloud engineer, King Saud University graduate 2025, Alibaba Cloud, AWS (MLA-C01), Kubernetes.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   keywords: [
     "عبدالرحمن الميمان",
     "عبد الرحمن الميمان",
     "Abdulrahman Almyman",
     "PYTHON01100100",
     "مهندس ذكاء اصطناعي",
+    "الذكاء الاصطناعي التوليدي",
+    "GenAI",
+    "LLMOps",
+    "DevOps Engineer",
+    "Multi-Cloud",
     "خريج جامعة الملك سعود 2025",
     "King Saud University",
     "Alibaba Cloud",
     "AWS MLA-C01",
     "SCCC",
   ],
-  authors: [{ name: "عبدالرحمن الميمان" }],
+  authors: [{ name: "Abdulrahman Almyman (عبدالرحمن الميمان)", url: SITE_URL }],
+  creator: "Abdulrahman Almyman",
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: SITE_TITLE,
+    description:
+      "AI & DevOps Engineer specializing in GenAI, LLMOps, and Multi-Cloud architectures.",
+    siteName: "Abdulrahman Almyman",
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE,
+    description:
+      "AI & DevOps Engineer specializing in GenAI, LLMOps, and Multi-Cloud architectures.",
+  },
 };
 
 const personJsonLd = {
@@ -29,13 +55,14 @@ const personJsonLd = {
   "@type": "Person",
   name: "Abdulrahman Almyman",
   alternateName: ["عبدالرحمن الميمان", "عبد الرحمن الميمان", "PYTHON01100100"],
-  jobTitle: "AI & Cloud Engineer",
+  url: SITE_URL,
+  jobTitle: "AI & DevOps Engineer",
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "King Saud University",
     alternateName: "جامعة الملك سعود",
   },
-  knowsAbout: ["Artificial Intelligence", "Alibaba Cloud", "AWS", "Kubernetes"],
+  knowsAbout: ["Generative AI", "LLMOps", "Alibaba Cloud", "AWS", "Kubernetes", "Multi-Cloud"],
   sameAs: [
     "https://github.com/PYTHON01100100",
     "https://www.linkedin.com/in/abdulrahmanalmyman/",

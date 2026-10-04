@@ -45,7 +45,7 @@ const certsData: Certification[] = [
   {
     certification: "AWS ML Engineer - Associate",
     provider: "AWS",
-    date: "2026",
+    date: "Sep 2026",
     order: 2,
     wip: false,
     url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/7ed088bc294b40e6b7594ef53d34a407",
@@ -59,11 +59,18 @@ const certsData: Certification[] = [
   },
 ];
 
-// Rolling micro-updates, newest first. Edit freely.
+// Rolling micro-updates. Any order: they are sorted newest first on render.
 const dataLogs: DataLog[] = [
-  { timestamp: "2026.10.04_22:59", text: "Portfolio redeployed with NieR interface." },
-  { timestamp: "2026.10.04_21:30", text: "AWS Certified ML Engineer - Associate added to records." },
-  { timestamp: "2026.10.04_21:00", text: "ACA Cloud Computing certification added to records." },
+  { timestamp: "2026.11.18_00:00", text: "Mission Log: Relocation protocol SUCCESSFUL. Current grid coordinated to the United Kingdom 🇬🇧. Initializing system integration with global tech nodes and sync complete." },
+  { timestamp: "2026.11.18_00:00", text: "SCHEDULED: Travel sequence initiated. Destination: United Kingdom 🇬🇧." },
+  { timestamp: "2026.11.17_00:00", text: "SCHEDULED: Portfolio deployment in NieR interface." },
+  { timestamp: "2026.10.10_00:00", text: "Playing Hollow Knight: Silksong. Learning Go." },
+  { timestamp: "2026.10.01_00:00", text: "Learning Bifrost." },
+  { timestamp: "2026.09.11_00:00", text: "AWS Certified ML Engineer - Associate added to records." },
+  { timestamp: "2026.06.24_14:20", text: "Geo Log: Infiltrating the Vatican City node 🇻🇦 during the Italy expedition. Anomalous historical architecture detected. System inspiration levels: MAX." },
+  { timestamp: "2026.06.20_11:45", text: "Geo Log: Phase 2 initialized. Landed on Italian territories 🇮🇹. Commencing cultural data extraction and environmental sync." },
+  { timestamp: "2026.07.06_18:30", text: "Mission Log: European reconnaissance phase 1 complete. Initiating relocation protocol back to Riyadh HQ 🇸🇦." },
+  { timestamp: "2026.07.01_09:15", text: "Geo Log: Boundary breach successful. Arrived at the Switzerland node 🇨🇭. Mapping alpine environments and grid stabilization." },
 ];
 
 // In-memory Intel entries, newest first. Add href to link to a case-study page.
@@ -107,7 +114,11 @@ export default function Home() {
               </Section>
             </Section>
             <Section title="Data Logs" className="lg:pl-4">
-              <DataLogs logs={dataLogs} />
+              <DataLogs
+                logs={[...dataLogs].sort((a, b) =>
+                  b.timestamp.localeCompare(a.timestamp),
+                )}
+              />
             </Section>
             <Section title="InMemory Intel" className="lg:pl-4">
               <IntelList entries={intelData} />
