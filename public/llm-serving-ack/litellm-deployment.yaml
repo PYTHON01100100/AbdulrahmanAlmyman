@@ -18,7 +18,7 @@ spec:
       nodeName: <your-node-name>
       containers:
         - name: litellm-container
-          image: litellm:latest
+          image: litellm/litellm:latest
           imagePullPolicy: IfNotPresent #Always
 
           env:

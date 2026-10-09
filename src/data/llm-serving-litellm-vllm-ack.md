@@ -49,6 +49,7 @@ The platform has four layers:
 | GPU Nodes | 4 | `ecs.gn8is.2xlarge` (NVIDIA L20) |
 | OSS Bucket | 1 | Model storage |
 | CLB / Ingress | 1 | Access to the gateway |
+| NAT Gateway + EIP | 1 | Outbound internet so nodes can pull images from Docker Hub |
 | PV / PVC | 4+ | One per model mount |
 
 ```text
@@ -253,6 +254,32 @@ Pick one namespace for the whole stack (PVCs, the OSS Secret, the models and Lit
 5. LiteLLM hands it back in the standard OpenAI format.
 
 Because every model is registered in LiteLLM's config, switching models is just changing the `model` field in your request. Existing OpenAI SDK code works as is.
+
+## Container images and internet access (NAT Gateway)
+
+The manifests pull both images straight from Docker Hub:
+
+```bash
+docker pull litellm/litellm:latest
+docker pull vllm/vllm-openai:latest
+```
+
+```yaml
+image: vllm/vllm-openai:latest      # model Deployments
+image: litellm/litellm:latest       # LiteLLM Deployment
+```
+
+Cluster nodes in a private VPC have no route to the internet, so these pulls will hang in `ImagePullBackOff` unless you give them one. The simple way is to create the resources on Alibaba Cloud yourself:
+
+1. Create a **NAT Gateway** in the cluster's VPC.
+2. Create an **Elastic IP (EIP)** and associate it with the NAT Gateway.
+3. Add an **SNAT entry** for the vSwitches the ACK nodes use, so the nodes can reach the internet through the EIP.
+
+Both of these cost money (the NAT Gateway and the EIP), and the model weights are not downloaded through them, because those come from OSS over the internal endpoint. The same NAT also lets pods reach Hugging Face or other external APIs if you need that.
+
+If you can't open outbound access, or you hit Docker Hub pull limits, push the two images to your own **ACR** registry instead and replace the `image:` lines with your ACR address.
+
+Check that the pull worked with `kubectl describe pod <pod-name> -n your-namespace`, and look at the Events at the bottom.
 
 ## Deploying a model with vLLM
 
