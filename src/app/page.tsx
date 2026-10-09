@@ -1,6 +1,7 @@
 import Layout from "@/app/components/Layout";
 import Section from "@/app/components/Section";
 import ContactList from "@/app/components/ContactList";
+import LocationBadge from "@/app/components/LocationBadge";
 import CertsList, { Certification } from "@/app/components/CertsList";
 import IntelList, { IntelEntry } from "@/app/components/IntelList";
 import ArchiveList from "@/app/components/ArchiveList";
@@ -91,6 +92,7 @@ export default function Home() {
   if (!projectsData) return <p>Error occurred with projects data.</p>;
   return (
     <Layout className="text-base sm:text-lg px-6 py-5 md:px-8 md:py-8">
+      <LocationBadge geo="London, UK" hq="SCCC by stc" />
       {/* Large screen: centered container with max width */}
       <div className=" lg:flex lg:items-center lg:justify-center lg:min-h-[calc(100vh-4rem)] ">
         <div className="md:flex md:flex-wrap md:w-full lg:max-w-304 md:mx-auto max-h-fit">
