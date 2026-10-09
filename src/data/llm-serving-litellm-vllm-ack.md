@@ -162,7 +162,7 @@ The gateway itself is exposed through an internal `LoadBalancer` Service. Adding
 
 To check the whole chain (routing, inference, networking, OSS-backed loading), I pointed Open WebUI at LiteLLM:
 
-```env
+```bash
 OPENAI_API_BASE_URL=http://litellm-service:4000/v1
 OPENAI_API_KEY=dummy
 ```
