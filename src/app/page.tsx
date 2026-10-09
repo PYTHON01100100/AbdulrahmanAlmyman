@@ -62,6 +62,14 @@ const certsData: Certification[] = [
 
 // Rolling micro-updates. Any order: they are sorted newest first on render.
 const dataLogs: DataLog[] = [
+  // Timeline, recorded in the style of a 9S field report.
+  { timestamp: "2025.09.01_00:00", text: "Redeployment confirmed. Unit returned to SCCC, the same organization, now designated: AI Engineer. Combat readiness: elevated.", href: "https://www.linkedin.com/feed/update/urn:li:activity:7367876038896377856/" },
+  { timestamp: "2025.07.10_00:00", text: "Co-op deployment at SCCC, Alibaba Cloud division, concluded. Field data archived. Mission result: successful.", href: "https://www.linkedin.com/feed/update/urn:li:activity:7360680559204823042/" },
+  { timestamp: "2025.05.28_00:00", text: "Academic program complete. King Saud University: graduation confirmed. Status of unit upgraded to: GRADUATE.", href: "https://www.linkedin.com/feed/update/urn:li:activity:7333885466775056385/" },
+  { timestamp: "2025.01.12_00:00", text: "Co-op unit activated at SCCC, Alibaba Cloud division. First contact with large-scale cloud infrastructure established.", href: "https://www.linkedin.com/feed/update/urn:li:activity:7284174404584886272/" },
+  { timestamp: "2022.01.06_00:00", text: "Anomaly resolved. After a prolonged struggle against hostile GPA readings, the unit has finally entered the Computer Science program. Objective re-aligned." },
+  { timestamp: "2021.06.27_00:00", text: "Unit relocated to Egypt. Route deviation recorded. Duration: extended. Reason: classified." },
+  { timestamp: "2019.09.02_00:00", text: "Record 001: unit enrolled at King Saud University. Initial deployment begins. All systems nominal." },
   { timestamp: "2026.11.18_00:00", text: "Mission Log: Relocation protocol SUCCESSFUL. Current grid coordinated to the United Kingdom 🇬🇧. Initializing system integration with global tech nodes and sync complete." },
   { timestamp: "2026.11.18_00:00", text: "SCHEDULED: Travel sequence initiated. Destination: United Kingdom 🇬🇧." },
   { timestamp: "2026.11.17_00:00", text: "SCHEDULED: Portfolio deployment in NieR interface." },
