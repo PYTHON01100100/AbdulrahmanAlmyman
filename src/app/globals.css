@@ -202,6 +202,20 @@ body::after {
   line-height: 1.6;
 }
 
+/* Reset generic div/span rules inside the code panel */
+.markdown-content .code-block div,
+.markdown-content .code-block span {
+  margin: 0;
+}
+
+.markdown-content pre code span {
+  color: inherit;
+}
+
+.markdown-content .code-block-bar .code-block-label {
+  color: #b9ad8c;
+}
+
 /* Syntax highlighting: tuned for the dark code panel */
 .markdown-content pre code .token.comment,
 .markdown-content pre code .token.prolog,
@@ -320,7 +334,7 @@ figure > div > div {
 }
 
 .markdown-content table {
-  @apply w-full border-collapse my-4;
+  @apply w-full border-collapse my-4 block overflow-x-auto;
 }
 
 .markdown-content th,
@@ -333,7 +347,6 @@ figure > div > div {
   @apply font-bold;
   background-color: var(--color-terminal-border);
   color: var(--color-terminal-accent);
-  text-shadow: 0 0 6px rgba(0, 255, 255, 0.5);
 }
 
 .markdown-content td {

@@ -5,6 +5,7 @@ import TerminalImage from "@/app/components/TerminalImage";
 import CodeBlock from "@/app/components/CodeBlock";
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import rehypePrism from "rehype-prism-plus";
 import NotFound from "@/app/not-found";
@@ -48,6 +49,7 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
 
         <div className="markdown-content prose prose-invert">
           <Markdown
+            remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw, rehypePrism]}
             components={{
               img: (props) => {
