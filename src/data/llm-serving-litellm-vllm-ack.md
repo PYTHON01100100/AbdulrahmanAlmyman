@@ -330,6 +330,40 @@ model_list:
 
 The gateway itself is exposed through an internal `LoadBalancer` Service. Adding a model later means one new vLLM Deployment and one new entry in this list.
 
+## Why Redis? Caching in LiteLLM
+
+The LiteLLM config also turns on a **Redis cache**:
+
+```yaml
+litellm_settings:
+  cache: true
+  cache_params:
+    type: "redis"
+    host: "redis-master"          # your Redis address
+    port: 6379
+    password: "your_redis_password"
+    ttl: 300                      # seconds a cached answer is kept
+    namespace: "litellm_cache"
+```
+
+Why it is in this project:
+
+- **Saves GPU time:** when the same request (same model, messages and parameters) arrives again, LiteLLM answers from Redis and never touches vLLM. GPUs are the expensive part, and repeated prompts are common (health checks, tests, popular questions, retries).
+- **Faster answers:** a cache hit returns in milliseconds instead of waiting for generation.
+- **Shared by every replica:** the cache lives outside the LiteLLM pod, so it survives restarts and stays consistent if you scale LiteLLM to more than one pod. An in-memory cache would be lost on every restart.
+- **Expires on its own:** `ttl` keeps old answers from living forever, and `namespace` keeps this cache separate from anything else using the same Redis.
+
+If you don't need caching, set `cache: false` and remove `cache_params`. LiteLLM works without Redis.
+
+### Getting the Redis URL and password
+
+You need an instance first, and you copy two things from it into the config: the **connection address** (`host` and `port`) and the **password**.
+
+- Create a managed Redis instance on Alibaba Cloud by following the [Tair (Redis OSS-compatible) documentation](https://www.alibabacloud.com/help/en/redis). Put it in the same VPC as the cluster, use its **private** connection address as `host`, and set or reset the account password in the instance console.
+- Or run Redis inside the cluster (the example config uses a Service called `redis-master`) and follow the [Redis documentation](https://redis.io/docs/latest/) to set a password.
+
+Then put the address and password in `litellm-config.yaml` before you deploy. Treat the password like any other secret and don't commit the real value to Git.
+
 ## Validating with Open WebUI
 
 To check the whole chain (routing, inference, networking, OSS-backed loading), I pointed Open WebUI at LiteLLM:
