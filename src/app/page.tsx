@@ -75,6 +75,7 @@ const dataLogs: DataLog[] = [
 
 // In-memory Intel entries, newest first. Add href to link to a case-study page.
 const intelData: IntelEntry[] = [
+  { id: "llm-serving-litellm-vllm-ack", title: "Serving Large Language Models at Scale with LiteLLM and vLLM on Alibaba Cloud ACK", date: "2026-10-22", description: "A multi-model, OpenAI-compatible inference platform on GPU nodes in ACK, with a downloadable draw.io diagram.", href: "/case-study/llm-serving-litellm-vllm-ack" },
   { id: "alb-in-ack", title: "Using ALB in Alibaba Container Service for Kubernetes", date: "2026-04-26", description: "Customize an Application Load Balancer and use it with Ingress or Gateway API on Alibaba cloud.", href: "/case-study/alb-in-ack" },
   { id: "homelab", title: "K3s Cluster Homelab", date: "2026-03-11", description: "Documenting my homelabbing journey! :)", href: "/case-study/homelab" },
   { id: "deployment-strategies", title: "Application Zero-Downtime Deployment Strategies", date: "2026-02-28", description: "We explore Rolling Updates, Canary Deployments, and Blue/Green Deployments", href: "/case-study/deployment-strategies" },
