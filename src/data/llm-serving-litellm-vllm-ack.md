@@ -27,11 +27,11 @@ The stack:
 
 ## Architecture
 
-![High-level design of the multi-model LLM platform on ACK](../../llm-serving-ack/hld.png)
+![High-level design of the multi-model LLM platform on ACK](/llm-serving-ack/hld.png)
 
 The diagram is also available as an editable draw.io file, so you can adapt it to your own environment:
 
-<a href="../../llm-serving-ack/Example-HLD.drawio" download="Example-HLD.drawio">⬇ Download the editable diagram (Example-HLD.drawio)</a>
+<a href="/llm-serving-ack/Example-HLD.drawio" download="Example-HLD.drawio">⬇ Download the editable diagram (Example-HLD.drawio)</a>
 
 The platform has four layers:
 
@@ -115,7 +115,7 @@ Because every model is registered in LiteLLM's config, switching models is just 
 
 Each model is a Deployment plus a ClusterIP Service. This is the heart of the Qwen3 32B AWQ one:
 
-```yaml title="Qwen3-32B-AWQ.yaml (excerpt)" download="../../llm-serving-ack/Qwen3-32B-AWQ.yaml"
+```yaml title="Qwen3-32B-AWQ.yaml (excerpt)" download="/llm-serving-ack/Qwen3-32B-AWQ.yaml"
 args:
   - >
     vllm serve /mnt/OSSbuket/Qwen3-32B-AWQ
@@ -143,13 +143,13 @@ A few things worth calling out:
 
 The models are `ClusterIP` only; LiteLLM is the single door in.
 
-Full manifests (namespace, node names and IPs replaced by placeholders): <a href="../../llm-serving-ack/Llama-3.1-8B-Instruct.yaml" download>Llama-3.1-8B</a> · <a href="../../llm-serving-ack/Qwen2.5-14B-Instruct.yaml" download>Qwen2.5-14B</a> · <a href="../../llm-serving-ack/Qwen3-32B-AWQ.yaml" download>Qwen3-32B-AWQ</a> · <a href="../../llm-serving-ack/Qwen3-30B-A3B.yaml" download>Qwen3-30B-A3B</a> · <a href="../../llm-serving-ack/litellm-config.yaml" download>litellm-config</a> · <a href="../../llm-serving-ack/litellm-deployment.yaml" download>litellm-deployment</a>
+Full manifests (namespace, node names and IPs replaced by placeholders): <a href="/llm-serving-ack/Llama-3.1-8B-Instruct.yaml" download>Llama-3.1-8B</a> · <a href="/llm-serving-ack/Qwen2.5-14B-Instruct.yaml" download>Qwen2.5-14B</a> · <a href="/llm-serving-ack/Qwen3-32B-AWQ.yaml" download>Qwen3-32B-AWQ</a> · <a href="/llm-serving-ack/Qwen3-30B-A3B.yaml" download>Qwen3-30B-A3B</a> · <a href="/llm-serving-ack/litellm-config.yaml" download>litellm-config</a> · <a href="/llm-serving-ack/litellm-deployment.yaml" download>litellm-deployment</a>
 
 ## The LiteLLM gateway
 
 LiteLLM's ConfigMap maps each public model name to its internal vLLM service:
 
-```yaml title="litellm-config.yaml (excerpt)" download="../../llm-serving-ack/litellm-config.yaml"
+```yaml title="litellm-config.yaml (excerpt)" download="/llm-serving-ack/litellm-config.yaml"
 model_list:
   - model_name: Qwen3-32B-AWQ
     litellm_params:

@@ -3,7 +3,7 @@ import Layout from "@/app/components/Layout";
 import BackLink from "@/app/components/BackLink";
 import TerminalImage from "@/app/components/TerminalImage";
 import CodeBlock from "@/app/components/CodeBlock";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import rehypePrism from "rehype-prism-plus";
@@ -18,6 +18,18 @@ interface CaseStudyProps {
 }
 
 export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
+  // Site may be served from a sub-path (GitHub Pages), so root-relative asset
+  // URLs in the markdown are prefixed with whatever precedes /case-study.
+  const [base, setBase] = useState("");
+  useEffect(() => {
+    const i = window.location.pathname.indexOf("/case-study");
+    if (i > 0) setBase(window.location.pathname.slice(0, i));
+  }, []);
+  const withBase = (url?: string | Blob) =>
+    typeof url === "string" && url.startsWith("/") && !url.startsWith("//")
+      ? base + url
+      : url;
+
   useEffect(() => {
     if (!caseStudy?.name) return;
     document.title = caseStudy.name;
@@ -41,7 +53,7 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
               img: (props) => {
                 return inDeadRegion(props.src?.toString() + "")
                   ? null
-                  : TerminalImage(props);
+                  : TerminalImage({ ...props, src: withBase(props.src) });
               },
               pre: ({ node, children }) => {
                 const code = node?.children?.[0] as
@@ -60,7 +72,7 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
                   <CodeBlock
                     language={language}
                     title={attr("title")}
-                    download={attr("download")}
+                    download={withBase(attr("download")) as string | undefined}
                   >
                     {children}
                   </CodeBlock>
@@ -71,6 +83,7 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
                 return (
                   <a
                     {...props}
+                    href={withBase(props.href) as string | undefined}
                     target={props.download !== undefined ? undefined : "_blank"}
                   >
                     {props.children}
