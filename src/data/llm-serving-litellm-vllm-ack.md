@@ -164,15 +164,21 @@ Now there are two ways to upload, depending on how many models you have.
 ossutil cp -r ./Qwen3-32B-AWQ oss://modelshugging/Qwen3-32B-AWQ
 ```
 
-**2. Many models at once (better when you pull a lot from Hugging Face):** download every model into one local folder, one sub-folder per model, then upload the whole folder to the bucket root in a single command:
+**2. Many models at once (better when you pull a lot from Hugging Face):** clone every model with Git LFS into one local folder, one sub-folder per model, then upload the whole folder to the bucket root in a single command:
 
 ```bash
+sudo apt install git-lfs -y
+git lfs install
+
 mkdir -p ~/llms && cd ~/llms
 
-# download from Hugging Face (add --token for gated models such as Llama)
-huggingface-cli download Qwen/Qwen3-32B-AWQ --local-dir Qwen3-32B-AWQ
-huggingface-cli download Qwen/Qwen2.5-14B-Instruct --local-dir Qwen2.5-14B-Instruct
-huggingface-cli download meta-llama/Llama-3.1-8B-Instruct --local-dir Llama-3.1-8B-Instruct
+# clone from Hugging Face (gated models such as Llama need your HF username + access token)
+git clone https://huggingface.co/Qwen/Qwen3-32B-AWQ
+git clone https://huggingface.co/Qwen/Qwen2.5-14B-Instruct
+git clone https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
+
+# optional: drop the .git folders, they roughly double the size you upload
+rm -rf ~/llms/*/.git
 
 # upload everything to the root of the bucket
 ossutil cp -r ~/llms/ oss://modelshugging/
