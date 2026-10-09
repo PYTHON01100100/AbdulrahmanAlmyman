@@ -186,7 +186,48 @@ ossutil cp -r ~/llms/ oss://modelshugging/
 
 Check the result with `ossutil ls oss://modelshugging/`. Each model should now be a folder at the bucket root, which is the layout the PVs expect (`path: /Qwen3-32B-AWQ`).
 
-**Tip:** you can also create the PV and PVC from the ACK console (Storage). It is faster and a lot less error-prone than hand-writing the YAML.
+### Creating the PV and PVC from the ACK console
+
+Instead of hand-writing the YAML above, you can create both from the ACK console under **Storage**. It is faster and less error-prone, as long as these details are right.
+
+**Step 1: create the PV** (Storage → Persistent Volumes → Create)
+
+![Create PV in the ACK console with the OSS type, the model's OSS path, the existing secret and the internal endpoint](/llm-serving-ack/create-pv.png)
+
+- **PV Type:** `OSS`.
+- **Volume Name:** `<model>-pv`, all lowercase, for example `qwen3-32b-awq-pv`. Use the same model name for the PVC so they are easy to match.
+- **Capacity:** only a reference value for OSS (the real capacity is unlimited), so pick something at least as large as the model, such as `20Gi`.
+- **Access Mode:** `ReadOnlyMany`. The pods only read the weights.
+- **Access Certificate:** choose **Select Existing Secret**, then the namespace and the Secret that holds your AccessKey ID and AccessKey Secret (the `oss-secret` from the previous step). The bucket list in the next field is loaded with this AccessKey, so if the bucket doesn't show up, the keys or their permissions are wrong.
+- **Bucket ID:** select your models bucket.
+- **OSS Path:** the folder of **this one model, at the bucket root**, written exactly as it appears in the bucket, for example `/Muse-Glimmer-30B`. It is case-sensitive, and it must match what you uploaded with `ossutil` (`oss://modelshugging/Muse-Glimmer-30B/`). A wrong path mounts an empty folder and vLLM then fails with "model path not found".
+- **Endpoint:** `Internal Endpoint`, so traffic stays inside the VPC.
+
+**Step 2: create the PVC** (Storage → Persistent Volume Claims → Create)
+
+![Create PVC in the ACK console bound to the existing OSS volume](/llm-serving-ack/create-pvc.png)
+
+- **PVC Type:** `OSS`.
+- **Name:** `<model>-pvc`, for example `qwen3-32b-awq-pvc`. This exact name goes into the Deployment as `claimName`, so a typo here means the pod stays in `Pending`.
+- **Allocation Mode:** `Existing Volumes`, then **Select PV** and pick the PV you just made.
+- **Capacity:** the same value as the PV (`20Gi`).
+- Create the PVC in the **same namespace as the vLLM pods**.
+
+**Naming rule of thumb:** one model, one folder, one PV, one PVC, all with the same name.
+
+| Model folder in OSS | OSS Path | PV | PVC |
+| --- | --- | --- | --- |
+| `Qwen3-32B-AWQ` | `/Qwen3-32B-AWQ` | `qwen3-32b-awq-pv` | `qwen3-32b-awq-pvc` |
+| `Qwen2.5-14B-Instruct` | `/Qwen2.5-14B-Instruct` | `qwen2.5-14b-instruct-pv` | `qwen2.5-14b-instruct-pvc` |
+
+Check that both are bound before you deploy the model:
+
+```bash
+kubectl get pv
+kubectl get pvc -n your-namespace
+```
+
+Both should show `Bound`. The Deployment then mounts it with the PVC name (`claimName: qwen3-32b-awq-pvc`) and the model path from `vllm serve`.
 
 ## How a request flows
 
