@@ -573,3 +573,8 @@ a.nier-box:hover * {
     animation: none;
   }
 }
+
+/* Opaque plate so scrolling content never shows through it */
+.location-badge {
+  background: var(--nier-bg);
+}
