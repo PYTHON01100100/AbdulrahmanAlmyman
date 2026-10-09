@@ -76,14 +76,6 @@ body::after {
   @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-8 mb-4 pb-3 border-b-2;
   color: var(--color-terminal-accent);
   border-color: var(--color-terminal-border);
-  text-shadow:
-    -2px -1px rgba(90, 74, 42, 0.6),
-    2px 1px rgba(138, 122, 90, 0.6),
-    -1px 0 rgba(106, 90, 58, 0.5),
-    1px 0 rgba(154, 138, 106, 0.5),
-    0 0 12px rgba(138, 122, 90, 0.4),
-    0 0 24px rgba(138, 122, 90, 0.2);
-  animation: chromatic-aberration 3s ease-in-out infinite;
   letter-spacing: 0.05em;
 }
 
@@ -95,25 +87,12 @@ body::after {
   @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mt-6 mb-4 pb-2 border-b;
   color: var(--color-terminal-accent);
   border-color: var(--color-terminal-border);
-  text-shadow:
-    -2px -1px rgba(90, 74, 42, 0.6),
-    2px 1px rgba(138, 122, 90, 0.6),
-    -1px 0 rgba(106, 90, 58, 0.5),
-    1px 0 rgba(154, 138, 106, 0.5),
-    0 0 10px rgba(138, 122, 90, 0.3),
-    0 0 20px rgba(138, 122, 90, 0.15);
-  animation: chromatic-aberration 3s ease-in-out infinite;
   letter-spacing: 0.03em;
 }
 
 .markdown-content h3 {
   @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mt-5 mb-2;
   color: var(--color-terminal-accent);
-  text-shadow:
-    -1px 0 rgba(90, 74, 42, 0.4),
-    1px 0 rgba(138, 122, 90, 0.4),
-    0 0 6px rgba(138, 122, 90, 0.2);
-  animation: chromatic-aberration 4s ease-in-out infinite;
 }
 
 .markdown-content h4 {
@@ -158,96 +137,132 @@ body::after {
   @apply px-1 py-0.5 rounded text-xs sm:text-sm lg:text-base;
   background-color: var(--color-terminal-border);
   color: var(--color-terminal-strong);
-  text-shadow: 0 0 4px rgba(106, 90, 58, 0.3);
   box-shadow: 0 0 6px rgba(106, 90, 58, 0.15) inset;
 }
 
+/* Code blocks: dark NieR-style panel with a toolbar (copy / download) */
+.markdown-content .code-block {
+  @apply my-4 rounded-md overflow-hidden border;
+  background-color: #3b372c;
+  border-color: var(--color-terminal-accent);
+}
+
+.markdown-content .code-block-bar {
+  @apply flex items-center justify-between gap-4 px-4 py-1.5 text-xs sm:text-sm;
+  background-color: #2f2c23;
+  border-bottom: 1px solid var(--color-terminal-accent);
+  color: #b9ad8c;
+}
+
+.markdown-content .code-block-label {
+  @apply uppercase tracking-widest;
+}
+
+.markdown-content .code-block-actions {
+  @apply flex gap-4;
+}
+
+.markdown-content .code-block-actions button,
+.markdown-content .code-block-actions a {
+  @apply cursor-pointer;
+  color: #e3d9b8;
+  text-decoration: none;
+  text-shadow: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+}
+
+.markdown-content .code-block-actions button:hover,
+.markdown-content .code-block-actions a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .markdown-content pre {
-  @apply p-4 rounded-md overflow-x-auto my-4 border;
-  background-color: var(--color-terminal-border);
-  color: var(--color-terminal-text);
-  border-color: var(--color-terminal-border);
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2), inset 0 0 12px rgba(0, 255, 255, 0.1);
+  @apply p-4 overflow-x-auto m-0;
+  background-color: transparent;
+  color: #ece4c8;
+  border: 0;
+  box-shadow: none;
+}
+
+.markdown-content pre code,
+.markdown-content pre code * {
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 .markdown-content pre code {
   @apply p-0 rounded-none;
-  background-color: transparent;
   color: inherit;
   font-size: inherit;
+  line-height: 1.6;
 }
 
-/* Syntax Highlighting - Earth & Ocean Palette */
-/* Comments */
+/* Syntax highlighting: tuned for the dark code panel */
 .markdown-content pre code .token.comment,
 .markdown-content pre code .token.prolog,
 .markdown-content pre code .token.doctype,
 .markdown-content pre code .token.cdata {
-  color: #7f7f7f;
+  color: #8a826c;
   font-style: italic;
 }
 
-/* Punctuation */
 .markdown-content pre code .token.punctuation {
-  color: #a0a0a0;
-  opacity: 0.7;
+  color: #b9ad8c;
 }
 
-/* Keywords (if, else, function, return, etc.) */
 .markdown-content pre code .token.keyword,
 .markdown-content pre code .token.atrule,
 .markdown-content pre code .token.attr-value {
-  color: #9d8ab8;
+  color: #b8a0b0;
   font-weight: 600;
 }
 
-/* Strings */
 .markdown-content pre code .token.string,
 .markdown-content pre code .token.char,
 .markdown-content pre code .token.builtin,
 .markdown-content pre code .token.inserted {
-  color: #6fbf9f;
+  color: #a3b88c;
 }
 
-/* Functions and Classes */
 .markdown-content pre code .token.function,
 .markdown-content pre code .token.class-name {
-  color: #d47c5f;
+  color: #d9a07a;
   font-weight: 500;
 }
 
-/* Numbers */
 .markdown-content pre code .token.number,
 .markdown-content pre code .token.boolean,
 .markdown-content pre code .token.constant {
-  color: #5eb3b3;
+  color: #d9a07a;
 }
 
-/* Operators */
 .markdown-content pre code .token.operator,
 .markdown-content pre code .token.entity,
 .markdown-content pre code .token.url {
-  color: #c9956b;
+  color: #d8cba8;
 }
 
-/* Properties and Attributes */
 .markdown-content pre code .token.property,
 .markdown-content pre code .token.tag,
 .markdown-content pre code .token.selector,
 .markdown-content pre code .token.attr-name,
 .markdown-content pre code .token.symbol {
-  color: #8e9fb8;
+  color: #d4b66e;
 }
 
-/* Special cases */
 .markdown-content pre code .token.regex,
 .markdown-content pre code .token.important,
 .markdown-content pre code .token.variable {
-  color: #c9956b;
+  color: #d8cba8;
 }
 
 .markdown-content pre code .token.deleted {
-  color: #d47c5f;
+  color: #d9a07a;
 }
 
 .markdown-content pre code .token.important,
@@ -263,28 +278,21 @@ body::after {
   @apply underline;
   color: var(--color-terminal-link);
   transition: all 0.3s ease;
-  text-shadow: 0 0 6px rgba(106, 90, 58, 0.3);
 }
 
 .markdown-content a:hover {
   @apply no-underline;
-  text-shadow: 0 0 10px rgba(106, 90, 58, 0.6), 0 0 16px rgba(106, 90, 58, 0.3);
   color: #4a3a1a;
 }
 
 .markdown-content strong {
   @apply font-bold;
   color: var(--color-terminal-strong);
-  text-shadow:
-    0 0 6px rgba(138, 122, 90, 0.4),
-    0 0 12px rgba(138, 122, 90, 0.2),
-    0 0 18px rgba(138, 122, 90, 0.1);
 }
 
 .markdown-content em {
   @apply italic;
-  color: #ff006e;
-  text-shadow: 0 0 8px rgba(255, 0, 110, 0.5);
+  color: var(--color-terminal-strong);
 }
 
 .markdown-content blockquote {

@@ -2,6 +2,7 @@
 import Layout from "@/app/components/Layout";
 import BackLink from "@/app/components/BackLink";
 import TerminalImage from "@/app/components/TerminalImage";
+import CodeBlock from "@/app/components/CodeBlock";
 import { useEffect } from "react";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -42,10 +43,36 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
                   ? null
                   : TerminalImage(props);
               },
+              pre: ({ node, children }) => {
+                const code = node?.children?.[0] as
+                  | {
+                      properties?: { className?: string[] };
+                      data?: { meta?: string };
+                    }
+                  | undefined;
+                const language = code?.properties?.className
+                  ?.find((c) => c.startsWith("language-"))
+                  ?.slice("language-".length);
+                const meta = code?.data?.meta ?? "";
+                const attr = (name: string) =>
+                  meta.match(new RegExp(`${name}="([^"]+)"`))?.[1];
+                return (
+                  <CodeBlock
+                    language={language}
+                    title={attr("title")}
+                    download={attr("download")}
+                  >
+                    {children}
+                  </CodeBlock>
+                );
+              },
               p: "div",
               a: (props) => {
                 return (
-                  <a {...props} target="_blank">
+                  <a
+                    {...props}
+                    target={props.download !== undefined ? undefined : "_blank"}
+                  >
                     {props.children}
                   </a>
                 );
