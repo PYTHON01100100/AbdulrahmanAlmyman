@@ -227,7 +227,22 @@ kubectl get pv
 kubectl get pvc -n your-namespace
 ```
 
-Both should show `Bound`. The Deployment then mounts it with the PVC name (`claimName: qwen3-32b-awq-pvc`) and the model path from `vllm serve`.
+Both should show `Bound`.
+
+**Important: mind the namespace.** A PV is cluster-wide, but a **PVC lives in a namespace**. The console creates the PVC in whichever namespace is selected at the top of the page, and that is `default` if you never changed it. The vLLM Deployment must be in that **same namespace**, or it can't find the claim. The same goes for every `kubectl` command: without `-n`, kubectl only looks in `default`, so a PVC in another namespace seems to be missing.
+
+```bash
+# PVC in the default namespace
+kubectl get pvc
+
+# PVC in your own namespace
+kubectl get pvc -n your-namespace
+
+# or set it once so you can drop -n from every command
+kubectl config set-context --current --namespace=your-namespace
+```
+
+Pick one namespace for the whole stack (PVCs, the OSS Secret, the models and LiteLLM) and use it everywhere, including the `namespace:` field in the YAML manifests. The Deployment then mounts it with the PVC name (`claimName: qwen3-32b-awq-pvc`) and the model path from `vllm serve`.
 
 ## How a request flows
 
