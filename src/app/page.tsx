@@ -4,7 +4,7 @@ import ContactList from "@/app/components/ContactList";
 import LocationBadge from "@/app/components/LocationBadge";
 import CertsList, { Certification } from "@/app/components/CertsList";
 import IntelList, { IntelEntry } from "@/app/components/IntelList";
-import ArchiveList from "@/app/components/ArchiveList";
+import ArchiveList, { ExternalRepo } from "@/app/components/ArchiveList";
 import DataLogs, { DataLog } from "@/app/components/DataLogs";
 // import StatusComment from "@/app/components/StatusComment";
 import { getVisibleCaseStudies } from "@/lib/case-studies";
@@ -94,7 +94,16 @@ const intelData: IntelEntry[] = [
   { id: "author-clock", title: "Author Clock/Entertainment System", date: "2025-09-05", description: "Author Clock replica built on Raspberry Pi with YouTube, Spotify, and Kodi integration", href: "/case-study/author-clock" },
 ];
 
-const projectsData = getVisibleCaseStudies("project");
+// Archives: only the portfolio has an internal page; the rest link out to GitHub.
+const projectsData = getVisibleCaseStudies("project")?.filter(
+  (project) => project.caseStudyId === "abdulrahman-almyman-portfolio",
+);
+
+const archiveRepos: ExternalRepo[] = [
+  { name: "a1s", href: "https://github.com/PYTHON01100100/a1s" },
+  { name: "BucketOps", href: "https://github.com/PYTHON01100100/BucketOps" },
+  { name: "ec2s", href: "https://github.com/PYTHON01100100/ec2s" },
+];
 
 export default function Home() {
   if (!projectsData) return <p>Error occurred with projects data.</p>;
@@ -136,7 +145,7 @@ export default function Home() {
           </div>
           {/* Projects Section */}
           <Section title="Archives" className="w-full md:w-1/2 lg:pl-4">
-            <ArchiveList projects={projectsData} />
+            <ArchiveList projects={projectsData} repos={archiveRepos} />
             <Section title="Certifications">
               <CertsList certs={certsData} />
             </Section>
