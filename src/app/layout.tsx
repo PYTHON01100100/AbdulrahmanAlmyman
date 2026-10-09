@@ -5,7 +5,7 @@ import { Roboto_Mono } from "next/font/google";
 import ThemeToggle from "@/app/components/ThemeToggle";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const SITE_URL = "https://abdulrahmanalmyman.dev";
+const SITE_URL = "https://www.abdulrahmanalmyman.dev";
 const SITE_TITLE = "Abdulrahman Almyman | عبدالرحمن الميمان";
 const SITE_DESCRIPTION =
   "الموقع الشخصي للمهندس عبدالرحمن الميمان - متخصص في الذكاء الاصطناعي التوليدي، النماذج اللغوية الكبيرة، والحوسبة السحابية المتعددة. AI & DevOps Engineer specializing in GenAI, LLMOps, and Multi-Cloud architectures.";

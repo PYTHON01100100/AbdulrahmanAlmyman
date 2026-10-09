@@ -17,7 +17,7 @@ Publish date: `2026-10-09`
 
 This website is my main project: the [AbdulrahmanAlmyman](https://github.com/PYTHON01100100/AbdulrahmanAlmyman) repository itself. This page explains the idea behind the site, why it looks the way it does, and what I want it to do for me.
 
-- **Live site:** [abdulrahmanalmyman.dev](https://abdulrahmanalmyman.dev) (also on [GitHub Pages](https://python01100100.github.io/AbdulrahmanAlmyman/))
+- **Live site:** [www.abdulrahmanalmyman.dev](https://www.abdulrahmanalmyman.dev) (also on [GitHub Pages](https://python01100100.github.io/AbdulrahmanAlmyman/))
 - **Source code:** [github.com/PYTHON01100100/AbdulrahmanAlmyman](https://github.com/PYTHON01100100/AbdulrahmanAlmyman)
 
 ## The idea
@@ -58,7 +58,7 @@ I kept the effects restrained on the reading pages. A case study should be comfo
 
 ## My own domain: Cloudflare DNS + GitHub Pages
 
-A personal brand needs an address that belongs to you, so I bought the domain **abdulrahmanalmyman.dev** and put its DNS on **Cloudflare**, while GitHub Pages hosts the site for free. Here are the steps if you want to do the same.
+A personal brand needs an address that belongs to you, so I bought the domain **abdulrahmanalmyman.dev** (the site lives at **www.abdulrahmanalmyman.dev**, and the bare domain redirects to it) and put its DNS on **Cloudflare**, while GitHub Pages hosts the site for free. Here are the steps if you want to do the same.
 
 ### 1. Put the domain on Cloudflare
 
@@ -85,7 +85,7 @@ Keep the records on **DNS only** (grey cloud) at first. GitHub has to reach the 
 ### 3. Tell GitHub Pages about the domain
 
 1. Open the repository, then **Settings → Pages**.
-2. Under **Custom domain**, enter `abdulrahmanalmyman.dev` and save. GitHub checks the DNS records.
+2. Under **Custom domain**, enter `www.abdulrahmanalmyman.dev` and save. GitHub checks the DNS records.
 3. When the check passes, tick **Enforce HTTPS**. The certificate can take a few minutes to appear.
 
 The site is deployed with GitHub Actions, so you set the domain in these settings. You don't need a `CNAME` file in the repo.
@@ -98,7 +98,7 @@ The site is deployed with GitHub Actions, so you set the domain in these setting
 
 ### 5. Update the site itself
 
-Once the domain works, the site no longer lives under `/AbdulrahmanAlmyman/` but at the root. I updated the canonical URL, sitemap and Open Graph tags to use `https://abdulrahmanalmyman.dev`, so search engines index the custom domain.
+Once the domain works, the site no longer lives under `/AbdulrahmanAlmyman/` but at the root. I updated the canonical URL, sitemap and Open Graph tags to use `https://www.abdulrahmanalmyman.dev`, so search engines index the custom domain.
 
 ## A new version, and the old one
 
