@@ -99,7 +99,52 @@ OSS → Persistent Volume → Persistent Volume Claim → vLLM Pod
 ossutil cp Qwen3-32B-AWQ oss://modelshugging/Qwen3-32B-AWQ -r
 ```
 
-**Tip:** create the PV and PVC from the ACK console (Storage). It is faster and a lot less error-prone than hand-writing the YAML.
+### Giving the PV access to the bucket (AccessKey + SecretKey)
+
+The PV mounts the bucket through the OSS CSI driver, which needs credentials to read it. So before creating the PV you need an **AccessKey ID** and **AccessKey Secret**:
+
+1. In the RAM console, create a **RAM user** just for this (never use the root account keys).
+2. Grant it only what it needs. Read access to the models bucket is enough for serving, so `AliyunOSSReadOnlyAccess`, or a custom policy limited to that one bucket. Use `AliyunOSSFullAccess` only on the user you upload models with.
+3. Open the user and click **Create AccessKey**. Copy the AccessKey ID and Secret right away, because the secret is shown only once.
+4. Store them in a Kubernetes Secret in the same namespace as the models:
+
+```bash
+kubectl create secret generic oss-secret -n your-namespace \
+  --from-literal=akId=<ACCESS_KEY_ID> \
+  --from-literal=akSecret=<ACCESS_KEY_SECRET>
+```
+
+5. Reference that Secret from the PV, so the driver can authenticate when the pod mounts the volume:
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: qwen3-32b-awq-pv
+spec:
+  capacity:
+    storage: 100Gi
+  accessModes:
+    - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain
+  csi:
+    driver: ossplugin.csi.alibabacloud.com
+    volumeHandle: qwen3-32b-awq-pv
+    nodePublishSecretRef:
+      name: oss-secret
+      namespace: your-namespace
+    volumeAttributes:
+      bucket: modelshugging
+      url: oss-me-central-1-internal.aliyuncs.com
+      path: /Qwen3-32B-AWQ
+      otherOpts: "-o umask=022 -o allow_other"
+```
+
+Bind it with a PVC (`qwen3-32b-awq-pvc` in the manifests) and the vLLM pod can mount the model folder.
+
+**Security notes:** never commit the keys to Git, keep the RAM user read-only, use the **internal** OSS endpoint (`-internal`) so traffic stays inside the VPC, and rotate the AccessKey regularly.
+
+**Tip:** you can also create the PV and PVC from the ACK console (Storage). It is faster and a lot less error-prone than hand-writing the YAML.
 
 ## How a request flows
 
