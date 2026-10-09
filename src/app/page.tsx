@@ -98,7 +98,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-2 justify-start items-start w-full md:w-1/2">
             <Section title="About" className="w-full lg:pl-4">
-              <p className="ml-6 mt-4 mb-4 max-w-[560px] md:max-w-fit leading-5 md:ml-6">
+              <p className="nier-box ml-6 mt-4 mb-4 p-3 max-w-[560px] leading-5">
                 Hi, I&apos;m{" "}
                 <strong className="font-normal text-terminal-strong">
                   Abdulrahman Almyman 🙋🏽‍♂️😊&nbsp;
@@ -109,10 +109,9 @@ export default function Home() {
                 AWS, Azure, and GCP with hands-on expertise in Kubernetes and
                 Docker. I love designing scalable, cloud-native architectures.
               </p>
-              {/* Certs section within the notes */}
-              <Section title="Contact" className="lg:pl-4 ">
-                <ContactList contacts={contactData} />
-              </Section>
+            </Section>
+            <Section title="Contact" className="lg:pl-4">
+              <ContactList contacts={contactData} />
             </Section>
             <Section title="Data Logs" className="lg:pl-4">
               <DataLogs
