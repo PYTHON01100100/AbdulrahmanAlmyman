@@ -2,14 +2,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-terminal-bg: #d1cbb7;
-  --color-terminal-text: #4b463a;
+  --color-terminal-bg: var(--nier-bg);
+  --color-terminal-text: var(--nier-ink);
   --color-terminal-accent: #8a7a5a;
   --color-terminal-link: #5a4a2a;
   --color-terminal-strong: #6a5a3a;
   --color-terminal-comment: #9a8a6a;
   --color-terminal-border: #c4b590;
   --color-terminal-highlight: #7a6a4a;
+}
+
+:root {
+  --nier-bg: #d1cbb7;
+  --nier-ink: #4b463a;
+  --nier-ink-rgb: 75, 70, 58;
+  color-scheme: light;
+}
+
+/* NieR dark: the same palette inverted - warm charcoal with parchment ink */
+html[data-theme="dark"] {
+  --nier-bg: #26231d;
+  --nier-ink: #d1cbb7;
+  --nier-ink-rgb: 209, 203, 183;
+  --color-terminal-bg: #26231d;
+  --color-terminal-text: #d1cbb7;
+  --color-terminal-accent: #b5a47a;
+  --color-terminal-link: #e0cfa0;
+  --color-terminal-strong: #cdbb8c;
+  --color-terminal-comment: #8f8468;
+  --color-terminal-border: #4a4435;
+  --color-terminal-highlight: #e8d9a8;
+  color-scheme: dark;
+}
+
+body,
+.nier-box {
+  transition: background-color 0.2s steps(3), color 0.2s steps(3);
 }
 
 * {
@@ -24,7 +52,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #d1cbb7;
+  background: var(--nier-bg);
   background-attachment: fixed;
   position: relative;
   overflow-x: hidden;
@@ -41,17 +69,17 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    linear-gradient(#4b463a, #4b463a) top / 100% 6px no-repeat,
-    linear-gradient(#4b463a, #4b463a) bottom / 100% 6px no-repeat,
+    linear-gradient(var(--nier-ink), var(--nier-ink)) top / 100% 6px no-repeat,
+    linear-gradient(var(--nier-ink), var(--nier-ink)) bottom / 100% 6px no-repeat,
     repeating-linear-gradient(
       45deg,
-      rgba(75, 70, 58, 0.07) 0px,
-      rgba(75, 70, 58, 0.07) 1px,
+      rgba(var(--nier-ink-rgb), 0.07) 0px,
+      rgba(var(--nier-ink-rgb), 0.07) 1px,
       transparent 1px,
       transparent 6px
     ),
-    linear-gradient(90deg, rgba(75, 70, 58, 0.07) 1px, transparent 1px) 0 0 / 64px 64px,
-    linear-gradient(0deg, rgba(75, 70, 58, 0.07) 1px, transparent 1px) 0 0 / 64px 64px;
+    linear-gradient(90deg, rgba(var(--nier-ink-rgb), 0.07) 1px, transparent 1px) 0 0 / 64px 64px,
+    linear-gradient(0deg, rgba(var(--nier-ink-rgb), 0.07) 1px, transparent 1px) 0 0 / 64px 64px;
   pointer-events: none;
   z-index: 1;
 }
@@ -60,7 +88,7 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 55%, rgba(75, 70, 58, 0.18) 100%);
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(var(--nier-ink-rgb), 0.18) 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -296,7 +324,7 @@ body::after {
 
 .markdown-content a:hover {
   @apply no-underline;
-  color: #4a3a1a;
+  color: var(--color-terminal-highlight);
 }
 
 .markdown-content strong {
@@ -480,31 +508,31 @@ figure > div > div {
 
 /* NieR-style rectangular boxes */
 .nier-box {
-  border: 1px solid #4b463a;
+  border: 1px solid var(--nier-ink);
   border-radius: 0;
-  background: rgba(75, 70, 58, 0.04);
-  box-shadow: 3px 3px 0 rgba(75, 70, 58, 0.25);
+  background: rgba(var(--nier-ink-rgb), 0.04);
+  box-shadow: 3px 3px 0 rgba(var(--nier-ink-rgb), 0.25);
   transition: background 0.1s steps(2);
 }
 
 a.nier-box:hover {
-  background: #4b463a;
-  color: #d1cbb7;
+  background: var(--nier-ink);
+  color: var(--nier-bg);
   animation: nier-glitch 0.35s steps(2) 1;
 }
 
 a.nier-box:hover * {
-  color: #d1cbb7;
+  color: var(--nier-bg);
 }
 
 .nier-row:hover {
-  background: #4b463a;
-  color: #d1cbb7;
+  background: var(--nier-ink);
+  color: var(--nier-bg);
   animation: nier-glitch 0.3s steps(2) 1;
 }
 
 .nier-row:hover * {
-  color: #d1cbb7;
+  color: var(--nier-bg);
 }
 
 .nier-blink {

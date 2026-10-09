@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto_Mono } from "next/font/google";
+import ThemeToggle from "@/app/components/ThemeToggle";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const SITE_URL = "https://abdulrahmanalmyman.dev";
@@ -87,6 +88,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}`,
+          }}
+        />
+        <ThemeToggle />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
