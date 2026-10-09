@@ -95,10 +95,6 @@ Model weights are tens of gigabytes. Downloading them every time a pod starts ma
 OSS → Persistent Volume → Persistent Volume Claim → vLLM Pod
 ```
 
-```bash
-ossutil cp Qwen3-32B-AWQ oss://modelshugging/Qwen3-32B-AWQ -r
-```
-
 ### Giving the PV access to the bucket (AccessKey + SecretKey)
 
 The PV mounts the bucket through the OSS CSI driver, which needs credentials to read it. So before creating the PV you need an **AccessKey ID** and **AccessKey Secret**:
@@ -143,6 +139,46 @@ spec:
 Bind it with a PVC (`qwen3-32b-awq-pvc` in the manifests) and the vLLM pod can mount the model folder.
 
 **Security notes:** never commit the keys to Git, keep the RAM user read-only, use the **internal** OSS endpoint (`-internal`) so traffic stays inside the VPC, and rotate the AccessKey regularly.
+
+### Uploading the models to OSS
+
+Install `ossutil`, then run `ossutil config` once. It asks five things, and only some of them need an answer:
+
+| Prompt | What to do |
+| --- | --- |
+| Config file name | Press **Enter** (use the default `~/.ossutilconfig`) |
+| Access Key ID | **Type it** (the RAM user's AccessKey ID) |
+| Access Key Secret | **Type it** (the RAM user's AccessKey Secret) |
+| Region | **Type it**, for example `me-central-1` |
+| Endpoint | Press **Enter** (the public endpoint is used by default) |
+
+![ossutil config: press Enter for the config file and the endpoint, but type the AccessKey ID, AccessKey Secret and region](/llm-serving-ack/ossutil-config.png)
+
+For uploading, use a RAM user that is allowed to write to the bucket. The read-only user above is only for the PV.
+
+Now there are two ways to upload, depending on how many models you have.
+
+**1. One model at a time:**
+
+```bash
+ossutil cp -r ./Qwen3-32B-AWQ oss://modelshugging/Qwen3-32B-AWQ
+```
+
+**2. Many models at once (better when you pull a lot from Hugging Face):** download every model into one local folder, one sub-folder per model, then upload the whole folder to the bucket root in a single command:
+
+```bash
+mkdir -p ~/llms && cd ~/llms
+
+# download from Hugging Face (add --token for gated models such as Llama)
+huggingface-cli download Qwen/Qwen3-32B-AWQ --local-dir Qwen3-32B-AWQ
+huggingface-cli download Qwen/Qwen2.5-14B-Instruct --local-dir Qwen2.5-14B-Instruct
+huggingface-cli download meta-llama/Llama-3.1-8B-Instruct --local-dir Llama-3.1-8B-Instruct
+
+# upload everything to the root of the bucket
+ossutil cp -r ~/llms/ oss://modelshugging/
+```
+
+Check the result with `ossutil ls oss://modelshugging/`. Each model should now be a folder at the bucket root, which is the layout the PVs expect (`path: /Qwen3-32B-AWQ`).
 
 **Tip:** you can also create the PV and PVC from the ACK console (Storage). It is faster and a lot less error-prone than hand-writing the YAML.
 
