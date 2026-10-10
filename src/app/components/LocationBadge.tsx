@@ -5,11 +5,18 @@ import { useEffect, useState } from "react";
 interface LocationBadgeProps {
   geo: string;
   hq: string;
+  status?: string;
+  launch?: string;
 }
 
 // Status plate: fixed beside the theme toggle on large screens, inline on small ones.
 // Fades out once the page is scrolled so it never sits over the content.
-export default function LocationBadge({ geo, hq }: LocationBadgeProps) {
+export default function LocationBadge({
+  geo,
+  hq,
+  status,
+  launch,
+}: LocationBadgeProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,6 +41,19 @@ export default function LocationBadge({ geo, hq }: LocationBadgeProps) {
         <span className="text-terminal-comment">HQ:</span>{" "}
         <span className="text-terminal-strong">{hq}</span>
       </p>
+      {status && (
+        <p>
+          <span className="text-terminal-comment">STATE:</span>{" "}
+          <span className="text-terminal-strong">{status}</span>
+          <span className="nier-blink">_</span>
+        </p>
+      )}
+      {launch && (
+        <p>
+          <span className="text-terminal-comment">OFFICIAL_LAUNCH:</span>{" "}
+          <span className="text-terminal-strong">{launch}</span>
+        </p>
+      )}
     </div>
   );
 }

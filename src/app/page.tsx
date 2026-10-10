@@ -109,7 +109,12 @@ export default function Home() {
   if (!projectsData) return <p>Error occurred with projects data.</p>;
   return (
     <Layout className="text-base sm:text-lg px-6 py-5 md:px-8 md:py-8">
-      <LocationBadge geo="London, UK" hq="SCCC by stc" />
+      <LocationBadge
+        geo="London, UK"
+        hq="SCCC by stc"
+        status="UNDER DEV"
+        launch="18 NOV 2026"
+      />
       {/* Large screen: centered container with max width */}
       <div className=" lg:flex lg:items-center lg:justify-center lg:min-h-[calc(100vh-4rem)] ">
         <div className="md:flex md:flex-wrap md:w-full lg:max-w-304 md:mx-auto max-h-fit">
