@@ -313,6 +313,8 @@ I also tried this myself. In my video I run **Ollama** inside WSL with the **qwe
 
 **Video: [using opencode with ollama inside wsl](https://youtu.be/CCG23ATWdfU)**
 
+<iframe style="width:100%;aspect-ratio:16/9;border:0" src="https://www.youtube.com/embed/CCG23ATWdfU" title="using opencode with ollama inside wsl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The Ollama part takes only a few commands inside your distro:
 
 ```bash title="Ubuntu terminal (inside WSL)"
