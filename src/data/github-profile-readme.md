@@ -177,4 +177,5 @@ A GitHub profile README takes very little time, and it quietly works for you eve
 - [Post on X about profile READMEs](https://x.com/PurpleHallos/status/1811038558850814196) (**the post is in Arabic**)
 - [GitHub Docs: Managing your profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)
 - [Shields.io](https://shields.io/): badges for your README
+- [Tweet by Ali Aljaffer](https://x.com/aliAljaffer/status/2043653464522178944): an additional resource on how to make your own CV. It is a bit off-topic for profile READMEs, but useful. (**the tweet is in Arabic**)
 - [My profile README repository](https://github.com/PYTHON01100100/PYTHON01100100)
