@@ -61,6 +61,10 @@ In short: WSL gives you **the best of both worlds**. Windows for your daily apps
 
 With WSL 2, Windows starts a small, lightweight virtual machine in the background and runs a real Linux kernel inside it. Each distro you install lives in its own isolated space on top of that, with its own files, users and processes. You don't manage the VM yourself. Windows starts and stops it as you need it.
 
+![WSL architecture: Windows components (wsl.exe, wslservice.exe) talk over hvsocket to the Linux side (mini_init, the distribution's init, plan9 and more)](/wsl-guide/wsl-architecture.png)
+
+In the diagram, the top box is Windows (the `wsl.exe` command and the `wslservice.exe` service). The bottom box is the Linux side inside the lightweight VM, where each distribution runs. They talk to each other over a fast channel called `hvsocket`, and `plan9` is what shares Linux files with Windows. You can read more about each component on [wsl.dev](https://wsl.dev/).
+
 Two things make it feel integrated:
 
 - **Files are shared.** Windows drives appear in Linux under `/mnt/c`, and Linux files show up in Windows Explorer under `\\wsl.localhost\`.
@@ -299,6 +303,30 @@ If you have **more than one GPU**, WSL can use only one at a time. Choose it wit
 export MESA_D3D12_DEFAULT_ADAPTER_NAME="<NameFromDeviceManager>"
 ```
 
+### My own test: Ollama and OpenCode with qwen3:8b in WSL
+
+I also tried this myself. In my video I run **Ollama** inside WSL with the **qwen3:8b** model and connect **OpenCode** to it, so the model runs locally on my own GPU:
+
+**Video: [using opencode with ollama inside wsl](https://youtu.be/CCG23ATWdfU)**
+
+The Ollama part takes only a few commands inside your distro:
+
+```bash title="Ubuntu terminal (inside WSL)"
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull qwen3:8b
+ollama run qwen3:8b
+```
+
+**Want to try the same with vLLM?** vLLM can serve the same kind of model with an OpenAI-compatible API. Inside WSL (with your GPU driver installed on Windows):
+
+```bash title="Ubuntu terminal (inside WSL)"
+python3 -m venv ~/vllm-env && source ~/vllm-env/bin/activate
+pip install vllm
+vllm serve Qwen/Qwen3-8B
+```
+
+The server listens on `http://localhost:8000/v1`, so you can point any tool that supports an OpenAI-compatible endpoint (such as OpenCode) at that address and compare it with Ollama. An 8B model in full precision needs a lot of GPU memory (roughly 16 GB), so on a smaller card use a quantized version of the model. For a production-style setup of the same idea, see my article [Serving Large Language Models with LiteLLM and vLLM on Alibaba Cloud ACK](/case-study/llm-serving-litellm-vllm-ack).
+
 ## Run Linux GUI apps
 
 WSL can show Linux graphical apps in normal Windows windows. Try a tiny one:
@@ -399,4 +427,5 @@ WSL removes the biggest barrier to using Linux on Windows: you don't have to cho
 - [wsl.dev](https://wsl.dev/): the developer documentation site for WSL (architecture, building and testing WSL, and APIs)
 - [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) (Wikipedia)
 - [microsoft/WSL on GitHub](https://github.com/microsoft/WSL)
+- [My video: using opencode with ollama inside wsl](https://youtu.be/CCG23ATWdfU)
 - [NVIDIA CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#getting-started-with-cuda-on-wsl)
