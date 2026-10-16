@@ -80,6 +80,14 @@ WSL can also run **Linux GUI apps** on the Windows desktop (this part is called 
 
 For older Windows builds or servers, see the manual steps later in this guide.
 
+## Watch: Linux on Windows, Windows on Linux
+
+If you prefer to learn by watching, NetworkChuck's video walks through running Linux on Windows with WSL:
+
+<iframe style="width:100%;aspect-ratio:16/9;border:0" src="https://www.youtube.com/embed/vxTW22y8zV8" title="Linux on Windows......Windows on Linux" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**Video:** [Linux on Windows......Windows on Linux](https://youtu.be/vxTW22y8zV8) by NetworkChuck
+
 ## Install WSL
 
 Open **PowerShell as Administrator** (right-click the Start menu, then choose Terminal or PowerShell as administrator) and run:
@@ -194,6 +202,34 @@ From PowerShell you can run Linux commands without opening a shell:
 wsl ls -la
 wsl date
 ```
+
+## Code in WSL with VS Code
+
+Visual Studio Code with the **WSL extension** lets you use WSL as your full-time development environment. VS Code runs on Windows, while your code, Git, terminal and tools run inside Linux. You get Linux toolchains, IntelliSense, linting, debugging, the built-in terminal and Git support, and you still keep all your Windows apps.
+
+Follow the Microsoft tutorial [Get started using VS Code with WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode). The short version:
+
+1. **Install VS Code on Windows**, not inside Linux, from the [VS Code download page](https://code.visualstudio.com/download). During setup, tick **Add to PATH**, so the `code` command works.
+2. **Install the WSL extension** (`ms-vscode-remote.remote-wsl`) from the Extensions tab. If you also use remote machines or Dev Containers, install the Remote Development extension pack instead, which includes it.
+3. **Add a few libraries inside Linux.** Some distros miss libraries that the VS Code server needs:
+
+```bash title="Ubuntu terminal (inside WSL)"
+sudo apt-get update
+sudo apt-get install wget ca-certificates
+```
+
+4. **Open a project from WSL:**
+
+```bash title="Ubuntu terminal (inside WSL)"
+cd ~/projects/my-app
+code .
+```
+
+VS Code opens on Windows and connects to your Linux distro. The bottom-left corner shows that you are connected to WSL. You can also press **Ctrl + Shift + P** in VS Code and type `WSL` to reopen a folder in WSL or pick a distro.
+
+**Extensions work in two places.** The interface runs on Windows, and the "server" part (your code, Git and extensions) runs in your WSL distro. A theme only needs to be installed once. Extensions that lint or debug code, like the Python extension, must be installed **in WSL** too. VS Code shows an **Install in WSL** button when one is missing.
+
+Remember the file rule from earlier: keep the project inside the Linux file system (`~/projects`), not under `/mnt/c`.
 
 ## The commands you will use every day
 
@@ -429,6 +465,8 @@ WSL removes the biggest barrier to using Linux on Windows: you don't have to cho
 - [Manual installation steps for older versions of WSL](https://learn.microsoft.com/en-us/windows/wsl/install-manual) (Microsoft Learn)
 - [What is Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about) (Microsoft Learn)
 - [Open Source WSL](https://learn.microsoft.com/en-us/windows/wsl/opensource) (Microsoft Learn)
+- [Get started using VS Code with WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode) (Microsoft Learn tutorial)
+- [Linux on Windows......Windows on Linux](https://youtu.be/vxTW22y8zV8), video by NetworkChuck
 - [GPU accelerated ML training in WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gpu-compute) (Microsoft Learn tutorial, used for the GPU examples)
 - [wsl.dev](https://wsl.dev/): the developer documentation site for WSL (architecture, building and testing WSL, and APIs)
 - [Windows Subsystem for Linux](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) (Wikipedia)
