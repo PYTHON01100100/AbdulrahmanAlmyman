@@ -69,30 +69,32 @@ In short: Distrobox gives you **a safe, disposable, per-project Linux** without 
 
 ## Install
 
+> **How to read the code blocks:** a block marked **ON THE HOST** runs in your normal terminal. A block marked **IN THE BOX** runs inside the container, after `distrobox enter`.
+
 You need two things: a container manager and Distrobox. I recommend **Podman**, because it runs without root by default.
 
 ### Ubuntu / Debian (`apt`)
 
-```bash
+```bash where="host"
 sudo apt update
 sudo apt install -y podman distrobox
 ```
 
 ### Fedora (`dnf`)
 
-```bash
+```bash where="host"
 sudo dnf install -y podman distrobox
 ```
 
 ### Arch / Manjaro (`pacman`)
 
-```bash
+```bash where="host"
 sudo pacman -S --needed podman distrobox
 ```
 
 Distro repositories can ship an older Distrobox version. If `distrobox` is missing or too old on your release, use the install script from the project (stable version):
 
-```bash
+```bash where="host"
 curl -fsSL https://raw.githubusercontent.com/89luca89/distrobox/legacy/install | sh
 ```
 
@@ -100,20 +102,20 @@ Add `-s -- --prefix ~/.local` after `sh` to install into your home folder instea
 
 Check it works:
 
-```bash
+```bash where="host"
 distrobox --version
 ```
 
 ## Create and enter your first container
 
-```bash
+```bash where="host"
 distrobox create --name ubuntu-box --image ubuntu:24.04
 distrobox enter ubuntu-box
 ```
 
 The first time, it downloads the image and sets everything up, which takes a minute. After that, your prompt changes. You are now inside Ubuntu, in the same home folder you always use:
 
-```bash
+```bash where="box"
 cat /etc/os-release     # shows Ubuntu
 sudo apt update         # works inside the box
 exit                    # back to your host
@@ -143,14 +145,14 @@ I picked **Claude Desktop** because it is a perfect fit. The [official Linux bet
 
 **Step 1: create and enter an Ubuntu box**
 
-```bash
+```bash where="host"
 distrobox create --name ubuntu-apps --image ubuntu:24.04
 distrobox enter ubuntu-apps
 ```
 
 **Step 2: inside the box, add Anthropic's apt repository and install the app**
 
-```bash
+```bash where="box"
 # tools needed to download and check the signing key
 sudo apt update && sudo apt install -y curl gnupg
 
@@ -169,7 +171,7 @@ sudo apt update && sudo apt install -y claude-desktop
 
 **Step 3: export it to your host menu (still inside the box)**
 
-```bash
+```bash where="box"
 # find the exact name of the app's launcher file
 ls /usr/share/applications | grep -i claude
 
@@ -181,10 +183,14 @@ Now open your application launcher and search for **Claude**. It starts like a n
 
 **Use the same recipe for any other app.** Only the install lines change:
 
-```bash
-# 1. enter your box
+```bash where="host"
+# 1. on your host: enter your box
 distrobox enter ubuntu-apps
+```
 
+Then, inside the box:
+
+```bash where="box"
 # 2. install the app (replace with any package, for example gimp, vlc, libreoffice)
 sudo apt install -y <package-name>
 
@@ -199,7 +205,7 @@ Not every Claude Desktop feature has to work inside a container. Cowork, for exa
 
 You can also export a **command-line tool** so it works from your host terminal:
 
-```bash
+```bash where="box"
 distrobox-export --bin /usr/bin/git --export-path ~/.local/bin
 ```
 
@@ -209,27 +215,35 @@ GUI apps work out of the box on most desktops, because the container shares your
 
 **Fedora box** (works from any host):
 
-```bash
+```bash where="host"
 distrobox create --name fedora-apps --image fedora:latest
 distrobox enter fedora-apps
+```
 
+Then, inside the box:
+
+```bash where="box"
 sudo dnf install -y gimp
 distrobox-export --app gimp
 ```
 
 **Arch box:**
 
-```bash
+```bash where="host"
 distrobox create --name arch-apps --image docker.io/library/archlinux:latest
 distrobox enter arch-apps
+```
 
+Then, inside the box:
+
+```bash where="box"
 sudo pacman -Syu --noconfirm gimp
 distrobox-export --app gimp
 ```
 
 You can also run an app directly without exporting it:
 
-```bash
+```bash where="host"
 distrobox enter arch-apps -- gimp
 ```
 
@@ -237,13 +251,13 @@ distrobox enter arch-apps -- gimp
 
 If you see an error like "cannot open display", the container can't reach the host's X server. Install `xhost` on the **host**, then run:
 
-```bash
+```bash where="host"
 xhost +si:localuser:$USER
 ```
 
 To make it permanent, add this line to `~/.distroboxrc`:
 
-```bash
+```bash where="host"
 xhost +si:localuser:$USER >/dev/null
 ```
 
@@ -253,7 +267,7 @@ If the app still has no clipboard, install `xsel` inside the box on an Xorg desk
 
 Intel and AMD GPUs work without extra steps, because the container installs the latest Mesa/DRI drivers. For NVIDIA, you must create the box with the `--nvidia` flag. Without it, the app inside the container won't use your host's NVIDIA card:
 
-```bash
+```bash where="host"
 distrobox create --nvidia --name ubuntu-nvidia --image ubuntu:24.04
 ```
 
@@ -265,7 +279,7 @@ This is where Distrobox really shines for my work. Cloud engineers juggle many C
 
 Create a box with its **own home folder**, so its credentials and config files stay separate from your main home:
 
-```bash
+```bash where="host"
 mkdir -p ~/boxes/client-a
 distrobox create --name cloud-client-a --image ubuntu:24.04 --home ~/boxes/client-a
 distrobox enter cloud-client-a
@@ -273,7 +287,7 @@ distrobox enter cloud-client-a
 
 Inside the box, install the basics and the tools you need:
 
-```bash
+```bash where="box"
 sudo apt update
 sudo apt install -y git curl unzip jq
 
@@ -292,7 +306,7 @@ unzip ossutil.zip && chmod 755 ossutil && sudo mv ossutil /usr/local/bin/
 
 Check it:
 
-```bash
+```bash where="box"
 aws --version
 kubectl version --client
 ossutil version
@@ -304,7 +318,7 @@ Run `aws configure` or `ossutil config` inside this box, and those credentials s
 
 Instead of repeating commands, write the box as a manifest. Create `distrobox.ini`:
 
-```ini
+```ini where="host"
 [cloud-client-a]
 image=ubuntu:24.04
 home=/home/YOUR_USER/boxes/client-a
@@ -315,7 +329,7 @@ replace=true
 
 Then create it (or recreate it on a new laptop) with one command:
 
-```bash
+```bash where="host"
 distrobox assemble create
 ```
 

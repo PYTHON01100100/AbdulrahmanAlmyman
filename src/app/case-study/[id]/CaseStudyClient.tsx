@@ -14,6 +14,25 @@ const DEAD_REGION = "me-south-1";
 export const inDeadRegion = (imageSrc: string) => {
   return imageSrc.includes(DEAD_REGION);
 };
+// rehype-raw rebuilds the tree and drops node.data, so keep a fence's meta
+// string (title="..." where="...") as a plain attribute that survives it.
+type HastNode = {
+  type?: string;
+  tagName?: string;
+  properties?: Record<string, unknown>;
+  data?: { meta?: string };
+  children?: HastNode[];
+};
+const rehypeCodeMeta = () => (tree: HastNode) => {
+  const walk = (node: HastNode) => {
+    if (node.tagName === "code" && node.data?.meta) {
+      node.properties = { ...node.properties, dataMeta: node.data.meta };
+    }
+    node.children?.forEach(walk);
+  };
+  walk(tree);
+};
+
 interface CaseStudyProps {
   caseStudy: CaseStudy & { content: string };
 }
@@ -50,7 +69,7 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
         <div className="markdown-content prose prose-invert">
           <Markdown
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw, rehypePrism]}
+            rehypePlugins={[rehypeCodeMeta, rehypeRaw, rehypePrism]}
             components={{
               img: (props) => {
                 return inDeadRegion(props.src?.toString() + "")
@@ -60,14 +79,13 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
               pre: ({ node, children }) => {
                 const code = node?.children?.[0] as
                   | {
-                      properties?: { className?: string[] };
-                      data?: { meta?: string };
+                      properties?: { className?: string[]; dataMeta?: string };
                     }
                   | undefined;
                 const language = code?.properties?.className
                   ?.find((c) => c.startsWith("language-"))
                   ?.slice("language-".length);
-                const meta = code?.data?.meta ?? "";
+                const meta = code?.properties?.dataMeta ?? "";
                 const attr = (name: string) =>
                   meta.match(new RegExp(`${name}="([^"]+)"`))?.[1];
                 return (
@@ -75,6 +93,11 @@ export default function CaseStudyClient({ caseStudy }: CaseStudyProps) {
                     language={language}
                     title={attr("title")}
                     download={withBase(attr("download")) as string | undefined}
+                    where={
+                      attr("where") === "box" || attr("where") === "host"
+                        ? (attr("where") as "box" | "host")
+                        : undefined
+                    }
                   >
                     {children}
                   </CodeBlock>

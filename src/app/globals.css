@@ -186,6 +186,16 @@ body::after {
   @apply uppercase tracking-widest;
 }
 
+.markdown-content .code-block-where {
+  @apply inline-flex items-center gap-1.5;
+  color: #e3d9b8;
+}
+
+.markdown-content .code-block-where svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
 .markdown-content .code-block-actions {
   @apply flex gap-4;
 }
