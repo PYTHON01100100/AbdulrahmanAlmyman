@@ -135,32 +135,67 @@ Other images work the same way: `fedora:latest`, `archlinux:latest`, `debian:lat
 | `distrobox ephemeral` | Temporary container, removed when you exit |
 | `distrobox assemble create` | Create containers from a manifest file |
 
-## Example 1: A GUI app from Ubuntu, in your app menu
+## Example 1: Claude Desktop from Ubuntu, in your app menu
 
 This is the shortest useful example: install an app in a box, then **export** it so it shows up in your normal launcher, like any other app.
 
-I use GIMP here because it is in every repository, but the steps are the same for any desktop app.
+I picked **Claude Desktop** because it is a perfect fit. The [official Linux beta](https://code.claude.com/docs/en/desktop-linux) supports only Debian-based systems (Ubuntu 22.04+ or Debian 12+). On Fedora or Arch that means you can't install it directly, but with Distrobox you can run it from an Ubuntu box anyway.
+
+**Step 1: create and enter an Ubuntu box**
 
 ```bash
-# 1. create and enter an Ubuntu box
 distrobox create --name ubuntu-apps --image ubuntu:24.04
 distrobox enter ubuntu-apps
-
-# 2. inside the box, install the app
-sudo apt update
-sudo apt install -y gimp
-
-# 3. export it to the host menu
-distrobox-export --app gimp
 ```
 
-Now open your application launcher and search for **GIMP**. It starts like a native app, but it lives in the Ubuntu box. To remove it from the menu later:
+**Step 2: inside the box, add Anthropic's apt repository and install the app**
 
 ```bash
-distrobox-export --app gimp --delete
+# tools needed to download and check the signing key
+sudo apt update && sudo apt install -y curl gnupg
+
+# download Anthropic's signing key
+sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc
+
+# check the key: the fingerprint must be 31DDDE24DDFAB679F42D7BD2BAA929FF1A7ECACE
+gpg --show-keys /usr/share/keyrings/claude-desktop-archive-keyring.asc
+
+# register the repository
+echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main" | sudo tee /etc/apt/sources.list.d/claude-desktop.list
+
+# install the app
+sudo apt update && sudo apt install -y claude-desktop
 ```
 
-**What about Claude Desktop?** The steps are the same: inside the box, install the app, then run `distrobox-export --app <name>`. If you have a `.deb` package for it that you trust, install it with `sudo apt install ./your-package.deb`. Check whether the vendor offers an official Linux build first, and treat community builds as unofficial software.
+**Step 3: export it to your host menu (still inside the box)**
+
+```bash
+# find the exact name of the app's launcher file
+ls /usr/share/applications | grep -i claude
+
+# export it to the host menu
+distrobox-export --app claude-desktop
+```
+
+Now open your application launcher and search for **Claude**. It starts like a native app, but it lives in the Ubuntu box. Sign in with your Anthropic account as usual. Updates come through the box: run `distrobox upgrade ubuntu-apps` now and then.
+
+**Use the same recipe for any other app.** Only the install lines change:
+
+```bash
+# 1. enter your box
+distrobox enter ubuntu-apps
+
+# 2. install the app (replace with any package, for example gimp, vlc, libreoffice)
+sudo apt install -y <package-name>
+
+# 3. export it so it appears in your host app menu (replace with the app's name)
+distrobox-export --app <app-name>
+
+# 4. remove it from the menu later
+distrobox-export --app <app-name> --delete
+```
+
+Not every Claude Desktop feature has to work inside a container. Cowork, for example, needs hardware virtualization (KVM) and QEMU, which the docs list as requirements, and I haven't tested it in a box. Check the [Linux docs](https://code.claude.com/docs/en/desktop-linux) if one of its tabs complains.
 
 You can also export a **command-line tool** so it works from your host terminal:
 
@@ -170,7 +205,7 @@ distrobox-export --bin /usr/bin/git --export-path ~/.local/bin
 
 ## Example 2: GUI apps on Fedora and Arch
 
-GUI apps work out of the box on most desktops, because the container shares your X11 and Wayland sockets. The idea is the same everywhere, only the package manager changes.
+GUI apps work out of the box on most desktops, because the container shares your X11 and Wayland sockets. The idea is the same everywhere, only the package manager changes. These boxes are also how you run Debian-only apps like Claude Desktop from Fedora or Arch: use the Ubuntu box from Example 1.
 
 **Fedora box** (works from any host):
 
@@ -327,6 +362,7 @@ Distrobox gives you the freedom of every Linux distro on one machine. You can ru
 ## References
 
 - [Distrobox on GitHub](https://github.com/89luca89/distrobox) (official repository and docs)
+- [Claude Desktop on Linux (beta)](https://code.claude.com/docs/en/desktop-linux), used as the example app
 - [Distrobox compatibility: host distros, container managers, NVIDIA](https://distrobox.it/compatibility/)
 - [Toolbox](https://github.com/containers/toolbox), the project that inspired Distrobox
 - Video walkthrough of Distrobox, summarised with Gemini (see "Notes from a video walkthrough")
