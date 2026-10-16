@@ -31,6 +31,27 @@ It is a thin wrapper around a container manager (`podman`, `docker` or `lilipod`
 
 So it feels like using a second distro on the same machine, with none of the weight of a virtual machine.
 
+### The tools that come with it
+
+Distrobox is a small set of commands. You can run each one as `distrobox COMMAND`, or as its own tool (`distrobox-create`, `distrobox-enter`, ...):
+
+- `distrobox-assemble`: create and destroy containers from a config file
+- `distrobox-create`: create a container
+- `distrobox-enter`: enter a container
+- `distrobox-ephemeral`: create a temporary container that is destroyed when you exit the shell
+- `distrobox-list`: list your containers
+- `distrobox-rm`: delete a container
+- `distrobox-stop`: stop a running container
+- `distrobox-upgrade`: upgrade one or more containers at once
+- `distrobox-generate-entry`: add a container to your applications list
+- `distrobox-init`: the container entry point (you never run it by hand)
+- `distrobox-export`: run inside the container, exports apps and services to the host
+- `distrobox-host-exec`: run commands from the host while you are inside the container
+
+The idea comes from [Toolbox](https://github.com/containers/toolbox), re-done in a simpler way with POSIX `sh` so that it works on more systems.
+
+**The kernel catch:** inside the box you get a Fedora, Ubuntu or Arch *user space*, but you are still running your **host's Linux kernel**. A box is not a virtual machine, so you can't test a different kernel with it.
+
 ## What problems does it solve?
 
 | Problem | How Distrobox helps |
@@ -195,11 +216,13 @@ If the app still has no clipboard, install `xsel` inside the box on an Xorg desk
 
 ### Using an NVIDIA GPU
 
-Intel and AMD GPUs work without extra steps. For NVIDIA, create the box with the `--nvidia` flag:
+Intel and AMD GPUs work without extra steps, because the container installs the latest Mesa/DRI drivers. For NVIDIA, you must create the box with the `--nvidia` flag. Without it, the app inside the container won't use your host's NVIDIA card:
 
 ```bash
 distrobox create --nvidia --name ubuntu-nvidia --image ubuntu:24.04
 ```
+
+The [Distrobox compatibility page](https://distrobox.it/compatibility/) confirms this flag and also mentions an alternative: set up GPU access yourself with NVIDIA's `nvidia-container-toolkit`. The same page lists the supported host distros and the minimum container manager versions (Podman 2.1.0 rootless, Docker 19.03.15 without sudo).
 
 ## Example 3: A toolbox for a cloud architect
 
@@ -263,6 +286,21 @@ distrobox assemble create
 
 Remove everything in the manifest with `distrobox assemble rm`. Add `--dry-run` to preview what would run.
 
+## Notes from a video walkthrough
+
+While learning Distrobox I also watched a video walkthrough, and I used a Gemini summary of it as a study aid. The points that matched what I found in the docs:
+
+- Distrobox is a wrapper over Podman or Docker that tightly integrates apps from other distros with your host. For example, you can use AUR packages on Debian, or the Fedora build of Firefox on Pop!_OS.
+- Exposing GUI apps from containers used to be complicated, and Distrobox makes it easy. That makes it great for developers who package software for several distros, and for anyone who wants to test packages without touching the host.
+- `distrobox create` with no options builds a **Fedora** container named `my-distrobox`. To pick a distro and a name, use `--name` and `--image`, for example `distrobox create -n UbuntuBox --image ubuntu:22.04`.
+- `distrobox enter NAME` drops you into the container. From then on, `dnf` or `apt` commands run inside it, not on your host.
+- Run `distrobox-export --app NAME` **inside** the container, and within seconds the app shows up in your host's launcher.
+- `distrobox list` shows all your containers, and `distrobox rm NAME` deletes one.
+- On an NVIDIA host, remember `--nvidia` when creating the container.
+- It is still your host kernel underneath.
+
+I only kept the points that I could confirm in the official docs. Treat AI summaries as notes, and check the commands against the project's documentation.
+
 ## Good habits
 
 - **Keep boxes small and specific.** One box for GUI apps, one per project or client.
@@ -288,7 +326,10 @@ Distrobox gives you the freedom of every Linux distro on one machine. You can ru
 
 ## References
 
-- [Distrobox on GitHub](https://github.com/89luca89/distrobox)
+- [Distrobox on GitHub](https://github.com/89luca89/distrobox) (official repository and docs)
+- [Distrobox compatibility: host distros, container managers, NVIDIA](https://distrobox.it/compatibility/)
+- [Toolbox](https://github.com/containers/toolbox), the project that inspired Distrobox
+- Video walkthrough of Distrobox, summarised with Gemini (see "Notes from a video walkthrough")
 - [Distrobox: useful tips (NVIDIA, GUI, separate home)](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md)
 - [distrobox-export usage](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-export.md)
 - [distrobox-assemble usage](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md)
