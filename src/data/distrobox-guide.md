@@ -350,6 +350,8 @@ While learning Distrobox I also watched [New to DistroBox? Start Here: Full Begi
 
 I only kept the points that I could confirm in the official docs. Check any command against the project's documentation before you rely on it.
 
+**For Arabic readers:** there is also an Arabic video that explains how to use Distrobox, [شرح استخدام distrobox](https://youtu.be/Bn_3mTStCi8) by الوقّاد (Alwaqad).
+
 ## Good habits
 
 - **Keep boxes small and specific.** One box for GUI apps, one per project or client.
@@ -380,6 +382,7 @@ Distrobox gives you the freedom of every Linux distro on one machine. You can ru
 - [Distrobox compatibility: host distros, container managers, NVIDIA](https://distrobox.it/compatibility/)
 - [Toolbox](https://github.com/containers/toolbox), the project that inspired Distrobox
 - [New to DistroBox? Start Here: Full Beginner's Tutorial!](https://youtu.be/eiDt4O6UPRw), video by Learn Linux TV
+- [شرح استخدام distrobox](https://youtu.be/Bn_3mTStCi8), video by الوقّاد (Alwaqad) (**the video is in Arabic**)
 - [Distrobox: useful tips (NVIDIA, GUI, separate home)](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md)
 - [distrobox-export usage](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-export.md)
 - [distrobox-assemble usage](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md)
