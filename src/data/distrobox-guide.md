@@ -337,7 +337,7 @@ Remove everything in the manifest with `distrobox assemble rm`. Add `--dry-run` 
 
 ## Notes from a video walkthrough
 
-While learning Distrobox I also watched a video walkthrough, and I used a Gemini summary of it as a study aid. The points that matched what I found in the docs:
+While learning Distrobox I also watched [New to DistroBox? Start Here: Full Beginner's Tutorial!](https://youtu.be/eiDt4O6UPRw) by Learn Linux TV, and I used a Gemini summary of it as a study aid. The points that matched what I found in the docs:
 
 - Distrobox is a wrapper over Podman or Docker that tightly integrates apps from other distros with your host. For example, you can use AUR packages on Debian, or the Fedora build of Firefox on Pop!_OS.
 - Exposing GUI apps from containers used to be complicated, and Distrobox makes it easy. That makes it great for developers who package software for several distros, and for anyone who wants to test packages without touching the host.
@@ -379,7 +379,7 @@ Distrobox gives you the freedom of every Linux distro on one machine. You can ru
 - [Claude Desktop on Linux (beta)](https://code.claude.com/docs/en/desktop-linux), used as the example app
 - [Distrobox compatibility: host distros, container managers, NVIDIA](https://distrobox.it/compatibility/)
 - [Toolbox](https://github.com/containers/toolbox), the project that inspired Distrobox
-- Video walkthrough of Distrobox, summarised with Gemini (see "Notes from a video walkthrough")
+- [New to DistroBox? Start Here: Full Beginner's Tutorial!](https://youtu.be/eiDt4O6UPRw), video by Learn Linux TV (my notes were made with a Gemini summary)
 - [Distrobox: useful tips (NVIDIA, GUI, separate home)](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md)
 - [distrobox-export usage](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-export.md)
 - [distrobox-assemble usage](https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md)
