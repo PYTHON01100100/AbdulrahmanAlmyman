@@ -117,6 +117,10 @@ wsl --list --verbose
 
 You should see your distro with the **VERSION** column set to `2`.
 
+![My WSL setup: Ubuntu 24.04 updating with apt, neofetch showing the WSL 2 kernel, and the vllm and kubectl commands installed](/wsl-guide/wsl-setup.jpg)
+
+This is my own setup. In the screenshot, one Ubuntu 24.04 window is downloading updates with `apt`. In PowerShell, typing `wsl` opens Ubuntu and `neofetch` shows the system information, including the **WSL 2 kernel**. The third window already has `vllm` and `kubectl` installed, the same tools I use for LLM serving and Kubernetes work.
+
 ## Your first minutes in Linux
 
 Open Ubuntu from the Start menu, or type `wsl` in PowerShell. You are now in a Linux shell. Try some basics:
