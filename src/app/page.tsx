@@ -96,9 +96,12 @@ const intelData: IntelEntry[] = [
   { id: "author-clock", title: "Author Clock/Entertainment System", date: "2025-09-05", description: "Author Clock replica built on Raspberry Pi with YouTube, Spotify, and Kodi integration", href: "/case-study/author-clock" },
 ];
 
-// Archives: only the portfolio has an internal page; the rest link out to GitHub.
+// Archives: the portfolio and the profile README article have internal pages; the rest link out to GitHub.
 const projectsData = getVisibleCaseStudies("project")?.filter(
-  (project) => project.caseStudyId === "abdulrahman-almyman-portfolio",
+  (project) =>
+    ["abdulrahman-almyman-portfolio", "github-profile-readme"].includes(
+      project.caseStudyId,
+    ),
 );
 
 const archiveRepos: ExternalRepo[] = [
