@@ -82,7 +82,8 @@ const dataLogs: DataLog[] = [
   { timestamp: "2026.07.01_09:15", text: "Geo Log: Boundary breach successful. Arrived at the Switzerland node 🇨🇭. Mapping alpine environments and grid stabilization." },
 ];
 
-// In-memory Intel entries, newest first. Add href to link to a case-study page.
+// In-memory Intel entries. Any order here: they are sorted newest first on render.
+// Add href to link to a case-study page.
 const intelData: IntelEntry[] = [
   { id: "distrobox-guide", title: "Distrobox: Any Linux Distro Inside Your Terminal", date: "2026-10-16", description: "What Distrobox solves, how to install it with apt, dnf and pacman, run GUI apps, and build a toolbox for cloud work.", href: "/case-study/distrobox-guide" },
   { id: "llm-serving-litellm-vllm-ack", title: "Serving Large Language Models at Scale with LiteLLM and vLLM on Alibaba Cloud ACK", date: "2026-10-22", description: "A multi-model, OpenAI-compatible inference platform on GPU nodes in ACK, with a downloadable draw.io diagram.", href: "/case-study/llm-serving-litellm-vllm-ack" },
@@ -146,7 +147,9 @@ export default function Home() {
               />
             </Section>
             <Section title="InMemory Intel" className="lg:pl-4">
-              <IntelList entries={intelData} />
+              <IntelList
+                entries={[...intelData].sort((a, b) => b.date.localeCompare(a.date))}
+              />
             </Section>
           </div>
           {/* Projects Section */}
