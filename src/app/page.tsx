@@ -12,7 +12,7 @@ import { getVisibleCaseStudies } from "@/lib/case-studies";
 const contactData = [
   {
     label: "Resume/CV",
-    value: "https://drive.google.com/file/d/1K2lDxvyalavo-QJJIgDnzO189A0WtbJC/view",
+    value: "https://drive.google.com/file/d/1KHoUA8AS5-RKUPCLpa0c8Ilnd5qqWv2x/view",
     showAs: "resume",
   },
   {
