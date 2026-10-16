@@ -313,6 +313,8 @@ A few things worth calling out:
 
 The models are `ClusterIP` only; LiteLLM is the single door in.
 
+**Not sure which flags to use for your model?** [vLLM Recipes](https://recipes.vllm.ai/) is a community site where you pick a model, adjust it for your GPUs and copy a ready-to-run `vllm serve` command. It is a good starting point for the arguments in your own Deployment.
+
 Full manifests (namespace, node names and IPs replaced by placeholders): <a href="/llm-serving-ack/Llama-3.1-8B-Instruct.yaml" download>Llama-3.1-8B</a> · <a href="/llm-serving-ack/Qwen2.5-14B-Instruct.yaml" download>Qwen2.5-14B</a> · <a href="/llm-serving-ack/Qwen3-32B-AWQ.yaml" download>Qwen3-32B-AWQ</a> · <a href="/llm-serving-ack/Qwen3-30B-A3B.yaml" download>Qwen3-30B-A3B</a> · <a href="/llm-serving-ack/litellm-config.yaml" download>litellm-config</a> · <a href="/llm-serving-ack/litellm-deployment.yaml" download>litellm-deployment</a>
 
 ## The LiteLLM gateway
@@ -406,5 +408,6 @@ Putting LiteLLM in front of vLLM turns a pile of GPU deployments into a single, 
 - [Alibaba Cloud ACK documentation](https://www.alibabacloud.com/help/en/container-service-for-kubernetes)
 - [ACK: Deploy a vLLM inference application](https://www.alibabacloud.com/help/en/ack/cloud-native-ai-suite/user-guide/deploy-a-vllm-inference-application)
 - [vLLM documentation](https://docs.vllm.ai/)
+- [vLLM Recipes](https://recipes.vllm.ai/): ready-to-run `vllm serve` commands per model and GPU
 - [LiteLLM documentation](https://docs.litellm.ai/)
 - [Open WebUI](https://github.com/open-webui/open-webui)
