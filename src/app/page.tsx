@@ -88,13 +88,6 @@ const intelData: IntelEntry[] = [
   { id: "wsl-guide", title: "WSL: Use Linux on Windows Without a Virtual Machine", date: "2026-10-16", description: "What WSL solves, how to install it, try Ubuntu, Arch, Fedora and Kali, and use it for DevOps and GPU-accelerated AI.", href: "/case-study/wsl-guide" },
   { id: "distrobox-guide", title: "Distrobox: Any Linux Distro Inside Your Terminal", date: "2026-10-16", description: "What Distrobox solves, how to install it with apt, dnf and pacman, run GUI apps, and build a toolbox for cloud work.", href: "/case-study/distrobox-guide" },
   { id: "llm-serving-litellm-vllm-ack", title: "Serving Large Language Models with LiteLLM and vLLM on Alibaba Cloud ACK", date: "2026-11-18", description: "A multi-model, OpenAI-compatible inference platform on GPU nodes in ACK, with a downloadable draw.io diagram.", href: "/case-study/llm-serving-litellm-vllm-ack" },
-  { id: "alb-in-ack", title: "Using ALB in Alibaba Container Service for Kubernetes", date: "2026-04-26", description: "Customize an Application Load Balancer and use it with Ingress or Gateway API on Alibaba cloud.", href: "/case-study/alb-in-ack" },
-  { id: "homelab", title: "K3s Cluster Homelab", date: "2026-03-11", description: "Documenting my homelabbing journey! :)", href: "/case-study/homelab" },
-  { id: "deployment-strategies", title: "Application Zero-Downtime Deployment Strategies", date: "2026-02-28", description: "We explore Rolling Updates, Canary Deployments, and Blue/Green Deployments", href: "/case-study/deployment-strategies" },
-  { id: "k8s-adventures-pt2", title: "The end (?) of the Kubernetes learning journey", date: "2026-02-15", description: "After achieving Kubestronaut, am I done with Kubernetes?", href: "/case-study/k8s-adventures-pt2" },
-  { id: "k8s-adventures", title: "The Kubernetes learning journey (so far)", date: "2025-11-22", description: "Sharing thoughts after getting into the administration side of K8s", href: "/case-study/k8s-adventures" },
-  { id: "teamwork-and-collaboration", title: "Collaboration on GitHub", date: "2025-10-13", description: "A session I presented in DevOps bootcamp to help colleagues on how to efficiently collaborate on GitHub.", href: "/case-study/teamwork-and-collaboration" },
-  { id: "author-clock", title: "Author Clock/Entertainment System", date: "2025-09-05", description: "Author Clock replica built on Raspberry Pi with YouTube, Spotify, and Kodi integration", href: "/case-study/author-clock" },
 ];
 
 // Archives: the portfolio and the profile README article have internal pages; the rest link out to GitHub.
