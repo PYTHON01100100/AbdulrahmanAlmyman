@@ -101,7 +101,7 @@
             <mxRectangle height="104" width="172" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WJZtnNiKfoM-EU6AUUwO-54" parent="WJZtnNiKfoM-EU6AUUwO-51" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="&lt;br&gt;8.213.36.62 (Alibaba VPN, Tunnel 1)&lt;br&gt;Note: that IP got it after creation vpn via TR" vertex="1">
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-54" parent="WJZtnNiKfoM-EU6AUUwO-51" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="&lt;br&gt;44.44.23.13 (Alibaba VPN, Tunnel 1)&lt;br&gt;Note: that IP got it after creation vpn via TR" vertex="1">
           <mxGeometry height="104" width="174" x="346" as="geometry">
             <mxRectangle height="104" width="174" as="alternateBounds" />
           </mxGeometry>
