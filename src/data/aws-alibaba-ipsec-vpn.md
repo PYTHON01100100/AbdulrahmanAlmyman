@@ -52,6 +52,8 @@ Traffic goes from the EC2 in AWS, through the VGW and an IPsec tunnel over the i
 
 ## The IP plan
 
+> **Note:** the Alibaba Cloud public IPs in this article and its screenshots are replaced with example IPs (`44.44.23.x`). Use your own gateway IPs.
+
 Plan this **before** you click anything. Overlapping ranges are the number one reason a VPN "works" but traffic doesn't.
 
 | Network | CIDR / IP | Notes |
@@ -76,7 +78,7 @@ A customer gateway **always represents the other side**:
 
 | Customer gateway | Represents | ASN | Public IP |
 | --- | --- | --- | --- |
-| AWS customer gateway | Alibaba | `45104` | `8.213.36.62` (Alibaba VPN, tunnel 1) |
+| AWS customer gateway | Alibaba | `45104` | `44.44.23.13` (Alibaba VPN, tunnel 1) |
 | Alibaba customer gateway `CG1-PRIME` | AWS tunnel 1 | `64512` (AWS VGW default ASN) | `52.86.105.158` |
 | Alibaba customer gateway `BACKUP` | AWS tunnel 2 | `64512` | `54.225.87.140` |
 
@@ -118,7 +120,7 @@ My solution:
 2. Create the Alibaba side with those AWS IPs, and get Alibaba's VPN IPs.
 3. Come back and create the **real** AWS customer gateway with Alibaba's IP and ASN `45104`, then switch the VPN connection to it.
 
-![Creating the AWS customer gateway with BGP ASN 45104 and Alibaba's VPN IP 8.213.36.62](/aws-alibaba-ipsec/02-aws-placeholder-cgw.png)
+![Creating the AWS customer gateway with BGP ASN 45104 and Alibaba's VPN IP 44.44.23.13](/aws-alibaba-ipsec/02-aws-placeholder-cgw.png)
 
 ## Step 3 (AWS): Create the Site-to-Site VPN connection
 
@@ -172,7 +174,7 @@ Then fill in the two tunnels:
 
 ![Tunnel settings: each tunnel points to its AWS customer gateway with its own pre-shared key (keys hidden)](/aws-alibaba-ipsec/07b-alibaba-ipsec-tunnels.png)
 
-When it is created, Alibaba shows its gateway IPs: **`8.213.36.62` for tunnel 1** and **`8.213.36.73` for tunnel 2**. Now go back to AWS and finish step 2 with the real IP.
+When it is created, Alibaba shows its gateway IPs: **`44.44.23.13` for tunnel 1** and **`44.44.23.14` for tunnel 2**. Now go back to AWS and finish step 2 with the real IP.
 
 ### Troubleshooting: right after creating the IPsec connection
 
@@ -223,7 +225,7 @@ On AWS, the CloudWatch tunnel logs show the IKE state, DPD and NAT-T, and the BG
 | Problem | Evidence | Fix |
 | --- | --- | --- |
 | Alibaba BGP IP conflicts with AWS | Alibaba used `169.254.10.1` and `169.254.20.1`, but AWS owns `.1` | Change to `169.254.10.2` and `169.254.20.2` |
-| Tunnel 2 uses a different Alibaba IP | Tunnel 1 is `8.213.36.62`, tunnel 2 is `8.213.36.73`, but the AWS CGW only knows `.62` | Create a **second AWS CGW** (`8.213.36.73`, ASN `45104`) and a **second AWS VPN connection** |
+| Tunnel 2 uses a different Alibaba IP | Tunnel 1 is `44.44.23.13`, tunnel 2 is `44.44.23.14`, but the AWS CGW only knows `.62` | Create a **second AWS CGW** (`44.44.23.14`, ASN `45104`) and a **second AWS VPN connection** |
 | Tunnel 2 inside CIDRs don't match | AWS tunnel 2 used `169.254.137.140/30`, Alibaba used `169.254.20.0/30` | Use the same /30 on both sides |
 | Phase 1 failed on both tunnels | Connection status | Recheck the PSK and IKE parameters |
 
@@ -233,7 +235,7 @@ After the fix, **AWS tunnel 1 is Up with 2 BGP routes**:
 
 And Alibaba shows **Phase 2 succeeded and BGP Normal** on tunnel 1 (visible behind the log panel in the logs screenshot above).
 
-**Key lesson:** an AWS VPN connection has **one** customer gateway IP, and both AWS tunnels end on that IP. Alibaba's dual-tunnel IPsec uses **two different public IPs**. So for full redundancy you need **two AWS VPN connections**: one to `8.213.36.62` and one to `8.213.36.73`. In this lab only tunnel 1 is up, which is fine for a proof of concept but **not highly available**. Both consoles warn about this.
+**Key lesson:** an AWS VPN connection has **one** customer gateway IP, and both AWS tunnels end on that IP. Alibaba's dual-tunnel IPsec uses **two different public IPs**. So for full redundancy you need **two AWS VPN connections**: one to `44.44.23.13` and one to `44.44.23.14`. In this lab only tunnel 1 is up, which is fine for a proof of concept but **not highly available**. Both consoles warn about this.
 
 ### Troubleshooting: tunnel and BGP
 
@@ -270,7 +272,7 @@ The TR now has the **VPN attachment** and the **VPC attachment** (and later the 
 
 | Destination | Next hop | Type |
 | --- | --- | --- |
-| `172.31.0.0/16` | VPN attachment (via `8.213.36.62`) | Propagated |
+| `172.31.0.0/16` | VPN attachment (via `44.44.23.13`) | Propagated |
 | `192.159.5.0/24` | VPC attachment | Propagated |
 | `192.159.10.0/24` | VPC attachment | Propagated |
 
@@ -389,17 +391,16 @@ Still working, with **0% packet loss** (925 of 925 packets in one run). Notice t
 
 ## What I would do next
 
-- **Full redundancy:** a second AWS VPN connection to Alibaba's second IP (`8.213.36.73`), so both tunnels are up.
+- **Full redundancy:** a second AWS VPN connection to Alibaba's second IP (`44.44.23.14`), so both tunnels are up.
 - **Private CIDRs** instead of `192.159.0.0/16`.
 - **Tighter rules:** NACLs, security groups and firewall policies limited to the other cloud's CIDR and the ports you need.
 - **Monitoring:** CloudWatch alarms on tunnel state ([VPN metrics](https://docs.aws.amazon.com/vpn/latest/s2svpn/viewing-metrics.html)) and alerts on the TR attachments.
 
 ## Acknowledgment
 
-Thanks to **[Hussah Alotaibi](https://www.linkedin.com/in/hussah-alotaibi-7842a7362/)**, co-op, for her help on this project. She built and documented the same AWS and Alibaba Cloud connection, and her notes on BGP and tunnel settings helped me find my mistakes faster. Her files are available to download:
+Thanks to **[Hussah Alotaibi](https://www.linkedin.com/in/hussah-alotaibi-7842a7362/)**, co-op, for her help on this project. She built and documented the same AWS and Alibaba Cloud connection, and her notes on BGP and tunnel settings helped me find my mistakes faster. Her documentation is available to download:
 
-- <a href="/aws-alibaba-ipsec/coop/AWS_Alibaba_CEN_VPN_Complete_Technical_Documentation.pdf" download>Complete technical documentation (PDF)</a>
-- Screenshots: <a href="/aws-alibaba-ipsec/coop/01_BGP_imprtant-fixed.png" download>BGP</a> · <a href="/aws-alibaba-ipsec/coop/02_IPsec.png" download>IPsec</a> · <a href="/aws-alibaba-ipsec/coop/03_Gateways.png" download>Gateways</a> · <a href="/aws-alibaba-ipsec/coop/04_IKE.png" download>IKE</a> · <a href="/aws-alibaba-ipsec/coop/05_Tunnel_Config.png" download>Tunnel config</a> · <a href="/aws-alibaba-ipsec/coop/06_Tunnel_Status.png" download>Tunnel status</a>
+<a href="/aws-alibaba-ipsec/coop/AWS_Alibaba_CEN_VPN_Complete_Technical_Documentation.pdf" download>⬇ Download her complete technical documentation (PDF)</a>
 
 ## Conclusion
 
