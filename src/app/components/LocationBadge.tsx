@@ -17,11 +17,12 @@ interface Clock {
 
 function readClock(timeZone: string): Clock {
   const now = new Date();
-  const time = new Intl.DateTimeFormat("en-GB", {
+  const time = new Intl.DateTimeFormat("en-US", {
     timeZone,
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
+    hour12: true,
   }).format(now);
   const zone =
     new Intl.DateTimeFormat("en-GB", { timeZone, timeZoneName: "short" })
@@ -81,7 +82,7 @@ export default function LocationBadge({
       <p>
         <span className="text-terminal-comment">TIME:</span>{" "}
         <span className="text-terminal-strong tabular-nums">
-          {clock ? `${clock.time} ${clock.zone}` : "--:--:--"}
+          {clock ? `${clock.time} ${clock.zone}` : "--:--:-- --"}
         </span>
         <span className="nier-blink">_</span>
       </p>
