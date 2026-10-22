@@ -60,6 +60,7 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 ### Writing and academic work
 
 - LibreOffice
+- MS Office (for work, unfortunately)
 - TreeSheets
 
 ### Reading books and documents
@@ -95,15 +96,15 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 
 - DaVinci Resolve
 - Adobe Premiere Pro
-- Microsoft Clipchamp
+- Microsoft Clipchamp (I hate it)
 
-Adobe, the evil company: thank Allah I did not pay the thieves.
+Adobe, the evil company: thank Allah I did not pay for the thieves.
 
 ### Image editing and design
 
 - Figma
 - GIMP
-- Adobe Photoshop
+- Photo Craft
 
 ### System monitoring
 
