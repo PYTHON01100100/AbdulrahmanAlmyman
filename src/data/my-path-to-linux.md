@@ -161,7 +161,7 @@ Customization is one of my favorite parts of Linux. On Linux the desktop is not 
 - **Panels and bars** (Waybar, for example), **launchers**, notification daemons, **themes**, **icons**, **fonts** and **wallpapers**.
 - **Dotfiles**: the configuration files (usually starting with a dot, like `.config/hypr/hyprland.conf`) that describe your whole setup. Many people keep them in Git and share them.
 
-The community calls this **ricing**: polishing a desktop until every color, gap and font matches. The best place to see it is the subreddit [r/unixporn](https://www.reddit.com/r/unixporn/) (the name is a joke, the content is screenshots of desktops).
+The community calls this **ricing**: polishing a desktop until every color, gap and font matches. The best places to see it are the subreddits [r/unixporn](https://www.reddit.com/r/unixporn/) and [r/LinuxPorn](https://www.reddit.com/r/LinuxPorn/) (the names are a joke, the content is screenshots of desktops).
 
 Compare my desktops above with this community setup on Arch with Hyprland:
 
