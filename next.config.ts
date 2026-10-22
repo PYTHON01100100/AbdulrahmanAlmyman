@@ -18,13 +18,6 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["gray-matter"],
   distDir: "dist",
   images: {
-    remotePatterns: [
-      new URL("https://alialjaffer-website.s3.me-south-1.amazonaws.com/**/**"),
-      new URL("https://storage.googleapis.com/alialjaffer-portfolio/**/**"),
-      new URL(
-        "https://alialjaffer-website-backup.s3.eu-north-1.amazonaws.com/**/**",
-      ),
-    ],
     unoptimized: true,
   },
   trailingSlash: false,
