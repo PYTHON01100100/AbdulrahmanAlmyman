@@ -31,7 +31,9 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 - Ubuntu
 - Linux Mint
 
-## Development
+## Desktop programs
+
+### Development
 
 - Visual Studio Code
 - Antigravity (a little)
@@ -40,23 +42,56 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 - Ollama
 - OpenCode
 
-## Text editors and notes
+### Text editors and notes
 
 - Obsidian
+- GNU Emacs
 - Vim
 - nano
 
-## Web browsers
+### Web browsers
 
 - Firefox
+- Brave
+- Zen Browser
+- GNU IceCat
 - Google Chrome (for work, unfortunately)
 
-## Media players
+### Writing and academic work
+
+- LibreOffice
+- TreeSheets
+
+### Reading books and documents
+
+- Zathura
+- Papers
+
+### Encryption and password management
+
+- GnuPG
+- KeePassXC
+- Tomb
+
+### File management
+
+- PCManFM
+- nnn
+
+### Cryptocurrency
+
+- Bitcoin
+- Monero
+- Electrum
+
+### Media players
 
 - mpv
+- uosc
 - VLC
+- imv
 
-## Video editing
+### Video editing
 
 - DaVinci Resolve
 - Adobe Premiere Pro
@@ -64,19 +99,62 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 
 Adobe, the evil company: thank Allah I did not pay the thieves.
 
-## Image editing and design
+### Image editing and design
 
 - Figma
 - GIMP
 - Adobe Photoshop
 
-## System monitoring
+### System monitoring
 
 - [AppControl](https://www.appcontrol.com/)
 
-## Communication
+### Communication
 
 - Telegram
 - Signal
 - Discord
 - WhatsApp (unfortunately)
+
+## Mobile apps
+
+### Quran
+
+- Surah (سورة)
+
+### Media players
+
+- mpvKt
+- Gramophone
+
+### Photos
+
+- Fossify Gallery
+
+### File management
+
+- Material Files
+
+### Books and documents
+
+- Librera
+
+### Notes
+
+- EasyNotes
+- BeauTyXT
+
+### Downloads
+
+- Aria2App
+- Seal
+
+### Web browser
+
+- Brave
+
+### Privacy and security
+
+- Orbot
+- Exif Eraser
+- DNSNet
