@@ -19,6 +19,8 @@ Publish date: `2026-10-22` · Reading time: `~15 min`
 
 ![Logos of the Linux distributions in this article around Tux, the Linux penguin: Ubuntu, Linux Mint, Pop!_OS, PikaOS, Fedora, Arch Linux, CachyOS, Omarchy, Nobara, Kali, Bazzite and SteamOS](/my-path-to-linux/linux-distros.png)
 
+Image made by me with [PhotoCraft](https://getartcraft.com/apps/photocraft).
+
 **In this article:** my relationship with Linux · what Linux actually is · a short history · why I prefer it · why it matters for cloud and AI work · the distros I have used · customization and ricing · which distro you should choose · how to start · resources
 
 ## My relationship with Linux

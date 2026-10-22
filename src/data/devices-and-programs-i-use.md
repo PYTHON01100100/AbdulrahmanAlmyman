@@ -108,7 +108,7 @@ Adobe, the evil company: thank Allah I did not pay for the thieves.
 
 - Figma
 - GIMP
-- Photo Craft
+- [PhotoCraft](https://getartcraft.com/apps/photocraft)
 
 ### System monitoring
 
