@@ -100,6 +100,10 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 
 Adobe, the evil company: thank Allah I did not pay for the thieves.
 
+### Screen recording and streaming
+
+- OBS Studio
+
 ### Image editing and design
 
 - Figma
