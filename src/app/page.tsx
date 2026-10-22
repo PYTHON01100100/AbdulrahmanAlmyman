@@ -85,6 +85,7 @@ const dataLogs: DataLog[] = [
 // In-memory Intel entries. Any order here: they are sorted newest first on render.
 // Add href to link to a case-study page.
 const intelData: IntelEntry[] = [
+  { id: "my-path-to-linux", title: "My Path to Linux: From Curiosity to Freedom", date: "2026-10-22", description: "My journey through Linux, open source, cloud engineering, AI, gaming and desktop customization, and which distro I would recommend to you.", href: "/case-study/my-path-to-linux" },
   { id: "aws-alibaba-ipsec-vpn", title: "Connecting AWS and Alibaba Cloud with Site-to-Site IPsec VPN, BGP and a Transit Router", date: "2026-10-21", description: "A step-by-step lab with the IP plan, route tables, Cloud Firewall, and every IPsec and BGP problem I had to fix.", href: "/case-study/aws-alibaba-ipsec-vpn" },
   { id: "wsl-guide", title: "WSL: Use Linux on Windows Without a Virtual Machine", date: "2026-10-16", description: "What WSL solves, how to install it, try Ubuntu, Arch, Fedora and Kali, and use it for DevOps and GPU-accelerated AI.", href: "/case-study/wsl-guide" },
   { id: "distrobox-guide", title: "Distrobox: Any Linux Distro Inside Your Terminal", date: "2026-10-16", description: "What Distrobox solves, how to install it with apt, dnf and pacman, run GUI apps, and build a toolbox for cloud work.", href: "/case-study/distrobox-guide" },
