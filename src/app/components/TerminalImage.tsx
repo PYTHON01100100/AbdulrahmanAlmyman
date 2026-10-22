@@ -39,7 +39,7 @@ export default function TerminalImage({
     <>
       <figure className={`my-6 ${className}`}>
         <div
-          className="inline-block border border-terminal-border bg-terminal-border p-2 cursor-pointer hover:border-terminal-accent transition-colors max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+          className="block w-full border border-terminal-border bg-terminal-border p-2 cursor-pointer hover:border-terminal-accent transition-colors"
           onClick={() => setIsModalOpen(true)}
         >
           <div className="bg-terminal-bg p-1">
@@ -48,10 +48,10 @@ export default function TerminalImage({
               alt={imageAlt}
               width={imageWidth}
               height={imageHeight}
-              className="w-full h-auto object-contain p-1"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 75vw, 50vw"
+              className="w-full h-auto object-contain p-1 mx-auto"
+              sizes="100vw"
               style={{
-                maxHeight: "60vh",
+                maxHeight: "80vh",
                 objectFit: "contain",
               }}
             />
