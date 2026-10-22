@@ -5,8 +5,41 @@ import { useEffect, useState } from "react";
 interface LocationBadgeProps {
   geo: string;
   hq: string;
-  status?: string;
-  launch?: string;
+  timeZone?: string;
+}
+
+interface Clock {
+  time: string;
+  zone: string;
+  gregorian: string;
+  hijri: string;
+}
+
+function readClock(timeZone: string): Clock {
+  const now = new Date();
+  const time = new Intl.DateTimeFormat("en-GB", {
+    timeZone,
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).format(now);
+  const zone =
+    new Intl.DateTimeFormat("en-GB", { timeZone, timeZoneName: "short" })
+      .formatToParts(now)
+      .find((part) => part.type === "timeZoneName")?.value ?? "";
+  const gregorian = new Intl.DateTimeFormat("en-GB", {
+    timeZone,
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(now);
+  const hijri = new Intl.DateTimeFormat("en-GB-u-ca-islamic-umalqura", {
+    timeZone,
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(now);
+  return { time, zone, gregorian, hijri };
 }
 
 // Status plate: fixed beside the theme toggle on large screens, inline on small ones.
@@ -14,10 +47,11 @@ interface LocationBadgeProps {
 export default function LocationBadge({
   geo,
   hq,
-  status,
-  launch,
+  timeZone = "Europe/London",
 }: LocationBadgeProps) {
   const [scrolled, setScrolled] = useState(false);
+  // Filled in after mount: the static HTML has no clock, so there is no hydration mismatch.
+  const [clock, setClock] = useState<Clock | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -25,6 +59,13 @@ export default function LocationBadge({
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const tick = () => setClock(readClock(timeZone));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [timeZone]);
 
   return (
     <div
@@ -38,22 +79,28 @@ export default function LocationBadge({
         <span className="text-terminal-strong">{geo}</span>
       </p>
       <p>
+        <span className="text-terminal-comment">TIME:</span>{" "}
+        <span className="text-terminal-strong tabular-nums">
+          {clock ? `${clock.time} ${clock.zone}` : "--:--:--"}
+        </span>
+        <span className="nier-blink">_</span>
+      </p>
+      <p>
+        <span className="text-terminal-comment">DATE:</span>{" "}
+        <span className="text-terminal-strong">
+          {clock ? clock.gregorian : "--"}
+        </span>
+      </p>
+      <p>
+        <span className="text-terminal-comment">HIJRI:</span>{" "}
+        <span className="text-terminal-strong">
+          {clock ? clock.hijri : "--"}
+        </span>
+      </p>
+      <p>
         <span className="text-terminal-comment">HQ:</span>{" "}
         <span className="text-terminal-strong">{hq}</span>
       </p>
-      {status && (
-        <p>
-          <span className="text-terminal-comment">STATE:</span>{" "}
-          <span className="text-terminal-strong">{status}</span>
-          <span className="nier-blink">_</span>
-        </p>
-      )}
-      {launch && (
-        <p>
-          <span className="text-terminal-comment">OFFICIAL_LAUNCH:</span>{" "}
-          <span className="text-terminal-strong">{launch}</span>
-        </p>
-      )}
     </div>
   );
 }

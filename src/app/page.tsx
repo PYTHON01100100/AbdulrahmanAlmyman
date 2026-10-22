@@ -114,8 +114,6 @@ export default function Home() {
       <LocationBadge
         geo="London, UK"
         hq="SCCC by stc"
-        status="UNDER DEV"
-        launch="18 NOV 2026"
       />
       {/* Large screen: centered container with max width */}
       <div className=" lg:flex lg:items-center lg:justify-center lg:min-h-[calc(100vh-4rem)] ">
