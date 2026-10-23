@@ -111,7 +111,7 @@ This project is the current portfolio. My first portfolio is now the **old versi
 
 ![My old portfolio: a dark page with my name in red, a round picture of Kirby, a short introduction, social icons and a Contact Me button](/portfolio-article/old-portfolio.png)
 
-The old portfolio had one detail I still love: the round picture changed every 15 seconds, cycling through art from my favorite games, anime and films: Fullmetal Alchemist: Brotherhood, Banana Fish, Kirby, The Legend of Zelda, Red Dead Redemption 2, NieR, the Studio Ghibli films, *Your Name*, Hollow Knight, Animal Crossing, The Witcher 3, DOOM, Stray and ICO. The screenshot above caught it on Kirby.
+The old portfolio had one detail I still love: the round picture changed every 15 seconds, cycling through art from my favorite games, anime and films: Fullmetal Alchemist: Brotherhood, Hunter x Hunter, Banana Fish, Kirby, The Legend of Zelda, Red Dead Redemption 2, NieR, the Studio Ghibli films, *Your Name*, Hollow Knight, Animal Crossing, The Witcher 3, DOOM, Stray and ICO. The screenshot above caught it on Kirby.
 
 The old version was a static page that told people about me. The current one is a system that lets me keep publishing: a project archive, a blog, a log of updates, a theme, and a deployment pipeline. It is a portfolio I can grow for years, instead of one I have to rebuild.
 
