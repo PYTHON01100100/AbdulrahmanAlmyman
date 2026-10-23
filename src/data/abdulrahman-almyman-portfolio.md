@@ -115,14 +115,15 @@ The old portfolio had one detail I still love: the round picture changed every 1
 
 The old version was a static page that told people about me. The current one is a system that lets me keep publishing: a project archive, a blog, a log of updates, a theme, and a deployment pipeline. It is a portfolio I can grow for years, instead of one I have to rebuild.
 
-## The goal: a brand that is not limited to Saudi Arabia
+## The Goal: Engineering Beyond Borders
 
-I am proud of where I come from, and the Saudi tech scene gave me my start. But I want my name to mean something to engineers and employers anywhere, not only in the Kingdom. The site is designed with that in mind:
+Technology knows no borders, and neither does curiosity.
 
-- **English first.** Every case study is written in English, in the way international teams write: problem, approach, architecture, what went wrong.
-- **Global credentials.** Certifications from AWS and Alibaba Cloud, and write-ups on tools used all over the world: Kubernetes, vLLM, LiteLLM, WSL and Distrobox.
-- **Local roots, visible.** The Arabic keywords and name in the metadata keep me findable at home while the content speaks to everyone.
-- **A recognisable identity.** A memorable visual style makes the site, and so the name behind it, easier to recall than a standard template.
+My ambition is to build a globally recognized engineering identity through meaningful projects, open-source contributions, and knowledge sharing.
+
+I want my work in Cloud Engineering and Artificial Intelligence to reach and inspire engineers around the world, encourage collaboration, and contribute to the advancement of technology.
+
+**Great engineering is not defined by geography, but by the ideas we explore, the problems we solve, and the impact we create.**
 
 ## A CV that shows the work behind it
 
