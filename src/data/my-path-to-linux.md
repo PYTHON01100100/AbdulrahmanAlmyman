@@ -41,7 +41,7 @@ Strictly speaking, **Linux is the kernel**, the core of that system. The kernel 
 
 ![A hand drawing of the GNU head and Tux the penguin: GNU is the free Unix-like system Richard Stallman started in 1983, and Linux is the kernel Linus Torvalds created in 1991](/my-path-to-linux/gnu-and-linux.png)
 
-Drawing by **0xSaad**, from his Arabic article [An overview of the GNU/Linux operating system](https://saadaiblog.netlify.app/blog/post26.5) on SaadAI Blog.
+Drawing by **[Saad Al-Malki (0xSaad)](https://www.linkedin.com/in/saad-al-malki/)**, from his Arabic article [An overview of the GNU/Linux operating system](https://saadaiblog.netlify.app/blog/post26.5) on SaadAI Blog.
 
 A **distribution** (or *distro*) is a complete operating system built around the Linux kernel. Each distro makes its own choices:
 
