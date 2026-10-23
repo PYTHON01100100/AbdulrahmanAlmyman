@@ -120,7 +120,7 @@ The old version was a static page that told people about me. The current one is 
 I am proud of where I come from, and the Saudi tech scene gave me my start. But I want my name to mean something to engineers and employers anywhere, not only in the Kingdom. The site is designed with that in mind:
 
 - **English first.** Every case study is written in English, in the way international teams write: problem, approach, architecture, what went wrong.
-- **Global credentials.** Certifications from AWS and Alibaba Cloud, and write-ups on tools used all over the world: Kubernetes, vLLM, LiteLLM, and KEDA.
+- **Global credentials.** Certifications from AWS and Alibaba Cloud, and write-ups on tools used all over the world: Kubernetes, vLLM, LiteLLM, WSL and Distrobox.
 - **Local roots, visible.** The Arabic keywords and name in the metadata keep me findable at home while the content speaks to everyone.
 - **A recognisable identity.** A memorable visual style makes the site, and so the name behind it, easier to recall than a standard template.
 
@@ -130,13 +130,14 @@ The second goal is to make my experience easy to verify. My time at **SCCC (by s
 
 | What a CV says | Where the site shows it |
 | --- | --- |
-| Kubernetes and cloud-native skills | The Kubernetes learning journey posts, the K3s homelab, KEDA and zero-downtime deployment case studies |
-| Alibaba Cloud and AWS expertise | ALB on ACK, serving LLMs on ACK, AWS cost-alert automation, the ACA and AWS certifications |
-| AI and LLM engineering | Image captioning with AWS and Hugging Face, and the multi-model LiteLLM + vLLM platform on ACK |
-| DevOps and automation | End-to-end automated deployment on Azure, GitHub collaboration, and this site's own CI/CD |
+| Kubernetes and AI infrastructure | [Serving LLMs with LiteLLM and vLLM on Alibaba Cloud ACK](/case-study/llm-serving-litellm-vllm-ack): GPU nodes, Deployments, PV/PVC on OSS, a LiteLLM gateway |
+| Cloud networking on Alibaba Cloud and AWS | [Connecting AWS and Alibaba Cloud with IPsec VPN, BGP and a Transit Router](/case-study/aws-alibaba-ipsec-vpn) |
+| Certifications | AWS Certified Machine Learning Engineer – Associate and Alibaba Cloud ACA Cloud Computing |
+| Linux and developer tooling | [My Path to Linux](/case-study/my-path-to-linux), the [WSL guide](/case-study/wsl-guide) and the [Distrobox guide](/case-study/distrobox-guide) |
+| DevOps and automation | This site's own CI/CD with GitHub Actions, Cloudflare DNS and GitHub Pages |
 | Communication | The articles themselves, written to teach, with diagrams and downloadable files |
 
-Instead of "experienced in Kubernetes", a reader can open a page and see how I set up a cluster, what broke, and how I fixed it.
+Instead of "experienced in Kubernetes", a reader can open a page and see how I deployed models on a cluster, what broke, and how I fixed it.
 
 ## What is next
 
