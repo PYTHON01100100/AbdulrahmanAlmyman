@@ -39,6 +39,10 @@ An **operating system** is the software that sits between you and the hardware. 
 
 Strictly speaking, **Linux is the kernel**, the core of that system. The kernel talks directly to the hardware. On its own, though, a kernel is not something you can use. You also need a shell, basic commands like `ls` and `cp`, libraries, a package manager, and usually a graphical desktop. Many of those core tools come from the **GNU Project**, which is why some people insist on the name **GNU/Linux** for the complete system. In everyday conversation, "Linux" usually means the whole thing.
 
+![A hand drawing of the GNU head and Tux the penguin: GNU is the free Unix-like system Richard Stallman started in 1983, and Linux is the kernel Linus Torvalds created in 1991](/my-path-to-linux/gnu-and-linux.png)
+
+Drawing by **0xSaad**, from his Arabic article [An overview of the GNU/Linux operating system](https://saadaiblog.netlify.app/blog/post26.5) on SaadAI Blog.
+
 A **distribution** (or *distro*) is a complete operating system built around the Linux kernel. Each distro makes its own choices:
 
 - **Package manager:** how you install and update software (`apt` on Ubuntu and Mint, `dnf` on Fedora, `pacman` on Arch).
