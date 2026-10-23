@@ -86,7 +86,6 @@ const dataLogs: DataLog[] = [
 // In-memory Intel entries. Any order here: they are sorted newest first on render.
 // Add href to link to a case-study page.
 const intelData: IntelEntry[] = [
-  { id: "beyond-the-profile", title: "Beyond the Profile: Italy, Philosophy, and My Journey in Cloud & AI", date: "2026-11-17", description: "The story behind my LinkedIn photographs from Italy, and how curiosity connects to Cloud Engineering and AI.", href: "/case-study/beyond-the-profile" },
   { id: "devices-and-programs-i-use", title: "Devices and Programs I Use", date: "2025-01-01", description: "An ever-updating list of the devices, operating systems and programs I use and recommend.", href: "/case-study/devices-and-programs-i-use" },
   { id: "my-path-to-linux", title: "My Path to Linux: From Curiosity to Freedom", date: "2026-10-22", description: "My journey through Linux, open source, cloud engineering, AI, gaming and desktop customization, and which distro I would recommend to you.", href: "/case-study/my-path-to-linux" },
   { id: "aws-alibaba-ipsec-vpn", title: "Connecting AWS and Alibaba Cloud with Site-to-Site IPsec VPN, BGP and a Transit Router", date: "2026-10-21", description: "A step-by-step lab with the IP plan, route tables, Cloud Firewall, and every IPsec and BGP problem I had to fix.", href: "/case-study/aws-alibaba-ipsec-vpn" },
