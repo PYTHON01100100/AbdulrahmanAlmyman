@@ -20,6 +20,8 @@ This website is my main project: the [AbdulrahmanAlmyman](https://github.com/PYT
 - **Live site:** [www.abdulrahmanalmyman.dev](https://www.abdulrahmanalmyman.dev) (also on [GitHub Pages](https://python01100100.github.io/AbdulrahmanAlmyman/))
 - **Source code:** [github.com/PYTHON01100100/AbdulrahmanAlmyman](https://github.com/PYTHON01100100/AbdulrahmanAlmyman)
 
+![The current NieR:Automata style portfolio: About, Contact, Data Logs and InMemory Intel on the left, Archives and Certifications on the right, and the status plate with London time and Hijri date in the corner](/portfolio-article/new-portfolio.png)
+
 ## The idea
 
 A CV is a list of claims. A portfolio is supposed to be the evidence. My goal was a site where a recruiter, an engineer or a hiring manager can see, in a few minutes:
@@ -106,6 +108,10 @@ This project is the current portfolio. My first portfolio is now the **old versi
 
 - Old live site: [python01100100.github.io/Abdulrahman_Almyman_Portfolio](https://python01100100.github.io/Abdulrahman_Almyman_Portfolio/)
 - Old source code: [github.com/PYTHON01100100/Abdulrahman_Almyman_Portfolio](https://github.com/PYTHON01100100/Abdulrahman_Almyman_Portfolio)
+
+![My old portfolio: a dark page with my name in red, a round picture of Kirby, a short introduction, social icons and a Contact Me button](/portfolio-article/old-portfolio.png)
+
+The old portfolio had one detail I still love: the round picture changed every 15 seconds, cycling through art from my favorite games, anime and films: Fullmetal Alchemist: Brotherhood, Banana Fish, Kirby, The Legend of Zelda, Red Dead Redemption 2, NieR, the Studio Ghibli films, *Your Name*, Hollow Knight, Animal Crossing, The Witcher 3, DOOM, Stray and ICO. The screenshot above caught it on Kirby.
 
 The old version was a static page that told people about me. The current one is a system that lets me keep publishing: a project archive, a blog, a log of updates, a theme, and a deployment pipeline. It is a portfolio I can grow for years, instead of one I have to rebuild.
 
