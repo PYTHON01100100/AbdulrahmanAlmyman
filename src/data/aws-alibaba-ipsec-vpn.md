@@ -70,7 +70,7 @@ Plan this **before** you click anything. Overlapping ranges are the number one r
 | BGP inside tunnel 1 | `169.254.10.0/30` | AWS `.1`, Alibaba `.2` |
 | BGP inside tunnel 2 | `169.254.20.0/30` (Alibaba side) | see troubleshooting |
 
-**Lesson:** `192.159.x.x` is a **public** range, not a private one. It worked in this lab, but for real networks use private ranges (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) that don't overlap between the two clouds.
+**Lesson:** `192.159.x.x` is a **public** range, not a private one. It worked in this lab, but for real networks use [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918) private ranges (`10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) that don't overlap between the two clouds.
 
 ### Gateways, ASNs and public IPs
 
