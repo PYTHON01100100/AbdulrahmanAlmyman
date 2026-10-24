@@ -1,0 +1,124 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="wCY5MEXhOTY5Qb9T2Z4E">
+    <mxGraphModel dx="1426" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QIzOiZumEpr8V6Eci3e1-1" parent="1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;strokeColor=#8C4FFF;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" value="VPC&lt;br&gt;IP:&amp;nbsp;&lt;span style=&quot;color: rgb(198, 198, 205); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; font-size: 14px; white-space: nowrap; background-color: rgb(0, 17, 41);&quot;&gt;172.31.0.0/16&lt;/span&gt;" vertex="1">
+          <mxGeometry height="450" width="488" x="80" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="QIzOiZumEpr8V6Eci3e1-3" parent="QIzOiZumEpr8V6Eci3e1-1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.vpn_connection;" value="&lt;span style=&quot;color: rgb(198, 198, 205); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; font-size: 14px; text-align: start; background-color: rgb(22, 29, 38);&quot;&gt;IP Tunnel 1&lt;br&gt;34.193.229.239&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(198, 198, 205); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; font-size: 14px; text-align: start; background-color: rgb(22, 29, 38);&quot;&gt;IP Tunnel 2:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;text-align: start;&quot;&gt;&lt;span style=&quot;color: rgb(198, 198, 205); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; font-size: 14px; background-color: rgb(22, 29, 38);&quot;&gt;100.55.147.255&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(198, 198, 205); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; font-size: 14px; text-align: start; background-color: rgb(22, 29, 38);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="78" width="70" x="410" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-11" edge="1" parent="QIzOiZumEpr8V6Eci3e1-1" source="WJZtnNiKfoM-EU6AUUwO-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="QIzOiZumEpr8V6Eci3e1-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-8" parent="QIzOiZumEpr8V6Eci3e1-1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" value="Private subnet&lt;div&gt;IP:&lt;span style=&quot;background-color: rgb(0, 17, 41); color: rgb(198, 198, 205); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; font-size: 14px; white-space: nowrap;&quot;&gt;172.31.64.0/20&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="178.65" width="200" x="30" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-7" parent="WJZtnNiKfoM-EU6AUUwO-8" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ecs;fillColor=#F58534;gradientColor=none;" value="IP&amp;nbsp;172.31.71.127" vertex="1">
+          <mxGeometry height="67.5" width="72" x="64" y="55.58" as="geometry" />
+        </mxCell>
+        <mxCell id="QIzOiZumEpr8V6Eci3e1-10" edge="1" parent="1" source="QIzOiZumEpr8V6Eci3e1-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="NbJCKgk8Ob-dbe2LQdHP-2">
+          <mxGeometry relative="1" x="-0.1361" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="449" />
+              <mxPoint x="670" y="450" />
+              <mxPoint x="930" y="450" />
+            </Array>
+            <mxPoint x="860" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="262XCVSNkb04TCvRgoUg-1" connectable="0" parent="QIzOiZumEpr8V6Eci3e1-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="ABC T1 IP:&amp;nbsp;44.44.23.13&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;ABC T2 IP:&amp;nbsp;44.44.23.14&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0262" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QIzOiZumEpr8V6Eci3e1-12" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#FF8000;" value="" vertex="1">
+          <mxGeometry height="407.88" width="407.88" x="970" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="QIzOiZumEpr8V6Eci3e1-13" parent="1" style="aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.vpc_virtual_private_cloud;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; MAIN VPC&amp;nbsp;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; IP: 192.159.0/16" vertex="1">
+          <mxGeometry height="36.6" width="57" x="970" y="221" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF8000;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;Vswitch B:&lt;/span&gt;&lt;span&gt;192.159.10.0/24&lt;/span&gt;" vertex="1">
+          <mxGeometry height="52.5" width="270" x="990" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="QIzOiZumEpr8V6Eci3e1-15" parent="1" style="aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.vswitch;" value="" vertex="1">
+          <mxGeometry height="37.5" width="52.5" x="1000" y="562.65" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF8000;" value="" vertex="1">
+          <mxGeometry height="160" width="260" x="1090" y="369" as="geometry" />
+        </mxCell>
+        <mxCell id="QIzOiZumEpr8V6Eci3e1-14" parent="1" style="aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.vswitch;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Vswitch A:&lt;span&gt;192.159.5.0/24&lt;/span&gt;" vertex="1">
+          <mxGeometry height="37.5" width="52.5" x="1090" y="372.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-6" parent="1" style="aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.ecs_elastic_compute_service;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;IP:192.159.5.219&lt;/div&gt;" vertex="1">
+          <mxGeometry height="45.3" width="48.6" x="1220" y="450.68" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-46" parent="1" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;tableRender=collapsed;" value="" vertex="1">
+          <mxGeometry height="272.5" width="520" x="630" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-47" parent="WJZtnNiKfoM-EU6AUUwO-46" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;" value="" vertex="1">
+          <mxGeometry height="84" width="520" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-48" parent="WJZtnNiKfoM-EU6AUUwO-47" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="Customer gatway" vertex="1">
+          <mxGeometry height="84" width="174" as="geometry">
+            <mxRectangle height="84" width="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-49" parent="WJZtnNiKfoM-EU6AUUwO-47" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="ASN" vertex="1">
+          <mxGeometry height="84" width="172" x="174" as="geometry">
+            <mxRectangle height="84" width="172" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-50" parent="WJZtnNiKfoM-EU6AUUwO-47" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="PUBLIC IP" vertex="1">
+          <mxGeometry height="84" width="174" x="346" as="geometry">
+            <mxRectangle height="84" width="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-51" parent="WJZtnNiKfoM-EU6AUUwO-46" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;" value="" vertex="1">
+          <mxGeometry height="104" width="520" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-52" parent="WJZtnNiKfoM-EU6AUUwO-51" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="&lt;strong&gt;AWS Customer Gateway&lt;/strong&gt;&lt;br&gt;&lt;code dir=&quot;ltr&quot;&gt;cgw-001914b5d9fc0a4b5&lt;/code&gt;&lt;br&gt;(represents Alibaba)" vertex="1">
+          <mxGeometry height="104" width="174" as="geometry">
+            <mxRectangle height="104" width="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-53" parent="WJZtnNiKfoM-EU6AUUwO-51" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="&lt;br&gt;45104" vertex="1">
+          <mxGeometry height="104" width="172" x="174" as="geometry">
+            <mxRectangle height="104" width="172" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-54" parent="WJZtnNiKfoM-EU6AUUwO-51" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="&lt;br&gt;&lt;span style=&quot;font-size: 11px; white-space: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;44.44.23.13&lt;/span&gt;&amp;nbsp;(Alibaba VPN, Tunnel 1)&lt;br&gt;Note: that IP got it after creation vpn via TR" vertex="1">
+          <mxGeometry height="104" width="174" x="346" as="geometry">
+            <mxRectangle height="104" width="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-55" parent="WJZtnNiKfoM-EU6AUUwO-46" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fixedHeader=1;" value="" vertex="1">
+          <mxGeometry height="85" width="520" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-56" parent="WJZtnNiKfoM-EU6AUUwO-55" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="&lt;strong&gt;Alibaba Customer Gateway&lt;/strong&gt;&lt;br&gt;CG1-PRIME / BACKUP&lt;br&gt;(represents AWS)" vertex="1">
+          <mxGeometry height="85" width="174" as="geometry">
+            <mxRectangle height="85" width="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-57" parent="WJZtnNiKfoM-EU6AUUwO-55" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="&lt;strong&gt;64512&lt;/strong&gt; &lt;em&gt;(AWS VGW ASN, check yours)&lt;/em&gt;" vertex="1">
+          <mxGeometry height="85" width="172" x="174" as="geometry">
+            <mxRectangle height="85" width="172" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WJZtnNiKfoM-EU6AUUwO-58" parent="WJZtnNiKfoM-EU6AUUwO-55" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;" value="52.86.105.158 (AWS Tunnel 1)&lt;br&gt;54.225.87.140 (AWS Tunnel 2)&lt;div&gt;I got them after creation tunnel direct with dummy cg ip&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="174" x="346" as="geometry">
+            <mxRectangle height="85" width="174" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NbJCKgk8Ob-dbe2LQdHP-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;strokeColor=#FF8000;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="940" y="409" as="geometry" />
+        </mxCell>
+        <mxCell id="NbJCKgk8Ob-dbe2LQdHP-1" parent="1" style="aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.vpn_gateway;" value="" vertex="1">
+          <mxGeometry height="54.900000000000006" width="54.900000000000006" x="952.55" y="421.55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
