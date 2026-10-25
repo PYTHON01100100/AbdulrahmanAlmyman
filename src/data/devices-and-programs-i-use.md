@@ -19,9 +19,34 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 
 ## Devices
 
-- **PC:** Windows, for now (planning a new super PC in 2029)
-- **ThinkPad:** Fedora Linux, for work (previously Arch Linux)
-- **Old laptops:** Ubuntu and Linux Mint
+### My current PC
+
+- **OS:** Windows (planning a new super PC in 2029)
+- **Bought from:** [PCD](https://pcd.com.sa/)
+- **Build details:** [MY_PC1 on GitHub](https://github.com/PYTHON01100100/MY_PC1)
+
+| Component | Model / details |
+| --- | --- |
+| Graphics card | NVIDIA GeForce RTX 4070 Ti (GALAX RTX 4070 Ti EX GAMER 12GB GDDR6) |
+| Processor | Intel Core i7-12700F (25MB cache, up to 4.90GHz) |
+| Motherboard | ASUS TUF B760-PLUS GAMING WIFI DDR5 |
+| RAM | Kingston FURY Beast RGB 32GB (2×16GB) DDR5 CL40 5200MHz (white) |
+| Storage | Kingston NV2 4TB M.2 PCIe 2280 (SNV2S/4000G) |
+| CPU cooler | DeepCool AG400 BK ARGB (black) |
+| Power supply | FSP HP2-800 Bronze 80 PLUS (800W) |
+| Case | Lian Li Lancool 216 RGB tempered glass ATX mid-tower (black) |
+
+Built for coding, AI/ML, game dev and high-performance tasks.
+
+### Laptop: Lenovo ThinkPad E16 Gen 3
+
+- **Specs:** 1TB SSD, 32GB DDR5
+- **OS:** Fedora Linux, for work (previously Arch Linux, which I will return to on my new PC)
+- **Bought from:** [Amazon](https://amzn.eu/d/09q6Nxtv)
+
+### Old laptops
+
+- Ubuntu and Linux Mint
 
 ## Operating systems
 
