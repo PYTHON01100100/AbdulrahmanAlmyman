@@ -247,6 +247,7 @@ Terminating the VPN directly on a VPC is the simplest way to connect one Alibaba
 - [My previous lab: AWS and Alibaba Cloud through a Transit Router](/case-study/aws-alibaba-ipsec-vpn)
 - [Alibaba Cloud: connect a VPC and an AWS VPC through IPsec-VPN](https://www.alibabacloud.com/help/en/vpn/sub-product-ipsec-vpn/use-cases/through-ipsec-vpn-alibaba-cloud-vpc-and-aws-vpc-can-communicate)
 - [Alibaba Cloud: connect a VPC to an on-premises data center, office or other cloud](https://www.alibabacloud.com/help/en/vpc/connect-vpc-to-local-idc-office-terminal-other-cloud)
+- [Alibaba Cloud CEN: create a VPN connection and attach it to a transit router](https://www.alibabacloud.com/help/en/cen/user-guide/attach-an-ipsec-vpn-connection-to-a-transit-router)
 - [Alibaba Cloud blog post 594329](https://www.alibabacloud.com/blog/594329)
 - [Smartling: Connecting AWS and Alibaba Cloud networks using managed VPN solutions](https://tech.smartling.com/connecting-aws-and-alibaba-cloud-networks-using-managed-vpn-solutions-2793439160d6)
 - [RFC 1918: Address Allocation for Private Internets](https://datatracker.ietf.org/doc/html/rfc1918)

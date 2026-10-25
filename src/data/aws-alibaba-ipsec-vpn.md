@@ -432,4 +432,5 @@ Connecting two clouds with IPsec is not hard, but it is **unforgiving**: one wro
 - [API: CreateVpcFirewallCenConfigure](https://www.alibabacloud.com/help/en/cloud-firewall/cloudfirewall/developer-reference/api-cloudfw-2017-12-07-createvpcfirewallcenconfigure)
 - [Blog: IPsec VPN connections to CEN from an on-premises gateway](https://www.alibabacloud.com/blog/how-to-make-ipsec-vpn-connections-to-cloud-enterprise-network-cen-from-on-premise-gateway_600886)
 - [Blog: Connect Alibaba Cloud to AWS via VPN Gateway](https://www.alibabacloud.com/blog/connect-alibaba-cloud-to-aws-via-vpn-gateway_593915)
+- [VPN Gateway: connect sites to each other and a VPC](https://www.alibabacloud.com/help/en/vpn/sub-product-ipsec-vpn/use-cases/connect-multiple-offices-to-each-other-and-to-a-vpc)
 - [Alibaba Cloud blog post 594329](https://www.alibabacloud.com/blog/594329)
