@@ -287,6 +287,10 @@ The most important advice: be patient with yourself. Everyone who uses Linux tod
 - [The Code: Story of Linux](https://youtu.be/XMm0HsmOTFI): a documentary about the people who built Linux.
 - [The Mind Behind Linux | Linus Torvalds](https://youtu.be/o8NPllzkFhE): Linus Torvalds in conversation at TED.
 
+### For Arabic readers
+
+- [كيف تلعب على لينكس](https://youtu.be/HjvnEDfps5s) by الوقّاد (Alwaqad): a video about how to play games on Linux (**the video is in Arabic**).
+
 ## Final thoughts
 
 Linux has become an important part of both my professional and my personal life. At work it is the ground everything stands on: servers, containers, clusters and GPU nodes. At home it is my playground, where I learn by breaking things, try new distros, and shape a desktop that feels like mine.
