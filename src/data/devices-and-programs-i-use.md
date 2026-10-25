@@ -121,7 +121,7 @@ Built for coding, AI/ML, game dev and high-performance tasks.
 
 - DaVinci Resolve
 - Adobe Premiere Pro
-- Microsoft Clipchamp (I hate it)
+- Microsoft Clipchamp (I hate it ( ` ᴖ ´ ) )
 
 Adobe, the evil company: thank Allah I did not pay for the thieves.
 
@@ -144,7 +144,7 @@ Adobe, the evil company: thank Allah I did not pay for the thieves.
 - Telegram
 - Signal
 - Discord
-- WhatsApp (unfortunately)
+- WhatsApp (unfortunately (¬`‸´¬) )
 
 ## Mobile apps
 
