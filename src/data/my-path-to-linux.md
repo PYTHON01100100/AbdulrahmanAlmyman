@@ -154,6 +154,8 @@ If a friend asks me which Linux to install after Windows, I usually say **Linux 
 
 This is my personal recommendation, not a universal rule. Some beginners will be happier with Ubuntu, Fedora or something else entirely.
 
+If you are switching from Windows and want to see the whole move before you try it, [How To Switch To Linux For Beginners…](https://youtu.be/IyT4wfz5ZMg) by SomeOrdinaryGamers is a good watch, and it fits a Mint start ( ◠‿◠ )
+
 ![A community Linux Mint desktop with Cinnamon: a giant mech against a pink sunset sky, with small CPU and memory widgets](/my-path-to-linux/unixporn-mint.jpg)
 
 Community example: *[Cinnamon] linux mint* by [u/PrestigiousRip749](https://www.reddit.com/user/PrestigiousRip749) · [original post](https://www.reddit.com/r/unixporn/comments/1f1n5t3/cinnamon_linux_mint/)
