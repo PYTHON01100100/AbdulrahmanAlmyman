@@ -35,7 +35,7 @@ So it feels like using a second distro on the same machine, with none of the wei
 
 **Figure: How Distrobox works.** A single Fedora workstation can run applications from different Linux distributions, such as Ubuntu and Arch Linux, using lightweight containers. Unlike traditional virtual machines, these containers share the host's Linux kernel while keeping separate user-space environments and package managers.
 
-Diagram made by me with [PhotoCraft](https://getartcraft.com/apps/photocraft), for free :)
+Diagram made by me with [PhotoCraft](https://getartcraft.com/apps/photocraft), for free (˶>⩊<˶)
 
 ### The tools that come with it
 
