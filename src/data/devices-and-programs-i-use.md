@@ -135,6 +135,15 @@ Adobe, the evil company: thank Allah I did not pay for the thieves.
 - GIMP
 - [PhotoCraft](https://getartcraft.com/apps/photocraft)
 
+### Backup and system restore
+
+- [Timeshift](https://github.com/linuxmint/timeshift)
+
+### VPN
+
+- [Proton VPN](https://protonvpn.com/)
+- [OpenVPN](https://openvpn.net/), hosted on my own server
+
 ### System monitoring
 
 - [AppControl](https://www.appcontrol.com/)
