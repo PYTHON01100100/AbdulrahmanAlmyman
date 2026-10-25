@@ -31,6 +31,12 @@ It is a thin wrapper around a container manager (`podman`, `docker` or `lilipod`
 
 So it feels like using a second distro on the same machine, with none of the weight of a virtual machine.
 
+![How Distrobox works: a Fedora Workstation host runs an Ubuntu box and an Arch box, each with its own apps and tools, managed by Distrobox through Podman or Docker, sharing the host kernel, home directory, GUI and network](/distrobox-guide/how-distrobox-works.png)
+
+**Figure: How Distrobox works.** A single Fedora workstation can run applications from different Linux distributions, such as Ubuntu and Arch Linux, using lightweight containers. Unlike traditional virtual machines, these containers share the host's Linux kernel while keeping separate user-space environments and package managers.
+
+Diagram made by me with [PhotoCraft](https://getartcraft.com/apps/photocraft), for free :)
+
 ### The tools that come with it
 
 Distrobox is a small set of commands. You can run each one as `distrobox COMMAND`, or as its own tool (`distrobox-create`, `distrobox-enter`, ...):
@@ -181,6 +187,10 @@ distrobox-export --app claude-desktop
 
 Now open your application launcher and search for **Claude**. It starts like a native app, but it lives in the Ubuntu box. Sign in with your Anthropic account as usual. Updates come through the box: run `distrobox upgrade ubuntu-apps` now and then.
 
+![Claude Desktop running on my Fedora desktop from an Ubuntu box, even though its Linux beta officially supports only Debian-based distributions](/distrobox-guide/claude-desktop-fedora.png)
+
+Here it is on my own machine: Claude Desktop running on **Fedora**, even though its Linux beta officially supports only Debian-based distributions.
+
 **Use the same recipe for any other app.** Only the install lines change:
 
 ```bash where="host"
@@ -212,6 +222,14 @@ distrobox-export --bin /usr/bin/git --export-path ~/.local/bin
 ## Example 2: GUI apps on Fedora and Arch
 
 GUI apps work out of the box on most desktops, because the container shares your X11 and Wayland sockets. The idea is the same everywhere, only the package manager changes. These boxes are also how you run Debian-only apps like Claude Desktop from Fedora or Arch: use the Ubuntu box from Example 1.
+
+The same trick works for other apps that only ship a `.deb` package. For example, I run **Cisco Packet Tracer**, which is distributed as a Debian package, on Fedora from an Ubuntu box:
+
+![Cisco Packet Tracer, a Debian package, running on my Fedora desktop from an Ubuntu Distrobox container](/distrobox-guide/packet-tracer-fedora.png)
+
+Exported apps sit in the app grid next to native ones. Apps that come from a box get a small **box icon** on their icon, like Packet Tracer and the `Ubuntu-box` and `My-distrobox` entries below:
+
+![My Fedora app grid with exported Distrobox apps marked by a small box icon: Packettracer, My-distrobox and Ubuntu-box, next to native apps like GIMP, OBS Studio and Wireshark](/distrobox-guide/distrobox-app-icons.png)
 
 **Fedora box** (works from any host):
 
