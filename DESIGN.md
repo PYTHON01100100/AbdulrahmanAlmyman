@@ -41,6 +41,9 @@ Always use the CSS variables, never hard-coded light-theme hex values, so both t
 - **`.nier-box`**: 1px ink border, square corners, 3px 3px hard offset shadow, faint ink tint. Used for About, Contact rows, Intel cards, status plate, buttons.
 - **Hover:** `a.nier-box` and `.nier-row` invert (ink background, bg-coloured text) with a short stepped glitch.
 - **Archives:** `ls -l` style listing. Internal entries use `drwxr-xr-x`, external GitHub repos use `lrwxr-xr-x … github ↗` and open in a new tab.
+- **About (`page.tsx`):** a YoRHa "personal record" in a `.nier-box`: the header `[ SYSTEM ARCHIVE // PERSONAL RECORD ]`, then `> IDENTITY`, `> STATUS` and `> CLASS` lines (labels in the comment colour, values in the strong colour), short paragraphs that wrap naturally (no hard line breaks), and `> END OF RECORD_` with a blinking cursor. It opens with a text emoticon greeting.
+- **Certifications (`CertsList`):** boxed rows with `[ Provider ]` above the title. A certificate with a `url` is a link that opens in a new tab and shows a small `verify ↗` on the right, in the same muted style as the Archives `github ↗`; one without a `url` shows no arrow.
+- **Text emoticons:** friendly kaomoji such as `Hi! (^-^)/` open the About box and some articles. Use them sparingly, one per page at most. In Markdown, check the built page: a leading backslash must be doubled (`\(^_^)/`) and brackets must not be followed by `(`.
 - **Data Logs:** `TIMESTAMP: [YYYY.MM.DD_HH:MM]` then `> text`. Shows 5 at first, `[ LOAD MORE ]` / `[ COLLAPSE ]`, counter `n/total logs_`. Entries may have `[ SOURCE ]` links. Tone: a 9S-style field report.
 - **Status plate (`LocationBadge`):** GEO_LOCATION, TIME (London, 12-hour with AM/PM, ticking every second), DATE, HIJRI (Umm al-Qura), HQ. Fixed beside the theme toggle on large screens, inline on small ones, opaque, fades out after 40px of scroll.
 - **Theme toggle:** cycles light, dark, neon, labelled with the next mode (`[ DARK ]`, `[ NEON ]`, `[ LIGHT ]`), fixed top-right, choice saved in `localStorage` and defaulting to the system light or dark setting. An inline script in `layout.tsx` sets the theme before paint.
@@ -55,7 +58,7 @@ Short stepped transitions only (`steps()`), a blinking cursor (`.nier-blink`) an
 
 ## Layout
 
-- Home: two columns from `md`, centred container up to `max-w-304`. Left: About, Contact, Data Logs, InMemory Intel. Right: Archives, Certifications.
+- Home: two columns from `md`, centred container up to `max-w-304`. Left: About, Contact, InMemory Intel. Right: Archives, Certifications, Data Logs.
 - Article page: single column, `max-w-4xl`, sticky `← Back to Portfolio` bar.
 - Section content is indented (`ml-6`) under its header bar and limited to about 560px.
 
