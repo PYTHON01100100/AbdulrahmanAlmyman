@@ -124,27 +124,45 @@ export default function Home() {
 
           <div className="flex flex-col gap-2 justify-start items-start w-full md:w-1/2">
             <Section title="About" className="w-full lg:pl-4">
-              <p className="nier-box ml-6 mt-4 mb-4 p-3 max-w-[560px] leading-5">
-                Hi, I&apos;m{" "}
-                <strong className="font-normal text-terminal-strong">
-                  Abdulrahman Almyman 🙋🏽‍♂️😊&nbsp;
-                </strong>
-                a King Saud University graduate (2025) and an AI Engineer
-                passionate about building intelligent systems,
-                cloud infrastructure, and DevOps. I specialize in Alibaba Cloud,
-                AWS, Azure, and GCP with hands-on expertise in Kubernetes and
-                Docker. I love designing scalable, cloud-native architectures.
-              </p>
+              <div className="nier-box ml-6 mt-4 mb-4 p-3 max-w-[560px] leading-5">
+                <p className="text-terminal-comment mb-2">
+                  [ SYSTEM ARCHIVE // PERSONAL RECORD ]
+                </p>
+                <p>
+                  <span className="text-terminal-comment">&gt; IDENTITY:</span>{" "}
+                  <span className="text-terminal-strong">ABDULRAHMAN ALMYMAN</span>
+                </p>
+                <p>
+                  <span className="text-terminal-comment">&gt; STATUS:</span>{" "}
+                  <span className="text-terminal-strong">ACTIVE</span>
+                </p>
+                <p className="mb-3">
+                  <span className="text-terminal-comment">&gt; CLASS:</span>{" "}
+                  <span className="text-terminal-strong">AI / CLOUD ENGINEER</span>
+                </p>
+                <p className="mb-3">
+                  Hi (^-^)/ I&apos;m{" "}
+                  <strong className="font-normal text-terminal-strong">
+                    Abdulrahman Almyman
+                  </strong>
+                  , a King Saud University graduate (2025) and an AI Engineer
+                  driven by curiosity and the pursuit of intelligent systems.
+                </p>
+                <p className="mb-3">
+                  My expertise spans Alibaba Cloud, AWS, Azure, and GCP, with
+                  hands-on experience in Kubernetes, Docker, and DevOps.
+                </p>
+                <p className="mb-3">
+                  I build scalable, cloud-native architectures and explore the
+                  boundaries of AI engineering.
+                </p>
+                <p className="text-terminal-comment">
+                  &gt; END OF RECORD<span className="nier-blink">_</span>
+                </p>
+              </div>
             </Section>
             <Section title="Contact" className="lg:pl-4">
               <ContactList contacts={contactData} />
-            </Section>
-            <Section title="Data Logs" className="lg:pl-4">
-              <DataLogs
-                logs={[...dataLogs].sort((a, b) =>
-                  b.timestamp.localeCompare(a.timestamp),
-                )}
-              />
             </Section>
             <Section title="InMemory Intel" className="lg:pl-4">
               <IntelList
@@ -152,13 +170,22 @@ export default function Home() {
               />
             </Section>
           </div>
-          {/* Projects Section */}
-          <Section title="Archives" className="w-full md:w-1/2 lg:pl-4">
-            <ArchiveList projects={projectsData} repos={archiveRepos} />
-            <Section title="Certifications">
+          {/* Right column: Archives, Certifications, Data Logs */}
+          <div className="flex flex-col gap-2 justify-start items-start w-full md:w-1/2">
+            <Section title="Archives" className="w-full lg:pl-4">
+              <ArchiveList projects={projectsData} repos={archiveRepos} />
+            </Section>
+            <Section title="Certifications" className="w-full lg:pl-4">
               <CertsList certs={certsData} />
             </Section>
-          </Section>
+            <Section title="Data Logs" className="w-full lg:pl-4">
+              <DataLogs
+                logs={[...dataLogs].sort((a, b) =>
+                  b.timestamp.localeCompare(a.timestamp),
+                )}
+              />
+            </Section>
+          </div>
           {/* Status/Notes Section */}
 
           {/* <section className="xl:w-full mb-4">
