@@ -79,52 +79,105 @@ html[data-theme="neon"] .markdown-content .code-block {
   border-color: #4fe3d7;
 }
 
-/* --- AKIRA (Neo-Tokyo retro terminal) --- flat, no glow */
-html[data-theme="akira"] {
-  --nier-bg: #0d0c0c;
-  --nier-ink: #f4f2f0;
-  --nier-ink-rgb: 244, 242, 240;
-  --color-terminal-bg: #0d0c0c;
-  --color-terminal-text: #f4f2f0;
-  --color-terminal-accent: #e51313;
-  --color-terminal-link: #ff4d4d;
+/* --- 04 // COPLAND OS NAVI (Serial Experiments Lain) --- flat, no glow */
+html[data-theme="lain"] {
+  --nier-bg: #141416;
+  --nier-ink: #7c7ff5;
+  --nier-ink-rgb: 124, 127, 245;
+  --color-terminal-bg: #141416;
+  --color-terminal-text: #7c7ff5;
+  --color-terminal-accent: #a5b4fc;
+  --color-terminal-link: #c4b5fd;
+  --color-terminal-strong: #c7d2fe;
+  --color-terminal-comment: #8b8b96;
+  --color-terminal-border: #27272a;
+  --color-terminal-highlight: #e0e7ff;
+  color-scheme: dark;
+}
+
+/* --- 05 // NERV MAGI CLUSTER (Evangelion) --- flat, no glow */
+html[data-theme="evangelion"] {
+  --nier-bg: #0a0807;
+  --nier-ink: #ff7700;
+  --nier-ink-rgb: 255, 119, 0;
+  --color-terminal-bg: #0a0807;
+  --color-terminal-text: #ff7700;
+  --color-terminal-accent: #d63e00;
+  --color-terminal-link: #ffa94d;
+  --color-terminal-strong: #ffd8a8;
+  --color-terminal-comment: #9a7a62;
+  --color-terminal-border: #1c1816;
+  --color-terminal-highlight: #ffc078;
+  color-scheme: dark;
+}
+
+/* --- 06 // CODEC CHASSIS (Metal Gear Solid) --- flat, no glow */
+html[data-theme="mgs1"] {
+  --nier-bg: #0e1410;
+  --nier-ink: #52c48a;
+  --nier-ink-rgb: 82, 196, 138;
+  --color-terminal-bg: #0e1410;
+  --color-terminal-text: #52c48a;
+  --color-terminal-accent: #10fa84;
+  --color-terminal-link: #6ee7b7;
+  --color-terminal-strong: #bbf7d0;
+  --color-terminal-comment: #6f8f7c;
+  --color-terminal-border: #1a2920;
+  --color-terminal-highlight: #a7f3d0;
+  color-scheme: dark;
+}
+
+/* --- 07 // RETRO GROOVE (Gruvbox Dark) --- flat, no glow */
+html[data-theme="gruvbox"] {
+  --nier-bg: #282828;
+  --nier-ink: #ebdbb2;
+  --nier-ink-rgb: 235, 219, 178;
+  --color-terminal-bg: #282828;
+  --color-terminal-text: #ebdbb2;
+  --color-terminal-accent: #fabd2f;
+  --color-terminal-link: #83a598;
+  --color-terminal-strong: #fbf1c7;
+  --color-terminal-comment: #a89984;
+  --color-terminal-border: #3c3836;
+  --color-terminal-highlight: #fe8019;
+  color-scheme: dark;
+}
+
+/* --- 08 // CATPPUCCIN MOCHA --- flat, no glow */
+html[data-theme="catppuccin"] {
+  --nier-bg: #1e1e2e;
+  --nier-ink: #cdd6f4;
+  --nier-ink-rgb: 205, 214, 244;
+  --color-terminal-bg: #1e1e2e;
+  --color-terminal-text: #cdd6f4;
+  --color-terminal-accent: #89b4fa;
+  --color-terminal-link: #cba6f7;
+  --color-terminal-strong: #b4befe;
+  --color-terminal-comment: #9399b2;
+  --color-terminal-border: #313244;
+  --color-terminal-highlight: #f9e2af;
+  color-scheme: dark;
+}
+
+/* --- 09 // CANONICAL SHELL (Ubuntu Terminal) --- flat, no glow */
+html[data-theme="ubuntu"] {
+  --nier-bg: #300a24;
+  --nier-ink: #eeeeec;
+  --nier-ink-rgb: 238, 238, 236;
+  --color-terminal-bg: #300a24;
+  --color-terminal-text: #eeeeec;
+  --color-terminal-accent: #e95420;
+  --color-terminal-link: #f6a87e;
   --color-terminal-strong: #ffffff;
-  --color-terminal-comment: #817a75; /* spec #5a5552 (2.7:1), lifted to 4.6:1 */
-  --color-terminal-border: #261212;
-  --color-terminal-highlight: #ffb3b3;
+  --color-terminal-comment: #b08aa6;
+  --color-terminal-border: #4d1c3b;
+  --color-terminal-highlight: #fbbf88;
   color-scheme: dark;
 }
 
-/* --- CYBERPUNK (Netrunner cyberdeck) --- flat, no glow */
-html[data-theme="cyberpunk"] {
-  --nier-bg: #06090e;
-  --nier-ink: #38f2a6;
-  --nier-ink-rgb: 56, 242, 166;
-  --color-terminal-bg: #06090e;
-  --color-terminal-text: #38f2a6;
-  --color-terminal-accent: #8432d6; /* spec #7928ca (2.8:1), lifted to 3.2:1 */
-  --color-terminal-link: #00b4d8;
-  --color-terminal-strong: #a7f3d0;
-  --color-terminal-comment: #697c99; /* spec #374151 (1.9:1), lifted to 4.7:1 */
-  --color-terminal-border: #111827;
-  --color-terminal-highlight: #67e8f9;
-  color-scheme: dark;
-}
-
-/* --- GITS (Section 9 ghost) --- flat, no glow */
-html[data-theme="gits"] {
-  --nier-bg: #000200;
-  --nier-ink: #4af24a;
-  --nier-ink-rgb: 74, 242, 74;
-  --color-terminal-bg: #000200;
-  --color-terminal-text: #4af24a;
-  --color-terminal-accent: #1e821e;
-  --color-terminal-link: #86efac;
-  --color-terminal-strong: #d1fae5;
-  --color-terminal-comment: #318931; /* spec #163e16 (1.7:1), lifted to 4.7:1 */
-  --color-terminal-border: #092409;
-  --color-terminal-highlight: #bbf7d0;
-  color-scheme: dark;
+/* Theme menu: opaque so page content never shows through it */
+.theme-menu {
+  background: var(--nier-bg);
 }
 
 body,

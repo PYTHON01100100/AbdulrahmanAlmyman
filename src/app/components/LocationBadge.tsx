@@ -71,7 +71,7 @@ export default function LocationBadge({
   return (
     <div
       aria-hidden={scrolled}
-      className={`nier-box location-badge mx-6 mt-4 mb-2 w-fit px-3 py-2 text-xs leading-5 sm:text-sm lg:fixed lg:top-4 lg:right-32 lg:z-[60] lg:m-0 transition-opacity duration-200 ${
+      className={`nier-box location-badge mx-6 mt-4 mb-2 w-fit px-3 py-2 text-xs leading-5 sm:text-sm lg:fixed lg:top-4 lg:right-40 lg:z-[60] lg:m-0 transition-opacity duration-200 ${
         scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
