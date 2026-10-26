@@ -279,6 +279,7 @@ The most important advice: be patient with yourself. Everyone who uses Linux tod
 - [Linux Journey](https://labex.io/linuxjourney): free, step-by-step lessons on Linux fundamentals.
 - [Bash Tutorial](https://www.w3schools.com/bash/index.php) by W3Schools: the basics of the Bash shell and scripting.
 - [What is Linux?](https://www.redhat.com/en/topics/linux/what-is-linux) by Red Hat: a clear explanation of Linux and how it is used.
+- [Linux: A Simple Guide for Beginners](https://medium.com/@vashugahh/linux-a-simple-guide-for-beginners-e36281483675) by @vashugahh on Medium: a beginner-friendly introduction to Linux.
 
 ### Discovering Linux history
 
