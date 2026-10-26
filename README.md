@@ -11,7 +11,7 @@ The site is hosted on **GitHub Pages**, with the domain `abdulrahmanalmyman.dev`
 - An about section, contact links, certifications and a timeline of **Data Logs**
 - **Archives** of my projects and **InMemory Intel**, my articles on cloud, Kubernetes, DevOps and AI
 - Case studies written in Markdown, with code blocks you can copy and files you can download
-- Nine selectable themes, from YoRHa Light and Dark to Lain, Evangelion, Metal Gear Solid, Gruvbox, Catppuccin and Ubuntu
+- Twelve selectable themes, from YoRHa Light, Dark and Hacking Neon to Lain, Evangelion, Metal Gear Solid, Gruvbox, Catppuccin, Ubuntu, Akira, Cyberpunk and Ghost in the Shell
 
 ## Tech stack
 

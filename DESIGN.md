@@ -1,6 +1,6 @@
 # DESIGN.md
 
-Design reference for the website: a calm **NieR:Automata** menu look, with nine selectable themes. Tokens live in `src/app/globals.css`.
+Design reference for the website: a calm **NieR:Automata** menu look, with twelve selectable themes. Tokens live in `src/app/globals.css`.
 
 ## Principles
 
@@ -33,7 +33,7 @@ The core palette inverted: bg `#26231d`, ink `#d1cbb7`, accent `#b5a47a`, link `
 
 YoRHa hacking screen: teal-black bg `#0c1214`, parchment ink `#d8d2bc`, cyan accent `#4fe3d7`, YoRHa red links `#ff6a5a`. The only theme with a glow, and it is limited to titles and `.nier-box`.
 
-### 04 – 09: flat themes (no glow)
+### 04 – 12: flat themes (no glow)
 
 | # | Name | `data-theme` | bg | ink | accent | link | comment | border |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -43,8 +43,11 @@ YoRHa hacking screen: teal-black bg `#0c1214`, parchment ink `#d8d2bc`, cyan acc
 | 07 | Retro Groove (Gruvbox Dark) | `gruvbox` | `#282828` | `#ebdbb2` | `#fabd2f` | `#83a598` | `#a89984` | `#3c3836` |
 | 08 | Catppuccin Mocha | `catppuccin` | `#1e1e2e` | `#cdd6f4` | `#89b4fa` | `#cba6f7` | `#9399b2` | `#313244` |
 | 09 | Canonical Shell (Ubuntu Terminal) | `ubuntu` | `#300a24` | `#eeeeec` | `#e95420` | `#f6a87e` | `#b08aa6` | `#4d1c3b` |
+| 10 | Neo-Tokyo Terminal (Akira) | `akira` | `#0d0c0c` | `#f4f2f0` | `#e51313` | `#ff4d4d` | `#817a75` | `#261212` |
+| 11 | Netrunner Cyberdeck (Cyberpunk) | `cyberpunk` | `#06090e` | `#38f2a6` | `#8432d6` | `#00b4d8` | `#697c99` | `#111827` |
+| 12 | Section 9 Ghost (Ghost in the Shell) | `gits` | `#000200` | `#4af24a` | `#1e821e` | `#86efac` | `#318931` | `#092409` |
 
-Contrast rule: text tokens (ink, link, strong, comment) need at least 4.5:1 against the background, accents used on headings at least 3:1. To meet it, Lain's ink was lifted from the proposed `#6366f1` (4.1:1), Gruvbox's comment from `#928374` (4.0:1) and Catppuccin's comment from `#7f849c` (4.4:1).
+Contrast rule: text tokens (ink, link, strong, comment) need at least 4.5:1 against the background, accents used on headings at least 3:1. To meet it, Lain's ink was lifted from the proposed `#6366f1` (4.1:1), Gruvbox's comment from `#928374` (4.0:1) and Catppuccin's comment from `#7f849c` (4.4:1). Akira, Cyberpunk and Ghost in the Shell had their comment colours lifted (from `#5a5552`, `#374151` and `#163e16`), and Cyberpunk's accent from `#7928ca`.
 
 ## Typography
 
@@ -63,7 +66,7 @@ Contrast rule: text tokens (ink, link, strong, comment) need at least 4.5:1 agai
 - **Text emoticons:** friendly kaomoji such as `Hi! (^-^)/` open the About box and some articles. Use them sparingly, one per page at most. In Markdown, check the built page: a leading backslash must be doubled (`\\(^_^)/`) and brackets must not be followed by `(`.
 - **Data Logs:** `TIMESTAMP: [YYYY.MM.DD_HH:MM]` then `> text`. Shows 5 at first, `[ LOAD MORE ]` / `[ COLLAPSE ]`, counter `n/total logs_`. Entries may have `[ SOURCE ]` links. Tone: a 9S-style field report.
 - **Status plate (`LocationBadge`):** GEO_LOCATION, TIME (London, 12-hour with AM/PM, ticking every second), DATE, HIJRI (Umm al-Qura), HQ. Fixed beside the theme toggle on large screens, inline on small ones, opaque, fades out after 40px of scroll.
-- **Theme menu (`ThemeToggle.tsx`):** a `[ THEME 0n ]` button, fixed top-right, opens a `.nier-box` list of the nine themes as `.nier-row` options (`03 // Hacking Neon`), with a `◆` on the current one. Closes on selection, outside click or Escape. The choice is saved in `localStorage`, and an inline script in `layout.tsx` applies it before first paint (no flash). First-time visitors get light or dark from their system setting.
+- **Theme menu (`ThemeToggle.tsx`):** a `[ THEME 0n ]` button, fixed top-right, opens a `.nier-box` list of all the themes as `.nier-row` options (`03 // Hacking Neon`), with a `◆` on the current one. Closes on selection, outside click or Escape. The choice is saved in `localStorage`, and an inline script in `layout.tsx` applies it before first paint (no flash). First-time visitors get light or dark from their system setting.
 - **Contact links:** boxed rows with an inline SVG icon (currentColor), label and `>` marker.
 - **Code blocks (`CodeBlock`):** dark panel (`#3b372c`, bar `#2f2c23`) in both themes, toolbar with `[ copy ]` and optional `[ download ]`. Syntax colours are muted earth tones (sage strings, gold properties, mauve keywords, terracotta numbers). No glow.
 - **Tables:** bordered, header on the border colour, scroll horizontally on small screens.
