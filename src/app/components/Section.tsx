@@ -7,6 +7,8 @@ interface SectionProps {
   titleClassName?: string;
 }
 
+// Section title styled like a YoRHa menu header: a solid bar with a small
+// diamond marker, followed by the dotted rule that runs through the NieR menus.
 export default function Section({
   title,
   children,
@@ -15,12 +17,9 @@ export default function Section({
 }: SectionProps) {
   return (
     <section className={`xl:pr-4 mb-4 max-h-fit ${className}`}>
-      <h1
-        className={`text-terminal-accent mb-2 ml-6 sm:ml-4 w-fit relative font-normal text-xl sm:text-2xl ${titleClassName}`}
-      >
-        <span className="absolute -left-9 select-none">{"/*"}</span>
-        <span className="absolute -right-9 select-none">{"*/"}</span>
-        {title}
+      <h1 className={`nier-heading ml-6 mb-3 max-w-[560px] ${titleClassName}`}>
+        <span className="nier-heading-tag">{title}</span>
+        <span className="nier-heading-dots" aria-hidden="true" />
       </h1>
       {children}
     </section>
