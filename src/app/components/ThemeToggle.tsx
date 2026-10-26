@@ -2,15 +2,19 @@
 
 import { useEffect, useState } from "react";
 
-type Theme = "light" | "dark" | "neon";
-
-// Click order: light -> dark -> neon -> light. The button names the NEXT mode.
-const NEXT: Record<Theme, Theme> = { light: "dark", dark: "neon", neon: "light" };
+// Cycle order. The button always names the NEXT theme.
+export const THEMES = ["light", "dark", "neon", "akira", "cyberpunk", "gits"] as const;
+type Theme = (typeof THEMES)[number];
 
 const isTheme = (value: unknown): value is Theme =>
-  value === "light" || value === "dark" || value === "neon";
+  typeof value === "string" && (THEMES as readonly string[]).includes(value);
+
+const nextTheme = (theme: Theme): Theme =>
+  THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
 
 export default function ThemeToggle() {
+  // The inline script in layout.tsx has already set data-theme before paint;
+  // this only syncs the button label with it.
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
@@ -19,9 +23,9 @@ export default function ThemeToggle() {
   }, []);
 
   const toggle = () => {
-    const next = NEXT[theme];
-    setTheme(next);
+    const next = nextTheme(theme);
     document.documentElement.dataset.theme = next;
+    setTheme(next);
     try {
       localStorage.setItem("theme", next);
     } catch {
@@ -29,12 +33,12 @@ export default function ThemeToggle() {
     }
   };
 
-  const next = NEXT[theme];
+  const next = nextTheme(theme);
   return (
     <button
       type="button"
       onClick={toggle}
-      aria-label={`Switch to ${next} mode`}
+      aria-label={`Switch to ${next} theme`}
       className="nier-box nier-toggle fixed top-4 right-4 z-[60] px-3 py-1 text-xs sm:text-sm cursor-pointer select-none"
     >
       {`[ ${next.toUpperCase()} ]`}

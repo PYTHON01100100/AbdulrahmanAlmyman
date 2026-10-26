@@ -11,7 +11,7 @@ The site is hosted on **GitHub Pages**, with the domain `abdulrahmanalmyman.dev`
 - An about section, contact links, certifications and a timeline of **Data Logs**
 - **Archives** of my projects and **InMemory Intel**, my articles on cloud, Kubernetes, DevOps and AI
 - Case studies written in Markdown, with code blocks you can copy and files you can download
-- Three NieR themes: light, dark and neon (YoRHa-style teal and cyan)
+- Six themes: light, dark, neon (NieR/YoRHa), plus akira, cyberpunk and gits
 
 ## Tech stack
 

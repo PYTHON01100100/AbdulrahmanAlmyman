@@ -1,6 +1,6 @@
 # DESIGN.md
 
-Design reference for the website: a calm **NieR:Automata** menu look in three modes: light, dark and neon. Tokens live in `src/app/globals.css`.
+Design reference for the website: a calm **NieR:Automata** menu look in six modes: light, dark, neon, akira, cyberpunk and gits. Tokens live in `src/app/globals.css`.
 
 ## Principles
 
@@ -25,7 +25,17 @@ Light theme (default):
 
 Dark theme (`html[data-theme="dark"]`) is the same palette inverted: bg `#26231d`, ink `#d1cbb7`, accent `#b5a47a`, link `#e0cfa0`, strong `#cdbb8c`, comment `#8f8468`, border `#4a4435`.
 
-Neon theme (`html[data-theme="neon"]`, optional third mode): still NieR/YoRHa, with a teal-black background `#0c1214`, parchment ink `#d8d2bc`, a cyan accent `#4fe3d7` (the colour of YoRHa's hacking screens), YoRHa red links `#ff6a5a`, and a soft glow limited to titles and `.nier-box`. The toggle cycles light, dark, neon.
+Neon theme (`html[data-theme="neon"]`, optional third mode): still NieR/YoRHa, with a teal-black background `#0c1214`, parchment ink `#d8d2bc`, a cyan accent `#4fe3d7` (the colour of YoRHa's hacking screens), YoRHa red links `#ff6a5a`, and a soft glow limited to titles and `.nier-box`. The toggle cycles light, dark, neon, akira, cyberpunk, gits.
+
+Akira, cyberpunk and gits (`html[data-theme="akira" | "cyberpunk" | "gits"]`) are flat, with no glow:
+
+| Theme | bg | ink | accent | link | comment |
+| --- | --- | --- | --- | --- | --- |
+| Akira (Neo-Tokyo) | `#0d0c0c` | `#f4f2f0` | `#e51313` | `#ff4d4d` | `#817a75` |
+| Cyberpunk (netrunner) | `#06090e` | `#38f2a6` | `#8432d6` | `#00b4d8` | `#697c99` |
+| Gits (Section 9) | `#000200` | `#4af24a` | `#1e821e` | `#86efac` | `#318931` |
+
+Keep text tokens at 4.5:1 contrast or more against the background (3:1 for accents used on headings). The three comment colours and the cyberpunk accent were lightened from the original proposal to meet this.
 
 Always use the CSS variables, never hard-coded light-theme hex values, so both themes work. Overlays use `rgba(var(--nier-ink-rgb), alpha)`.
 
@@ -46,7 +56,7 @@ Always use the CSS variables, never hard-coded light-theme hex values, so both t
 - **Text emoticons:** friendly kaomoji such as `Hi! (^-^)/` open the About box and some articles. Use them sparingly, one per page at most. In Markdown, check the built page: a leading backslash must be doubled (`\\(^_^)/`) and brackets must not be followed by `(`.
 - **Data Logs:** `TIMESTAMP: [YYYY.MM.DD_HH:MM]` then `> text`. Shows 5 at first, `[ LOAD MORE ]` / `[ COLLAPSE ]`, counter `n/total logs_`. Entries may have `[ SOURCE ]` links. Tone: a 9S-style field report.
 - **Status plate (`LocationBadge`):** GEO_LOCATION, TIME (London, 12-hour with AM/PM, ticking every second), DATE, HIJRI (Umm al-Qura), HQ. Fixed beside the theme toggle on large screens, inline on small ones, opaque, fades out after 40px of scroll.
-- **Theme toggle:** cycles light, dark, neon, labelled with the next mode (`[ DARK ]`, `[ NEON ]`, `[ LIGHT ]`), fixed top-right, choice saved in `localStorage` and defaulting to the system light or dark setting. An inline script in `layout.tsx` sets the theme before paint.
+- **Theme toggle:** cycles the six themes in `THEMES` order, labelled with the next one in uppercase (`[ DARK ]` … `[ LIGHT ]`), fixed top-right, choice saved in `localStorage` and defaulting to the system light or dark setting. An inline script in `layout.tsx` sets the theme before paint.
 - **Contact links:** boxed rows with an inline SVG icon (currentColor), label and `>` marker.
 - **Code blocks (`CodeBlock`):** dark panel (`#3b372c`, bar `#2f2c23`) in both themes, toolbar with `[ copy ]` and optional `[ download ]`. Syntax colours are muted earth tones (sage strings, gold properties, mauve keywords, terracotta numbers). No glow.
 - **Tables:** bordered, header on the border colour, scroll horizontally on small screens.
