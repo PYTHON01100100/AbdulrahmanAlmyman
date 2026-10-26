@@ -15,7 +15,7 @@ Publish date: `2026-10-25`
 
 # AWS to Alibaba Cloud IPsec VPN, Direct to the VPC (No Transit Router)
 
-In my [previous lab](/case-study/aws-alibaba-ipsec-vpn) I connected AWS and Alibaba Cloud through a **CEN Transit Router**, with a Cloud Firewall in the middle. That design is great when you have many VPCs, but it has more moving parts and more cost.
+Hi! [ ^_^ ]/ In my [previous lab](/case-study/aws-alibaba-ipsec-vpn) I connected AWS and Alibaba Cloud through a **CEN Transit Router**, with a Cloud Firewall in the middle. That design is great when you have many VPCs, but it has more moving parts and more cost.
 
 This time I built the same connection the **direct** way: the IPsec tunnels end on an **Alibaba VPN gateway attached straight to the VPC**. Same goal (an EC2 in AWS and an ECS in Alibaba Cloud talking over private IPs, encrypted, with BGP), fewer components.
 
