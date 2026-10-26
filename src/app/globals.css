@@ -223,6 +223,217 @@ html[data-theme="gits"] {
   color-scheme: dark;
 }
 
+/* Code block palettes: the warm panel is the default (light and dark);
+   every other theme gets its own panel and syntax colours (all text >= 4.5:1). */
+:root {
+  --code-bg: #3b372c;
+  --code-bar: #2f2c23;
+  --code-text: #ece4c8;
+  --code-label: #b9ad8c;
+  --code-action: #e3d9b8;
+  --code-action-hover: #ffffff;
+  --syn-comment: #8a826c;
+  --syn-punctuation: #b9ad8c;
+  --syn-keyword: #b8a0b0;
+  --syn-string: #a3b88c;
+  --syn-function: #d9a07a;
+  --syn-number: #d9a07a;
+  --syn-operator: #d8cba8;
+  --syn-property: #d4b66e;
+  --syn-variable: #d8cba8;
+  --syn-deleted: #d9a07a;
+}
+
+html[data-theme="neon"] {
+  --code-bg: #12201f;
+  --code-bar: #0c1214;
+  --code-text: #d8d2bc;
+  --code-label: #8fa9a6;
+  --code-action: #9bf0e6;
+  --code-action-hover: #ffffff;
+  --syn-comment: #7d9896;
+  --syn-punctuation: #a9bfbc;
+  --syn-keyword: #ff8a7a;
+  --syn-string: #9bf0e6;
+  --syn-function: #4fe3d7;
+  --syn-number: #ffd1c9;
+  --syn-operator: #d8d2bc;
+  --syn-property: #4fe3d7;
+  --syn-variable: #ffd1c9;
+  --syn-deleted: #ff6a5a;
+}
+
+html[data-theme="lain"] {
+  --code-bg: #1d1d26;
+  --code-bar: #141416;
+  --code-text: #c7d2fe;
+  --code-label: #9a9aa6;
+  --code-action: #a5b4fc;
+  --code-action-hover: #ffffff;
+  --syn-comment: #8b8b96;
+  --syn-punctuation: #a1a1aa;
+  --syn-keyword: #c4b5fd;
+  --syn-string: #a5f3fc;
+  --syn-function: #a5b4fc;
+  --syn-number: #f0abfc;
+  --syn-operator: #e0e7ff;
+  --syn-property: #9aa3fb;
+  --syn-variable: #e0e7ff;
+  --syn-deleted: #fda4af;
+}
+
+html[data-theme="evangelion"] {
+  --code-bg: #1a120d;
+  --code-bar: #0a0807;
+  --code-text: #ffd8a8;
+  --code-label: #b08d74;
+  --code-action: #ffa94d;
+  --code-action-hover: #ffffff;
+  --syn-comment: #9a7a62;
+  --syn-punctuation: #c49a7a;
+  --syn-keyword: #ff7700;
+  --syn-string: #9be564;
+  --syn-function: #ffa94d;
+  --syn-number: #e879f9;
+  --syn-operator: #ffd8a8;
+  --syn-property: #ffc078;
+  --syn-variable: #ffd8a8;
+  --syn-deleted: #ff5a3d;
+}
+
+html[data-theme="mgs1"] {
+  --code-bg: #142019;
+  --code-bar: #0e1410;
+  --code-text: #bbf7d0;
+  --code-label: #86a693;
+  --code-action: #6ee7b7;
+  --code-action-hover: #ffffff;
+  --syn-comment: #6f8f7c;
+  --syn-punctuation: #8fb39e;
+  --syn-keyword: #10fa84;
+  --syn-string: #d9f99d;
+  --syn-function: #6ee7b7;
+  --syn-number: #fde68a;
+  --syn-operator: #bbf7d0;
+  --syn-property: #52c48a;
+  --syn-variable: #bbf7d0;
+  --syn-deleted: #fca5a5;
+}
+
+html[data-theme="gruvbox"] {
+  --code-bg: #32302f;
+  --code-bar: #282828;
+  --code-text: #ebdbb2;
+  --code-label: #a89984;
+  --code-action: #fabd2f;
+  --code-action-hover: #fbf1c7;
+  --syn-comment: #a89984;
+  --syn-punctuation: #d5c4a1;
+  --syn-keyword: #fc6857;
+  --syn-string: #b8bb26;
+  --syn-function: #8ec07c;
+  --syn-number: #d3869b;
+  --syn-operator: #fe8019;
+  --syn-property: #83a598;
+  --syn-variable: #ebdbb2;
+  --syn-deleted: #fc6857;
+}
+
+html[data-theme="catppuccin"] {
+  --code-bg: #181825;
+  --code-bar: #11111b;
+  --code-text: #cdd6f4;
+  --code-label: #9399b2;
+  --code-action: #89b4fa;
+  --code-action-hover: #ffffff;
+  --syn-comment: #9399b2;
+  --syn-punctuation: #bac2de;
+  --syn-keyword: #cba6f7;
+  --syn-string: #a6e3a1;
+  --syn-function: #89b4fa;
+  --syn-number: #fab387;
+  --syn-operator: #94e2d5;
+  --syn-property: #f9e2af;
+  --syn-variable: #cdd6f4;
+  --syn-deleted: #f38ba8;
+}
+
+html[data-theme="ubuntu"] {
+  --code-bg: #3e1132;
+  --code-bar: #2a0820;
+  --code-text: #eeeeec;
+  --code-label: #c4a6bb;
+  --code-action: #f6a87e;
+  --code-action-hover: #ffffff;
+  --syn-comment: #b08aa6;
+  --syn-punctuation: #d3c4ce;
+  --syn-keyword: #ea5b29;
+  --syn-string: #8ae234;
+  --syn-function: #729fcf;
+  --syn-number: #fcaf3e;
+  --syn-operator: #eeeeec;
+  --syn-property: #ad7fa8;
+  --syn-variable: #eeeeec;
+  --syn-deleted: #f24f4f;
+}
+
+html[data-theme="akira"] {
+  --code-bg: #181414;
+  --code-bar: #0d0c0c;
+  --code-text: #f4f2f0;
+  --code-label: #9a938e;
+  --code-action: #ff4d4d;
+  --code-action-hover: #ffffff;
+  --syn-comment: #847d77;
+  --syn-punctuation: #b5aeaa;
+  --syn-keyword: #ff4d4d;
+  --syn-string: #e8d5b7;
+  --syn-function: #ff8a8a;
+  --syn-number: #ff9e9e;
+  --syn-operator: #f4f2f0;
+  --syn-property: #ff6b6b;
+  --syn-variable: #f4f2f0;
+  --syn-deleted: #ff4d4d;
+}
+
+html[data-theme="cyberpunk"] {
+  --code-bg: #0c121b;
+  --code-bar: #06090e;
+  --code-text: #a7f3d0;
+  --code-label: #7c8fab;
+  --code-action: #00b4d8;
+  --code-action-hover: #ffffff;
+  --syn-comment: #6c7f9b;
+  --syn-punctuation: #8aa0b8;
+  --syn-keyword: #c084fc;
+  --syn-string: #38f2a6;
+  --syn-function: #00b4d8;
+  --syn-number: #fcee09;
+  --syn-operator: #a7f3d0;
+  --syn-property: #67e8f9;
+  --syn-variable: #a7f3d0;
+  --syn-deleted: #ff5c8a;
+}
+
+html[data-theme="gits"] {
+  --code-bg: #061006;
+  --code-bar: #000200;
+  --code-text: #d1fae5;
+  --code-label: #4fae4f;
+  --code-action: #86efac;
+  --code-action-hover: #ffffff;
+  --syn-comment: #3fa53f;
+  --syn-punctuation: #6fcf6f;
+  --syn-keyword: #4af24a;
+  --syn-string: #bbf7d0;
+  --syn-function: #86efac;
+  --syn-number: #e6ff7a;
+  --syn-operator: #d1fae5;
+  --syn-property: #4af24a;
+  --syn-variable: #d1fae5;
+  --syn-deleted: #f87171;
+}
+
 /* Theme menu: opaque so page content never shows through it */
 .theme-menu {
   background: var(--nier-bg);
@@ -364,15 +575,15 @@ body::after {
 /* Code blocks: dark NieR-style panel with a toolbar (copy / download) */
 .markdown-content .code-block {
   @apply my-4 rounded-md overflow-hidden border;
-  background-color: #3b372c;
+  background-color: var(--code-bg);
   border-color: var(--color-terminal-accent);
 }
 
 .markdown-content .code-block-bar {
   @apply flex items-center justify-between gap-4 px-4 py-1.5 text-xs sm:text-sm;
-  background-color: #2f2c23;
+  background-color: var(--code-bar);
   border-bottom: 1px solid var(--color-terminal-accent);
-  color: #b9ad8c;
+  color: var(--code-label);
 }
 
 .markdown-content .code-block-label {
@@ -381,7 +592,7 @@ body::after {
 
 .markdown-content .code-block-where {
   @apply inline-flex items-center gap-1.5;
-  color: #e3d9b8;
+  color: var(--code-action);
 }
 
 .markdown-content .code-block-where svg {
@@ -396,7 +607,7 @@ body::after {
 .markdown-content .code-block-actions button,
 .markdown-content .code-block-actions a {
   @apply cursor-pointer;
-  color: #e3d9b8;
+  color: var(--code-action);
   text-decoration: none;
   text-shadow: none;
   background: none;
@@ -407,14 +618,14 @@ body::after {
 
 .markdown-content .code-block-actions button:hover,
 .markdown-content .code-block-actions a:hover {
-  color: #ffffff;
+  color: var(--code-action-hover);
   text-decoration: underline;
 }
 
 .markdown-content pre {
   @apply p-4 overflow-x-auto m-0;
   background-color: transparent;
-  color: #ece4c8;
+  color: var(--code-text);
   border: 0;
   box-shadow: none;
 }
@@ -444,7 +655,7 @@ body::after {
 }
 
 .markdown-content .code-block-bar .code-block-label {
-  color: #b9ad8c;
+  color: var(--code-label);
 }
 
 /* Syntax highlighting: tuned for the dark code panel */
@@ -452,18 +663,18 @@ body::after {
 .markdown-content pre code .token.prolog,
 .markdown-content pre code .token.doctype,
 .markdown-content pre code .token.cdata {
-  color: #8a826c;
+  color: var(--syn-comment);
   font-style: italic;
 }
 
 .markdown-content pre code .token.punctuation {
-  color: #b9ad8c;
+  color: var(--syn-punctuation);
 }
 
 .markdown-content pre code .token.keyword,
 .markdown-content pre code .token.atrule,
 .markdown-content pre code .token.attr-value {
-  color: #b8a0b0;
+  color: var(--syn-keyword);
   font-weight: 600;
 }
 
@@ -471,25 +682,25 @@ body::after {
 .markdown-content pre code .token.char,
 .markdown-content pre code .token.builtin,
 .markdown-content pre code .token.inserted {
-  color: #a3b88c;
+  color: var(--syn-string);
 }
 
 .markdown-content pre code .token.function,
 .markdown-content pre code .token.class-name {
-  color: #d9a07a;
+  color: var(--syn-function);
   font-weight: 500;
 }
 
 .markdown-content pre code .token.number,
 .markdown-content pre code .token.boolean,
 .markdown-content pre code .token.constant {
-  color: #d9a07a;
+  color: var(--syn-number);
 }
 
 .markdown-content pre code .token.operator,
 .markdown-content pre code .token.entity,
 .markdown-content pre code .token.url {
-  color: #d8cba8;
+  color: var(--syn-operator);
 }
 
 .markdown-content pre code .token.property,
@@ -497,17 +708,17 @@ body::after {
 .markdown-content pre code .token.selector,
 .markdown-content pre code .token.attr-name,
 .markdown-content pre code .token.symbol {
-  color: #d4b66e;
+  color: var(--syn-property);
 }
 
 .markdown-content pre code .token.regex,
 .markdown-content pre code .token.important,
 .markdown-content pre code .token.variable {
-  color: #d8cba8;
+  color: var(--syn-variable);
 }
 
 .markdown-content pre code .token.deleted {
-  color: #d9a07a;
+  color: var(--syn-deleted);
 }
 
 .markdown-content pre code .token.important,
