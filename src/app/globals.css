@@ -175,7 +175,7 @@ html[data-theme="ubuntu"] {
   color-scheme: dark;
 }
 
-/* --- 10 // NEO-TOKYO TERMINAL (Akira) --- flat, no glow */
+/* --- 10 // AKIRA NEO-TOKYO --- flat, no glow */
 html[data-theme="akira"] {
   --nier-bg: #0d0c0c;
   --nier-ink: #f4f2f0;
@@ -207,7 +207,7 @@ html[data-theme="cyberpunk"] {
   color-scheme: dark;
 }
 
-/* --- 12 // SECTION 9 GHOST (Ghost in the Shell) --- flat, no glow */
+/* --- 12 // GHOST IN THE SHELL --- flat, no glow */
 html[data-theme="gits"] {
   --nier-bg: #000200;
   --nier-ink: #4af24a;

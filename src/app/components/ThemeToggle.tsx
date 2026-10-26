@@ -14,9 +14,9 @@ export const THEMES = [
   { id: "gruvbox", label: "Retro Groove" },
   { id: "catppuccin", label: "Catppuccin Mocha" },
   { id: "ubuntu", label: "Canonical Shell" },
-  { id: "akira", label: "Neo-Tokyo Terminal" },
+  { id: "akira", label: "Akira Neo-Tokyo" },
   { id: "cyberpunk", label: "Netrunner Cyberdeck" },
-  { id: "gits", label: "Section 9 Ghost" },
+  { id: "gits", label: "Ghost in the Shell" },
 ] as const;
 
 type ThemeId = (typeof THEMES)[number]["id"];

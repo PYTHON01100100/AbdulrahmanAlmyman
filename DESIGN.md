@@ -43,9 +43,9 @@ YoRHa hacking screen: teal-black bg `#0c1214`, parchment ink `#d8d2bc`, cyan acc
 | 07 | Retro Groove (Gruvbox Dark) | `gruvbox` | `#282828` | `#ebdbb2` | `#fabd2f` | `#83a598` | `#a89984` | `#3c3836` |
 | 08 | Catppuccin Mocha | `catppuccin` | `#1e1e2e` | `#cdd6f4` | `#89b4fa` | `#cba6f7` | `#9399b2` | `#313244` |
 | 09 | Canonical Shell (Ubuntu Terminal) | `ubuntu` | `#300a24` | `#eeeeec` | `#e95420` | `#f6a87e` | `#b08aa6` | `#4d1c3b` |
-| 10 | Neo-Tokyo Terminal (Akira) | `akira` | `#0d0c0c` | `#f4f2f0` | `#e51313` | `#ff4d4d` | `#817a75` | `#261212` |
+| 10 | Akira Neo-Tokyo | `akira` | `#0d0c0c` | `#f4f2f0` | `#e51313` | `#ff4d4d` | `#817a75` | `#261212` |
 | 11 | Netrunner Cyberdeck (Cyberpunk) | `cyberpunk` | `#06090e` | `#38f2a6` | `#8432d6` | `#00b4d8` | `#697c99` | `#111827` |
-| 12 | Section 9 Ghost (Ghost in the Shell) | `gits` | `#000200` | `#4af24a` | `#1e821e` | `#86efac` | `#318931` | `#092409` |
+| 12 | Ghost in the Shell | `gits` | `#000200` | `#4af24a` | `#1e821e` | `#86efac` | `#318931` | `#092409` |
 
 Contrast rule: text tokens (ink, link, strong, comment) need at least 4.5:1 against the background, accents used on headings at least 3:1. To meet it, Lain's ink was lifted from the proposed `#6366f1` (4.1:1), Gruvbox's comment from `#928374` (4.0:1) and Catppuccin's comment from `#7f849c` (4.4:1). Akira, Cyberpunk and Ghost in the Shell had their comment colours lifted (from `#5a5552`, `#374151` and `#163e16`), and Cyberpunk's accent from `#7928ca`.
 
