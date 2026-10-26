@@ -35,6 +35,51 @@ html[data-theme="dark"] {
   color-scheme: dark;
 }
 
+/* Neon: an optional third mode that stays in the NieR / YoRHa style.
+   Same flat boxes, hard shadows and hatch background, in a dark teal-black with
+   the parchment ink of the other themes, a cyan accent (the colour of YoRHa's
+   hacking screens) and YoRHa red for links. Glow is kept to titles and boxes. */
+html[data-theme="neon"] {
+  --nier-bg: #0c1214;
+  --nier-ink: #d8d2bc;
+  --nier-ink-rgb: 216, 210, 188;
+  --color-terminal-bg: #0c1214;
+  --color-terminal-text: #d8d2bc;
+  --color-terminal-accent: #4fe3d7;
+  --color-terminal-link: #ff6a5a;
+  --color-terminal-strong: #9bf0e6;
+  --color-terminal-comment: #6f8a88;
+  --color-terminal-border: #1c2a2c;
+  --color-terminal-highlight: #ffd1c9;
+  color-scheme: dark;
+}
+
+html[data-theme="neon"] .nier-box {
+  border-color: #4fe3d7;
+  box-shadow: 3px 3px 0 rgba(79, 227, 215, 0.3), 0 0 8px rgba(79, 227, 215, 0.25);
+}
+
+html[data-theme="neon"] section > h1,
+html[data-theme="neon"] .markdown-content h1,
+html[data-theme="neon"] .markdown-content h2 {
+  text-shadow: 0 0 8px rgba(79, 227, 215, 0.55);
+}
+
+html[data-theme="neon"] a.nier-box:hover,
+html[data-theme="neon"] .nier-row:hover {
+  background: #d8d2bc;
+  color: #0c1214;
+}
+
+html[data-theme="neon"] a.nier-box:hover *,
+html[data-theme="neon"] .nier-row:hover * {
+  color: #0c1214;
+}
+
+html[data-theme="neon"] .markdown-content .code-block {
+  border-color: #4fe3d7;
+}
+
 body,
 .nier-box {
   transition: background-color 0.2s steps(3), color 0.2s steps(3);

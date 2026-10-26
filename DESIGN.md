@@ -25,6 +25,8 @@ Light theme (default):
 
 Dark theme (`html[data-theme="dark"]`) is the same palette inverted: bg `#26231d`, ink `#d1cbb7`, accent `#b5a47a`, link `#e0cfa0`, strong `#cdbb8c`, comment `#8f8468`, border `#4a4435`.
 
+Neon theme (`html[data-theme="neon"]`, optional third mode): still NieR/YoRHa, with a teal-black background `#0c1214`, parchment ink `#d8d2bc`, a cyan accent `#4fe3d7` (the colour of YoRHa's hacking screens), YoRHa red links `#ff6a5a`, and a soft glow limited to titles and `.nier-box`. The toggle cycles light, dark, neon.
+
 Always use the CSS variables, never hard-coded light-theme hex values, so both themes work. Overlays use `rgba(var(--nier-ink-rgb), alpha)`.
 
 ## Typography

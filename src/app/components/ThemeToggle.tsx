@@ -2,19 +2,24 @@
 
 import { useEffect, useState } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "neon";
+
+// Click order: light -> dark -> neon -> light. The button names the NEXT mode.
+const NEXT: Record<Theme, Theme> = { light: "dark", dark: "neon", neon: "light" };
+
+const isTheme = (value: unknown): value is Theme =>
+  value === "light" || value === "dark" || value === "neon";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    setTheme(
-      document.documentElement.dataset.theme === "dark" ? "dark" : "light",
-    );
+    const current = document.documentElement.dataset.theme;
+    setTheme(isTheme(current) ? current : "light");
   }, []);
 
   const toggle = () => {
-    const next: Theme = theme === "dark" ? "light" : "dark";
+    const next = NEXT[theme];
     setTheme(next);
     document.documentElement.dataset.theme = next;
     try {
@@ -24,14 +29,15 @@ export default function ThemeToggle() {
     }
   };
 
+  const next = NEXT[theme];
   return (
     <button
       type="button"
       onClick={toggle}
-      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      aria-label={`Switch to ${next} mode`}
       className="nier-box nier-toggle fixed top-4 right-4 z-[60] px-3 py-1 text-xs sm:text-sm cursor-pointer select-none"
     >
-      {theme === "dark" ? "[ LIGHT ]" : "[ DARK ]"}
+      {`[ ${next.toUpperCase()} ]`}
     </button>
   );
 }
