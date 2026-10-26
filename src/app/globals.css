@@ -721,6 +721,14 @@ body::after {
   color: var(--syn-deleted);
 }
 
+/* Shell commands: the bash grammar reads part of an IP (172.31 of 172.31.71.127)
+   as a number and colours only that part, so numbers stay plain in shell blocks. */
+.markdown-content pre code.language-bash .token.number,
+.markdown-content pre code.language-sh .token.number,
+.markdown-content pre code.language-powershell .token.number {
+  color: inherit;
+}
+
 .markdown-content pre code .token.important,
 .markdown-content pre code .token.bold {
   font-weight: bold;
