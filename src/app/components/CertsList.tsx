@@ -23,7 +23,14 @@ export default function CertsList({ certs, className = "" }: CertsListProps) {
               <span className="block text-xs text-terminal-comment">
                 [ {cert.provider} ]{cert.wip && " - IN PROGRESS"}
               </span>
-              {cert.certification}
+              <span className="flex items-baseline justify-between gap-2">
+                <span>{cert.certification}</span>
+                {cert.url && (
+                  <span className="shrink-0 text-xs text-terminal-comment">
+                    verify ↗
+                  </span>
+                )}
+              </span>
             </>
           );
           return (
