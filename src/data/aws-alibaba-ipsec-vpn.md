@@ -15,7 +15,7 @@ Publish date: `2026-10-21`
 
 # Connecting AWS and Alibaba Cloud with Site-to-Site IPsec VPN, BGP and a Transit Router
 
-Many companies don't live in one cloud. An app may run on AWS while its database, its users or a partner sit on Alibaba Cloud. The two networks then need to talk **privately**: server to server, over private IPs, encrypted, without opening anything to the internet.
+Hi! (^-^)/ Many companies don't live in one cloud. An app may run on AWS while its database, its users or a partner sit on Alibaba Cloud. The two networks then need to talk **privately**: server to server, over private IPs, encrypted, without opening anything to the internet.
 
 In this lab I connected an **AWS VPC in N. Virginia** to an **Alibaba Cloud VPC in Riyadh** with a **site-to-site IPsec VPN** using **BGP**. On the Alibaba side the VPN goes through a **CEN Transit Router**, with a **Cloud Firewall** inspecting the traffic. At the end, an EC2 instance and an ECS instance can ping and SSH each other over their private IPs.
 
