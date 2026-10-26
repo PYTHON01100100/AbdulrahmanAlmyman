@@ -21,6 +21,8 @@ Publish date: `2026-10-22` · Reading time: `~15 min`
 
 Image made by me with [PhotoCraft](https://getartcraft.com/apps/photocraft) (˶ᵔ ᵕ ᵔ˶) .
 
+Hi! \\(^_^)/ guys
+
 **In this article:** my relationship with Linux · what Linux actually is · a short history · why I prefer it · why it matters for cloud and AI work · the distros I have used · customization and ricing · which distro you should choose · how to start · resources
 
 ## My relationship with Linux
