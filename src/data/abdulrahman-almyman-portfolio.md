@@ -147,3 +147,34 @@ Instead of "experienced in Kubernetes", a reader can open a page and see how I d
 - Keeping the Data Logs alive, so the site shows what I am learning right now.
 
 If you are hiring, collaborating, or just curious about the build, the code is open. Take a look at the [repository](https://github.com/PYTHON01100100/AbdulrahmanAlmyman), or get in touch through the contact links on the home page.
+
+## Design references and inspiration
+
+The NieR:Automata look did not come from nowhere. These are the videos, repositories and community desktops I studied while designing the site, and they are worth a look if you enjoy this style.
+
+### Videos
+
+- [[YoRHa] for the glory of mankind](https://youtu.be/YRDbhWHF8bY) by flicko
+- [YoRHa (WIP)](https://youtu.be/V1qrTnqaB-M) by flicko
+- [[wip]](https://youtu.be/yYYfMLOPfdI) by flicko
+- [Ryoku Arch](https://youtu.be/Yo0nCbux6QI) by unix.s
+
+### Source
+
+- [anteczko/Nier-Automata-Rice](https://github.com/anteczko/Nier-Automata-Rice): a repository for game-inspired Linux customization.
+
+### NieR-themed desktops (r/unixporn)
+
+- [[XFCE] Made a Nier:Automata inspired theme](https://www.reddit.com/r/unixporn/comments/7tn9dm/xfce_made_a_nierautomata_inspired_theme/) by u/melo3n
+- [[i3-gaps] NieR:Automata - First encounter with my Rice(R)](https://www.reddit.com/r/unixporn/comments/bngsiy/i3gaps_nierautomata_first_encounter_with_my_ricer/) by u/ShaentBlathanna
+- [[Hyprland] Minimalistic Nier: Automata themed rice](https://www.reddit.com/r/unixporn/comments/1g4cou1/hyprland_minimalistic_nier_automata_themed_rice/) by u/No-Nefariousness9863
+- [[Hyprland] Modern CachyOS Nier inspired Rice.](https://www.reddit.com/r/unixporn/comments/1tqkf9f/hyprland_modern_cachyos_nier_inspired_rice/) by u/MartZ0Z
+- [[KDE] NieR Themes Rice, First Proper Rice Since I Started Using Linux 2 Years Ago](https://www.reddit.com/r/unixporn/comments/1tcnxkq/kde_nier_themes_rice_first_proper_rice_since_i/) by u/david_pridson
+- [[OC] Nier lockscreen](https://www.reddit.com/r/unixporn/comments/1rtahcy/oc_nier_lockscreen/) by u/xRaech
+
+### Minimal and tiling desktops
+
+- [Arch with DWM](https://www.reddit.com/r/LinuxPorn/comments/1ipn861/arch_with_dwm/) on r/LinuxPorn, by u/Expert_Hippo1165
+- [[DWM] Kinda minimal..](https://www.reddit.com/r/unixporn/comments/1iqzqd9/dwm_kinda_minimal/) by u/Expert_Hippo1165
+- [[DWL] I prefer to have more space on screen](https://www.reddit.com/r/unixporn/comments/1p5l3ff/dwl_i_prefer_to_have_more_space_on_screen/) by u/Expert_Hippo1165
+- [[niri] burn my retinas](https://www.reddit.com/r/unixporn/comments/1qkh2lc/niri_burn_my_retinas/) by u/D3S3Rd
