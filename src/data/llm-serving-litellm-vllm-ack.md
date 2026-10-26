@@ -15,7 +15,7 @@ Publish date: `2026-11-18`
 
 # Serving Large Language Models with LiteLLM and vLLM on Alibaba Cloud ACK
 
-Once a team starts using more than one open-source LLM, things get messy fast. Every model wants different hardware, a different deployment, and a different endpoint for developers to remember. I built a reference platform on Alibaba Cloud ACK that hides all of that behind **one OpenAI-compatible endpoint**, and this is how it works.
+Hi! [o_o]ノ Once a team starts using more than one open-source LLM, things get messy fast. Every model wants different hardware, a different deployment, and a different endpoint for developers to remember. I built a reference platform on Alibaba Cloud ACK that hides all of that behind **one OpenAI-compatible endpoint**, and this is how it works.
 
 The stack:
 
