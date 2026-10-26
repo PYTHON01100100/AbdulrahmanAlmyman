@@ -290,6 +290,7 @@ The most important advice: be patient with yourself. Everyone who uses Linux tod
 ### For Arabic readers
 
 - [كيف تلعب على لينكس](https://youtu.be/HjvnEDfps5s) by الوقّاد (Alwaqad): a video about how to play games on Linux (**the video is in Arabic**).
+- [كيف تنتقل إلى نظام لينكس مع شرح الأساسيات 🐧](https://youtu.be/txoRdoqk8Rs) by iMr_PrO_GaMeR: how to move to Linux, with an explanation of the basics (**the video is in Arabic**).
 
 ## Final thoughts
 
