@@ -93,7 +93,7 @@ For the first round I used **PAI-DSW** (Data Science Workshop), Alibaba Cloud's 
 
 ![Creating the PAI-DSW instance: ecs.c9i.8xlarge (32 vCPU, 64 GiB) with the TensorFlow 2.14 CPU image, and the OSS bucket mounted read-only](/train-cv-model-oss/04-pai-dsw-create.png)
 
-Before training, the notebook downloaded all **1,658 files** from OSS once, using the **oss2** Python SDK (the official OSS library for Python) over the **internal endpoint**. The internal endpoint is the address that works inside Alibaba Cloud's own network, in the same region. The whole download took **2.6 seconds**. After that, the images were cached in RAM, so training never touched OSS again.
+Before training, the notebook downloaded all **1,658 files** from OSS once, using the **oss2** Python SDK (the official OSS library for Python; see [Use OSS in PAI: OSS SDK](https://www.alibabacloud.com/help/en/pai/use-oss#39058b653awlr)) over the **internal endpoint**. The internal endpoint is the address that works inside Alibaba Cloud's own network, in the same region. The whole download took **2.6 seconds**. After that, the images were cached in RAM, so training never touched OSS again.
 
 The model was a small **CNN** (convolutional neural network, a common model type for images) trained from scratch. It ran **29 epochs in about 30 seconds** (an epoch is one full pass over the training images) and reached **82.5% test accuracy**.
 
@@ -174,7 +174,7 @@ A rule of thumb:
 
 Say you have 5 TB of images and audio. A few things change:
 
-- **Train on an ECS GPU instance (or PAI-DLC)** in the same region as the bucket, and stream the data from OSS. Don't copy terabytes onto the machine.
+- **Train on an ECS GPU instance (or PAI-DLC)** in the same region as the bucket, and stream the data from OSS. Don't copy terabytes onto the machine. For PyTorch, Alibaba Cloud's [OSS Connector for AI/ML](https://www.alibabacloud.com/help/en/pai/use-oss#87814229253hc) is built for streaming large datasets from OSS.
 - **Pack the files into large shards** (TFRecord or WebDataset files of about 100 MB to 1 GB each) instead of streaming millions of tiny files.
 - **For audio, precompute features** (like spectrograms) once, instead of computing them again in every epoch.
 - **Save checkpoints to OSS regularly**, so a long training job can resume after a failure.
@@ -191,3 +191,9 @@ Why isn't CPU enough at that size? At 250 images per second, 20 million images w
 When you are done, **stop or release your instances**. Your data and results stay safe in OSS.
 
 The full scripts and the notebook are available in the <a href="/train-cv-model-oss/date-fruit-oss-training.zip" download>project package</a>.
+
+## References
+
+- [Use OSS in PAI](https://www.alibabacloud.com/help/en/pai/use-oss) (Alibaba Cloud PAI documentation): all the ways PAI can read and write OSS data.
+- [Use OSS in PAI: OSS SDK](https://www.alibabacloud.com/help/en/pai/use-oss#39058b653awlr): reading OSS data with the Python SDK (`oss2`), as in round 1.
+- [Use OSS in PAI: OSS Connector for AI/ML](https://www.alibabacloud.com/help/en/pai/use-oss#87814229253hc): streaming large datasets from OSS for PyTorch training.
