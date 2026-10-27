@@ -17,7 +17,7 @@ Publish date: `2026-10-27`
 
 Salam Alaikum! [=^_^=]/
 
-This builds on an older project of mine, [Date Fruit Image Classification](https://github.com/PYTHON01100100/Date_Fruit_Image_Classification_Project), where I first designed an image classifier for Saudi dates. This time the goal is a proof of concept (POC) for the cloud side: uploading the dataset to OSS, then training the model on Alibaba Cloud with both PAI and ECS, once by pre-downloading the data and once by streaming it.
+This builds on an older project of mine, [Date Fruit Image Classification](https://github.com/PYTHON01100100/Date_Fruit_Image_Classification_Project), where I first designed an image classifier for Saudi dates. This case study demonstrates two practical approaches to training AI models with datasets stored in Alibaba Cloud OSS, using PAI-DSW and ECS, with a focus on data uploading, access methods, and managing training results. It is a proof of concept (POC) for the cloud side: the same dataset is pre-downloaded in one round and streamed in the other.
 
 I built a model that looks at a photo of a date fruit and tells you which of 9 Saudi varieties it is: Ajwa, Galaxy, Mejdool, Meneifi, Nabtat Ali, Rutab, Shaishe, Sokari or Sugaey.
 
@@ -32,7 +32,7 @@ dataset/test/<class>/<image>
 
 One thing to know up front: GPU instances were sold out in my region (Riyadh, `me-central-1`), so **everything in this article ran on CPU**. I used a **c9i** instance with 32 vCPUs. These Intel CPUs have **AMX** (built-in matrix units), which speeds up training when it runs in **bfloat16** precision (a smaller number format that is fast and accurate enough for training).
 
-I trained the model twice, loading the data from **OSS** (Object Storage Service, Alibaba Cloud's file storage) in two different ways. This article shows both, and explains when each one makes sense.
+I trained the model twice, loading the data from **OSS** (Alibaba Cloud Object Storage Service, which stores your files as objects in a bucket) in two different ways. This article shows both, and explains when each one makes sense.
 
 <a href="/train-cv-model-oss/date-fruit-oss-training.zip" download>⬇ Download the project package (scripts, notebook and guides, .zip)</a>
 
@@ -165,6 +165,14 @@ This was the better choice for my 20 MB dataset.
 - Training starts immediately, without waiting for a download.
 
 The trade-off is one OSS request per file, per epoch. So keep your machine in the **same region** as the bucket and use the **internal endpoint**.
+
+**Streaming is not always the better option.** It scales further, but pre-downloading is often faster and simpler. To choose, look at:
+
+- **Dataset size:** small datasets are easiest to download once.
+- **RAM and local disk:** if the data fits, pre-downloading avoids reading from OSS again in every epoch.
+- **OSS access and network throughput:** streaming is only as fast as your connection to OSS, so the bucket and the machine should be in the same region.
+- **How often you reuse the data:** if you train many times on the same dataset, a local copy pays off quickly.
+- **The training workload:** a fast GPU can finish an epoch quicker than OSS can deliver the files one by one, so large jobs need streaming done well (in shards, see below), not just streaming.
 
 A rule of thumb:
 
