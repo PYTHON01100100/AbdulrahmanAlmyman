@@ -15,6 +15,8 @@ Publish date: `2026-10-16`
 
 # GitHub Profile README: Make Your GitHub Work as Your CV
 
+Yahooo! Salam Alaikum! (^-^)/ shabab and students who will graduate soon
+
 When someone wants to know what you can do, they will often open your GitHub profile before they open your CV. The first thing they see is your **profile README**, the page at the top of your profile. If it is empty, you wasted your best first impression. If it is well made, it tells your story in ten seconds.
 
 This article shows how I customized mine, why it matters for your career, and how you can build yours.

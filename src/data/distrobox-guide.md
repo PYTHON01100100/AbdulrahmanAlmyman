@@ -15,6 +15,8 @@ Publish date: `2026-10-16`
 
 # Distrobox: Any Linux Distro Inside Your Terminal
 
+Salam Alaikum! [=^_^=]/
+
 Have you ever wanted an app that exists only on another Linux distro? Or needed a newer (or older) version of a tool, but upgrading it would break something else on your machine? Distrobox is the tool that fixed this for me. This guide explains what it is, why it is useful, and how to use it step by step, in simple language.
 
 Project page: [github.com/89luca89/distrobox](https://github.com/89luca89/distrobox)

@@ -15,6 +15,8 @@ Publish date: `2026-10-16`
 
 # WSL: Use Linux on Windows Without a Virtual Machine
 
+Salam Alaikum! [•_•]/
+
 Many people use Windows every day, but sooner or later a task needs Linux. A DevOps tool only has Linux instructions. An AI tutorial starts with `apt install`. A teacher says "open a terminal" and means a Linux one. Or you simply want to **try Linux for the first time** and learn its commands, without wiping your computer.
 
 You don't need a virtual machine or a dual boot for that anymore. **Windows Subsystem for Linux (WSL)** gives you a real Linux terminal inside Windows, installed with one command. This guide explains what it is, the problems it solves, who benefits, and how to use it step by step, in simple language.

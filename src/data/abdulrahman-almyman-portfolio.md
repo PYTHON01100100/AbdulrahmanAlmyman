@@ -15,6 +15,8 @@ Publish date: `2026-10-09`
 
 # This Website: A NieR:Automata Portfolio
 
+Salam Alaikum! (^_^)/ dears
+
 This website is my main project: the [AbdulrahmanAlmyman](https://github.com/PYTHON01100100/AbdulrahmanAlmyman) repository itself. This page explains the idea behind the site, why it looks the way it does, and what I want it to do for me.
 
 - **Live site:** [www.abdulrahmanalmyman.dev](https://www.abdulrahmanalmyman.dev) (also on [GitHub Pages](https://python01100100.github.io/AbdulrahmanAlmyman/))

@@ -17,6 +17,8 @@ Publish date: `2026-11-17`
 
 *The story behind my LinkedIn photographs, my curiosity about the world, and my passion for Cloud Engineering and Artificial Intelligence.*
 
+Salam Alaikum! (^.^)/ shabab
+
 ## Introduction
 
 Recently, I decided to update my LinkedIn profile with two photographs from my travels in Italy: a portrait of myself by the Mediterranean Sea, and Raphael's famous painting, *The School of Athens*, which I photographed during my visit to Vatican City.
