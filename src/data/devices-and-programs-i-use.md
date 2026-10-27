@@ -15,6 +15,8 @@ Publish date: `2025-01-01`
 
 # Devices and Programs I Use
 
+Salamu alaykum \\(^o^)/
+
 This is an ever-updating list of the devices and programs I use and recommend. I update it whenever I switch to a new program, or find one that is worth trying.
 
 ## Devices
