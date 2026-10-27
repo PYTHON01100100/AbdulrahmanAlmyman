@@ -15,6 +15,10 @@ Publish date: `2026-10-27`
 
 # Training an Image Classifier on Alibaba Cloud with Data in OSS
 
+Salam Alaikum! [=^_^=]/
+
+This builds on an older project of mine, [Date Fruit Image Classification](https://github.com/PYTHON01100100/Date_Fruit_Image_Classification_Project), where I first designed an image classifier for Saudi dates. This time the goal is a proof of concept (POC) for the cloud side: uploading the dataset to OSS, then training the model on Alibaba Cloud with both PAI and ECS, once by pre-downloading the data and once by streaming it.
+
 I built a model that looks at a photo of a date fruit and tells you which of 9 Saudi varieties it is: Ajwa, Galaxy, Mejdool, Meneifi, Nabtat Ali, Rutab, Shaishe, Sokari or Sugaey.
 
 The dataset has 1,156 training images and 502 test images, about 20 MB in total, with one folder per class:
