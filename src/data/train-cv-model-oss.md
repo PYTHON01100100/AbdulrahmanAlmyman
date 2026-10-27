@@ -170,14 +170,22 @@ A rule of thumb:
 | Bigger than RAM, fits on disk | Either works |
 | Bigger than disk (hundreds of GB to TBs) | Stream from OSS, on GPU instances |
 
+On PAI you don't have to write the loading code yourself. The [PAI documentation](https://www.alibabacloud.com/help/en/pai/use-oss) lists several ways to read OSS data:
+
+- **Mount the bucket as a folder** with JindoFuse. The bucket then appears as a local path (in my round 1 screenshot, the bucket is mounted read-only at `/mnt/data/`). PAI recommends it when the dataset is small enough to benefit from its local cache.
+- **ossfs 2.0 mount**, for high-throughput reading and writing of files in order, which suits training jobs.
+- **OSS Connector for AI/ML**, for PyTorch code that streams data straight from OSS, especially millions of small files.
+- **The oss2 Python SDK**, when your own code decides what to read and when, as in both of my rounds.
+
 ## What about really big datasets?
 
 Say you have 5 TB of images and audio. A few things change:
 
-- **Train on an ECS GPU instance (or PAI-DLC)** in the same region as the bucket, and stream the data from OSS. Don't copy terabytes onto the machine. For PyTorch, Alibaba Cloud's [OSS Connector for AI/ML](https://www.alibabacloud.com/help/en/pai/use-oss#87814229253hc) is built for streaming large datasets from OSS.
+- **Train on an ECS GPU instance (or PAI-DLC)** in the same region as the bucket, and stream the data from OSS. Don't copy terabytes onto the machine. For PyTorch, the [OSS Connector for AI/ML](https://www.alibabacloud.com/help/en/oss/developer-reference/oss-connector-overview/) is built for this: it streams training data from OSS without a download step (`OssIterableDataset` reads in order, `OssMapDataset` allows random access). On PAI it works in DSW and DLC with an official PyTorch 2.0 (or newer) image. My scripts use TensorFlow, so they don't use it.
 - **Pack the files into large shards** (TFRecord or WebDataset files of about 100 MB to 1 GB each) instead of streaming millions of tiny files.
 - **For audio, precompute features** (like spectrograms) once, instead of computing them again in every epoch.
-- **Save checkpoints to OSS regularly**, so a long training job can resume after a failure.
+- **Save checkpoints to OSS regularly**, so a long training job can resume after a failure. In PyTorch, the connector's `OssCheckpoint` reads and writes checkpoints in OSS directly.
+- **Mind the file size limits** if your shards or archives are large. A single simple upload to OSS is limited to 5 GB; bigger files need a multipart upload (up to 48.8 TB), and a resumable upload can continue after a network drop. See [Upload objects to OSS](https://www.alibabacloud.com/help/en/oss/user-guide/upload-objects-to-oss/).
 
 Why isn't CPU enough at that size? At 250 images per second, 20 million images would take about **22 hours per epoch**.
 
@@ -197,3 +205,5 @@ The full scripts and the notebook are available in the <a href="/train-cv-model-
 - [Use OSS in PAI](https://www.alibabacloud.com/help/en/pai/use-oss) (Alibaba Cloud PAI documentation): all the ways PAI can read and write OSS data.
 - [Use OSS in PAI: OSS SDK](https://www.alibabacloud.com/help/en/pai/use-oss#39058b653awlr): reading OSS data with the Python SDK (`oss2`), as in round 1.
 - [Use OSS in PAI: OSS Connector for AI/ML](https://www.alibabacloud.com/help/en/pai/use-oss#87814229253hc): streaming large datasets from OSS for PyTorch training.
+- [OSS Connector for AI/ML overview](https://www.alibabacloud.com/help/en/oss/developer-reference/oss-connector-overview/) (OSS documentation): the connector's datasets (`OssMapDataset`, `OssIterableDataset`) and `OssCheckpoint`.
+- [Upload objects to OSS](https://www.alibabacloud.com/help/en/oss/user-guide/upload-objects-to-oss/) (OSS documentation): simple, multipart and resumable uploads, with their size limits.
