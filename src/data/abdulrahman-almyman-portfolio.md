@@ -20,7 +20,7 @@ Salam Alaikum! (^_^)/ dears
 This website is my main project: the [AbdulrahmanAlmyman](https://github.com/PYTHON01100100/AbdulrahmanAlmyman) repository itself. This page explains the idea behind the site, why it looks the way it does, and what I want it to do for me.
 
 - **Live site:** [www.abdulrahmanalmyman.dev](https://www.abdulrahmanalmyman.dev) (also on [GitHub Pages](https://python01100100.github.io/AbdulrahmanAlmyman/))
-- **Source code:** [github.com/PYTHON01100100/AbdulrahmanAlmyman](https://github.com/PYTHON01100100/AbdulrahmanAlmyman)
+- **Source code:** [github.com/PYTHON01100100/AbdulrahmanAlmyman](https://github.com/PYTHON01100100/AbdulrahmanAlmyman), open source under the [GNU GPL v3 licence](https://github.com/PYTHON01100100/AbdulrahmanAlmyman/blob/main/LICENSE)
 
 ![The current NieR:Automata style portfolio: About, Contact, Data Logs and InMemory Intel on the left, Archives and Certifications on the right, and the status plate with London time and Hijri date in the corner](/portfolio-article/new-portfolio.png)
 
