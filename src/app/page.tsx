@@ -146,15 +146,16 @@ export default function Home() {
                   <strong className="font-normal text-terminal-strong">
                     Abdulrahman Almyman
                   </strong>
-                  , a King Saud University graduate (2025) and an AI Engineer
-                  driven by curiosity and the pursuit of intelligent systems.
+                  , a King Saud University graduate (2025) &amp; an AI Engineer
+                  driven by curiosity &amp; the pursuit of intelligent systems.
+                  I&apos;m currently working @ SCCC by stc.
                 </p>
                 <p className="mb-3">
-                  My expertise spans Alibaba Cloud, AWS, Azure, and GCP, with
-                  hands-on experience in Kubernetes, Docker, and DevOps.
+                  My expertise spans Alibaba Cloud, AWS, Azure &amp; GCP, with
+                  hands-on experience in Kubernetes, Docker &amp; DevOps.
                 </p>
                 <p className="mb-3">
-                  I build scalable, cloud-native architectures and explore the
+                  I build scalable, cloud-native architectures &amp; explore the
                   boundaries of AI engineering.
                 </p>
                 <p className="text-terminal-comment">
