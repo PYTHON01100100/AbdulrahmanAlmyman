@@ -104,6 +104,7 @@ University math courses can feel disconnected while you take them. Seen through 
 ## References
 
 - [The Roadmap of Mathematics for Machine Learning](https://thepalindrome.org/p/the-roadmap-of-mathematics-for-machine-learning) by Tivadar Danka, The Palindrome
+- [The Deep Learning Road Map That I Took](https://medium.com/@ArianAmani/the-deep-learning-road-map-that-i-took-c29120b0f5e2) by Arian Amani on Medium: another learning path toward deep learning
 - [MATH 244 Linear Algebra (KSU)](https://github.com/PYTHON01100100/MATH244-Linear-Algebra-_44_KSU): notes, slides, quizzes and old homework
 - [MATH 151 (KSU)](https://github.com/PYTHON01100100/MATH151_43_SEC_TERM_22): discrete mathematics, with summaries and exams
 - [CSC 281 (KSU)](https://github.com/PYTHON01100100/CSC-281_KSU_44): discrete mathematics for computer science
