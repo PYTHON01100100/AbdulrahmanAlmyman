@@ -86,6 +86,7 @@ const dataLogs: DataLog[] = [
 // In-memory Intel entries. Any order here: they are sorted newest first on render.
 // Add href to link to a case-study page.
 const intelData: IntelEntry[] = [
+  { id: "math-for-machine-learning", title: "The Math Behind Machine Learning: My Roadmap from KSU Courses", date: "2024-09-01", description: "How the math I studied at KSU since 2021 maps to the roadmap of mathematics for machine learning, with my course notes as references.", href: "/case-study/math-for-machine-learning" },
   { id: "train-cv-model-oss", title: "Training an Image Classifier on Alibaba Cloud with Data in OSS", date: "2026-10-27", description: "Classifying 9 types of Saudi dates on CPU, pre-downloading vs. streaming the data from OSS, and when to use each.", href: "/case-study/train-cv-model-oss" },
   { id: "aws-alibaba-ipsec-direct-vpc", title: "AWS to Alibaba Cloud IPsec VPN, Direct to the VPC (No Transit Router)", date: "2026-10-25", description: "The simpler version of my site-to-site VPN lab: tunnels straight into the VPC, with BGP and the Bad Peer AS fix.", href: "/case-study/aws-alibaba-ipsec-direct-vpc" },
   { id: "devices-and-programs-i-use", title: "Devices and Programs I Use", date: "2025-01-01", description: "An ever-updating list of the devices, operating systems and programs I use and recommend.", href: "/case-study/devices-and-programs-i-use" },
