@@ -76,7 +76,7 @@ Probability is the mathematics of chance, and it is the language of predictions.
 - **The law of large numbers** says the average of many repetitions approaches the expected value. It is what makes stochastic gradient descent work.
 - **Information theory**: entropy measures the information in a distribution, and the **cross-entropy loss** used in classification, and the **KL divergence**, both come from it.
 
-My courses here don't map one to one to a single repository, but discrete mathematics gave me the base: events are sets, so set operations and counting are the language of probability. I studied it in **MATH 151** ([MATH151 repository](https://github.com/PYTHON01100100/MATH151_43_SEC_TERM_22)) and again from the computer science side in **CSC 281** ([CSC-281 repository](https://github.com/PYTHON01100100/CSC-281_KSU_44)).
+My courses here don't map one to one to a single repository, but discrete mathematics gave me the base: events are sets, so set operations and counting are the language of probability. I studied it in **MATH 151** ([MATH151 repository](https://github.com/PYTHON01100100/MATH151_43_SEC_TERM_22)) and again from the computer science side in **CSC 281** ([CSC-281 repository](https://github.com/PYTHON01100100/CSC-281_KSU_44)). For probability and statistics themselves, the third course of the specialization I recommend below covers them directly.
 
 ## How my courses map to the roadmap
 
@@ -97,6 +97,14 @@ The roadmap recommends these for each pillar:
 - **Probability:** MIT's *Introduction to Probability* by John Tsitsiklis.
 - **Everything in one place:** Tivadar Danka's book *The Mathematics of Machine Learning*.
 
+**My recommendation:** if you want one structured course to prepare for the math of AI, I recommend the [Mathematics for Machine Learning and Data Science](https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science) specialization by **DeepLearning.AI** on Coursera, taught by **Luis Serrano**. Its three courses match this roadmap closely:
+
+- **Linear Algebra for Machine Learning and Data Science** (about 34 hours)
+- **Calculus for Machine Learning and Data Science** (about 27 hours)
+- **Probability & Statistics for Machine Learning & Data Science** (about 33 hours)
+
+Note that it is a **paid** course, with a career certificate at the end.
+
 ## Conclusion
 
 University math courses can feel disconnected while you take them. Seen through this roadmap, they are not: linear algebra gives a model its shape, calculus trains it, and probability explains what its predictions mean. If you are a student at KSU or anywhere else, my notes are open, so take what helps you, and walk the road one concept at a time.
@@ -104,6 +112,7 @@ University math courses can feel disconnected while you take them. Seen through 
 ## References
 
 - [The Roadmap of Mathematics for Machine Learning](https://thepalindrome.org/p/the-roadmap-of-mathematics-for-machine-learning) by Tivadar Danka, The Palindrome
+- [Mathematics for Machine Learning and Data Science](https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science) by DeepLearning.AI on Coursera (paid): linear algebra, calculus, and probability & statistics
 - [The Deep Learning Road Map That I Took](https://medium.com/@ArianAmani/the-deep-learning-road-map-that-i-took-c29120b0f5e2) by Arian Amani on Medium: another learning path toward deep learning
 - [MATH 244 Linear Algebra (KSU)](https://github.com/PYTHON01100100/MATH244-Linear-Algebra-_44_KSU): notes, slides, quizzes and old homework
 - [MATH 151 (KSU)](https://github.com/PYTHON01100100/MATH151_43_SEC_TERM_22): discrete mathematics, with summaries and exams
