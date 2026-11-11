@@ -312,7 +312,7 @@ html[data-theme="bebop"] {
   --code-label: #b9ad8c;
   --code-action: #e3d9b8;
   --code-action-hover: #ffffff;
-  --syn-comment: #8a826c;
+  --syn-comment: #aaa391; /* was #8a826c (3.10:1); now 4.72:1 on --code-bg */
   --syn-punctuation: #b9ad8c;
   --syn-keyword: #b8a0b0;
   --syn-string: #a3b88c;
