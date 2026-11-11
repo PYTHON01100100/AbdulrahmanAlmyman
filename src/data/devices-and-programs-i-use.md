@@ -23,7 +23,7 @@ This is an ever-updating list of the devices and programs I use and recommend. I
 
 ### My current PC
 
-- **OS:** Windows (planning a new super PC in 2029)
+- **OS:** Windows, for now
 - **Bought from:** [PCD](https://pcd.com.sa/)
 - **Build details:** [MY_PC1 on GitHub](https://github.com/PYTHON01100100/MY_PC1)
 
@@ -56,6 +56,7 @@ Built for coding, AI/ML, game dev and high-performance tasks.
 - **Steam Deck:** to play my Steam library, like Elden Ring, away from my desk at work
 - **MacBook Pro 14-inch (M5 Max):** 18-core CPU, 40-core GPU, 128 GB unified memory and 2 to 4 TB of storage, for office work and AI inference only
 - **Mac Studio (M5 Ultra):** 36-core CPU, 80-core GPU, 512 GB unified memory and 8 TB of storage
+- **A new super PC (2029 or 2030):** a custom build that can run 4 operating systems on the same machine
 
 ## Operating systems
 
