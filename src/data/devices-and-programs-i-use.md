@@ -204,6 +204,14 @@ Fans rebuild classic games from their original code so they run natively on PC. 
 - [The Gaming Emporium: decompilations and recompilations](https://thegamingemporium.com/categories/decompilations-recompilations/)
 - [r/decomps](https://www.reddit.com/r/decomps/) on Reddit
 
+Accounts I follow on X for game ports and emulation:
+
+- [Samir (@samiirr_0)](https://x.com/samiirr_0)
+- [مُحَمّد | بلا مَثـيل (@RYX3D)](https://x.com/RYX3D)
+- [Ahmed (@xNJQy1)](https://x.com/xNJQy1)
+- [@iExplosiveRage](https://x.com/iExplosiveRage)
+- [ABDULBAKI (@iMr_PrO_GaMeR)](https://x.com/iMr_PrO_GaMeR)
+
 ## Mobile apps
 
 ### Quran
