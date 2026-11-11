@@ -50,6 +50,13 @@ Built for coding, AI/ML, game dev and high-performance tasks.
 
 - Ubuntu and Linux Mint
 
+### Devices I want
+
+- **Nintendo Switch 2:** to play during breaks at work
+- **Steam Deck:** to play my Steam library, like Elden Ring, away from my desk at work
+- **MacBook Pro 14-inch (M5 Max):** 18-core CPU, 40-core GPU, 128 GB unified memory and 2 to 4 TB of storage, for office work and AI inference only
+- **Mac Studio (M5 Ultra):** 36-core CPU, 80-core GPU, 512 GB unified memory and 8 TB of storage
+
 ## Operating systems
 
 - Fedora Linux
