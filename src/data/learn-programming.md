@@ -17,6 +17,8 @@ Publish date: `2020-01-01`
 
 ![The logos of Java, C++ and Python around a computer screen showing code](/learn-programming/languages.png)
 
+Image made by me with [PhotoCraft](https://getartcraft.com/apps/photocraft).
+
 Many people want to learn programming, but they start in the wrong way: five languages at once, hours of videos, and no code written by their own hands. This article is the roadmap I recommend. The exact path depends on your goal, but the structure below is what matters most while you are learning.
 
 ## The roadmap
@@ -116,3 +118,27 @@ To write and run code you need an **IDE** (an editor made for programming) and t
 ## Conclusion
 
 Pick one language, practice a little every day, build small projects, then choose a track and build projects you are proud of. Write the code yourself, understand every line, and ask for feedback. Every person's roadmap is a bit different, but these steps are the foundation of all of them.
+
+## Resources I recommend
+
+These are resources I used myself or recommend. Most are in Arabic.
+
+### Python
+
+- [Satr (Tuwaiq Academy): Python course](https://satr.tuwaiq.edu.sa/course/rRUQyVDkwQ/view?course_path_id=zaNuCyeqGx) (in Arabic)
+- [Codezilla: learn Python from scratch, full course for beginners](https://www.youtube.com/playlist?list=PLuXY3ddo_8nzrO74UeZQVZOb5-wIS6krJ) (YouTube playlist, in Arabic)
+
+### Java
+
+- [Satr (Tuwaiq Academy): Java learning path](https://satr.tuwaiq.edu.sa/path/rcqQIkvMEE/view) (in Arabic): good for university students
+- [CSC 111, Java 1 (KSU)](https://github.com/PYTHON01100100/CSC111_JAVA1_KSU_43): my course materials, for starters
+- [CSC 113, Java 2 (KSU)](https://github.com/PYTHON01100100/CSC113_JAVA2_KSU_43): my course materials for OOP, and linked lists, a great resource for students
+
+### C++
+
+- [Satr (Tuwaiq Academy): C++ course](https://satr.tuwaiq.edu.sa/course/vCmFYFdvRW/view?course_path_id=tHzXUtKlvK) (in Arabic)
+- [C++ basic to OOP, step by step](https://www.youtube.com/playlist?list=PLF8OvnCBlEY1bObRpU9p5Ioqt9Ckeeruj) by TheNewBaghdad (YouTube playlist, in Arabic): I used it in CSC 115, in my first term, when my major was still math
+
+### All three languages
+
+- [W3Schools](https://www.w3schools.com/): I used it for all three languages while I was learning English at the same time. It was enough for me, so I can't recommend any English videos from YouTube.
