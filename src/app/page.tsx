@@ -62,7 +62,7 @@ const certsData: Certification[] = [
 
 // Rolling micro-updates. Any order: they are sorted newest first on render.
 const dataLogs: DataLog[] = [
-  { timestamp: "2026.11.17_12:00", text: "Field report archived: \"Beyond the Profile\". Visual records from the Italy expedition decoded: coastal route Santa Margherita Ligure → Portofino, and The School of Athens in Vatican City. Link to Cloud & AI research: confirmed.", href: "/case-study/beyond-the-profile" },
+  { timestamp: "2026.11.30_12:00", text: "Field report archived: \"Beyond the Profile\". Visual records from the Italy expedition decoded: coastal route Santa Margherita Ligure → Portofino, and The School of Athens in Vatican City. Link to Cloud & AI research: confirmed.", href: "/case-study/beyond-the-profile" },
   // Timeline, recorded in the style of a 9S field report.
   { timestamp: "2025.09.01_00:00", text: "Redeployment confirmed. Unit returned to SCCC, the same organization, now designated: AI Engineer. Combat readiness: elevated.", href: "https://www.linkedin.com/feed/update/urn:li:activity:7367876038896377856/" },
   { timestamp: "2025.07.10_00:00", text: "Co-op deployment at SCCC, Alibaba Cloud division, concluded. Field data archived. Mission result: successful.", href: "https://www.linkedin.com/feed/update/urn:li:activity:7360680559204823042/" },
@@ -71,9 +71,9 @@ const dataLogs: DataLog[] = [
   { timestamp: "2022.01.06_00:00", text: "Anomaly resolved. After a prolonged struggle against hostile GPA readings, the unit has finally entered the Computer Science program. Objective re-aligned." },
   { timestamp: "2021.06.27_00:00", text: "Unit relocated to Egypt. Route deviation recorded. Duration: extended. Reason: classified." },
   { timestamp: "2019.09.02_00:00", text: "Record 001: unit enrolled at King Saud University. Initial deployment begins. All systems nominal." },
-  { timestamp: "2026.11.18_00:00", text: "Mission Log: Relocation protocol SUCCESSFUL. Current grid coordinated to the United Kingdom 🇬🇧. Initializing system integration with global tech nodes and sync complete." },
-  { timestamp: "2026.11.18_00:00", text: "SCHEDULED: Travel sequence initiated. Destination: United Kingdom 🇬🇧." },
-  { timestamp: "2026.11.17_00:00", text: "SCHEDULED: Portfolio deployment in NieR interface." },
+  { timestamp: "2026.12.01_00:00", text: "Mission Log: Relocation protocol SUCCESSFUL. Current grid coordinated to the United Kingdom 🇬🇧. Initializing system integration with global tech nodes and sync complete." },
+  { timestamp: "2026.12.01_00:00", text: "SCHEDULED: Travel sequence initiated. Destination: United Kingdom 🇬🇧." },
+  { timestamp: "2026.11.30_00:00", text: "SCHEDULED: Portfolio deployment in NieR interface." },
   { timestamp: "2026.10.10_00:00", text: "Playing Hollow Knight: Silksong. Learning Go." },
   { timestamp: "2026.10.01_00:00", text: "Learning Bifrost." },
   { timestamp: "2026.09.11_00:00", text: "AWS Certified ML Engineer - Associate added to records." },
@@ -95,7 +95,7 @@ const intelData: IntelEntry[] = [
   { id: "aws-alibaba-ipsec-vpn", title: "Connecting AWS and Alibaba Cloud with Site-to-Site IPsec VPN, BGP and a Transit Router", date: "2026-10-21", description: "A step-by-step lab with the IP plan, route tables, Cloud Firewall, and every IPsec and BGP problem I had to fix.", href: "/case-study/aws-alibaba-ipsec-vpn" },
   { id: "wsl-guide", title: "WSL: Use Linux on Windows Without a Virtual Machine", date: "2026-10-16", description: "What WSL solves, how to install it, try Ubuntu, Arch, Fedora and Kali, and use it for DevOps and GPU-accelerated AI.", href: "/case-study/wsl-guide" },
   { id: "distrobox-guide", title: "Distrobox: Any Linux Distro Inside Your Terminal", date: "2026-10-16", description: "What Distrobox solves, how to install it with apt, dnf and pacman, run GUI apps, and build a toolbox for cloud work.", href: "/case-study/distrobox-guide" },
-  { id: "llm-serving-litellm-vllm-ack", title: "Serving Large Language Models with LiteLLM and vLLM on Alibaba Cloud ACK", date: "2026-11-18", description: "A multi-model, OpenAI-compatible inference platform on GPU nodes in ACK, with a downloadable draw.io diagram.", href: "/case-study/llm-serving-litellm-vllm-ack" },
+  { id: "llm-serving-litellm-vllm-ack", title: "Serving Large Language Models with LiteLLM and vLLM on Alibaba Cloud ACK", date: "2026-12-01", description: "A multi-model, OpenAI-compatible inference platform on GPU nodes in ACK, with a downloadable draw.io diagram.", href: "/case-study/llm-serving-litellm-vllm-ack" },
 ];
 
 // Archives: the portfolio and the profile README article have internal pages; the rest link out to GitHub.

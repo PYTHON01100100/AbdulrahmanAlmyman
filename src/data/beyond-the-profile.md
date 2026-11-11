@@ -7,11 +7,11 @@ beyond-the-profile:
   url: ""
   images: []
   show: true
-  date: "2026-11-17"
+  date: "2026-11-30"
   type: "blog"
 ---
 
-Publish date: `2026-11-17`
+Publish date: `2026-11-30`
 
 # Beyond the Profile: Italy, Philosophy, and My Journey in Cloud & AI
 

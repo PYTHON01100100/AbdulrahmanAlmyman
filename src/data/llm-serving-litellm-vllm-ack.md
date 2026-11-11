@@ -7,11 +7,11 @@ llm-serving-litellm-vllm-ack:
   url: ""
   images: []
   show: true
-  date: "2026-11-18"
+  date: "2026-12-01"
   type: "blog"
 ---
 
-Publish date: `2026-11-18`
+Publish date: `2026-12-01`
 
 # Serving Large Language Models with LiteLLM and vLLM on Alibaba Cloud ACK
 
