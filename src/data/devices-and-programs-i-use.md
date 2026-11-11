@@ -157,6 +157,35 @@ Adobe, the evil company: thank Allah I did not pay for the thieves.
 - Discord
 - WhatsApp (unfortunately (¬`‸´¬) )
 
+### Video games
+
+**Launchers and stores**
+
+- Steam: my favorite launcher, and where most of my games are
+- GOG: to own my games, not just a licence
+- Epic Games Store: for the free games, to save money
+
+**Emulators**
+
+- RetroArch
+- DuckStation (PlayStation)
+- PPSSPP (PSP)
+- Dolphin (GameCube and Wii)
+- PCSX2 (PlayStation 2)
+- Yuzu (Switch)
+- Fritchii: for playing the Zelda: Ocarina of Time remake, because I don't have the budget for a Switch 2
+
+**Game ports (decompilations and recompilations)**
+
+Fans rebuild classic games from their original code so they run natively on PC. These are good places to find them:
+
+- [Quiver Launcher](https://quiverlauncher.com/): recomps, source ports and PC ports
+- [RecompLauncher](https://recomplauncher.com/): recompiled games for Windows, Linux and Mac
+- [Retro Games Center: decompilation list](https://rgc.zone/decomplist/index.html) (the site is in Russian)
+- [Awesome Decomp Games](https://submitgame.github.io/awesome-decomp-games/): decompiled, recompiled and reverse-engineered games
+- [The Gaming Emporium: decompilations and recompilations](https://thegamingemporium.com/categories/decompilations-recompilations/)
+- [r/decomps](https://www.reddit.com/r/decomps/) on Reddit
+
 ## Mobile apps
 
 ### Quran
