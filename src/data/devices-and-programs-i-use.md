@@ -181,7 +181,7 @@ Adobe, the evil company: thank Allah I did not pay for the thieves.
 - Dolphin (GameCube and Wii)
 - PCSX2 (PlayStation 2)
 - Yuzu (Switch)
-- Fritchii: for playing the Zelda: Ocarina of Time remake, because I don't have the budget for a Switch 2
+- Fritchii: for playing the Zelda: Ocarina of Time remake, for the higher resolution and high FPS
 
 **Game ports (decompilations and recompilations)**
 
