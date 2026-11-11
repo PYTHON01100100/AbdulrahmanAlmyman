@@ -77,6 +77,16 @@ Built for coding, AI/ML, game dev and high-performance tasks.
 - Ollama
 - OpenCode
 
+### Agentic AI harnesses
+
+- Claude Code
+- Codex
+- OpenCode
+- Hermes
+- Pi
+- OpenClaw
+- DeepSeek harness
+
 ### Text editors and notes
 
 - Obsidian
