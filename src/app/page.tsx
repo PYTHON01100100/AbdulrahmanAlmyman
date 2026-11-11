@@ -62,6 +62,7 @@ const certsData: Certification[] = [
 
 // Rolling micro-updates. Any order: they are sorted newest first on render.
 const dataLogs: DataLog[] = [
+  { timestamp: "2026.11.11_00:00", text: "Environment Log: Winter protocol activated across the Saudi Arabia node. Ambient temperature dropping. Current operation: The Legend of Zelda: Ocarina of Time, running on the Fritchii emulator." },
   { timestamp: "2026.11.30_12:00", text: "Field report archived: \"Beyond the Profile\". Visual records from the Italy expedition decoded: coastal route Santa Margherita Ligure → Portofino, and The School of Athens in Vatican City. Link to Cloud & AI research: confirmed.", href: "/case-study/beyond-the-profile" },
   // Timeline, recorded in the style of a 9S field report.
   { timestamp: "2025.09.01_00:00", text: "Redeployment confirmed. Unit returned to SCCC, the same organization, now designated: AI Engineer. Combat readiness: elevated.", href: "https://www.linkedin.com/feed/update/urn:li:activity:7367876038896377856/" },
