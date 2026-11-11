@@ -143,7 +143,7 @@ Bind it with a PVC (`qwen3-32b-awq-pvc` in the manifests) and the vLLM pod can m
 
 ### Uploading the models to OSS
 
-Install `ossutil`, then run `ossutil config` once. It asks five things, and only some of them need an answer:
+Install `ossutil` (see [Install ossutil](https://www.alibabacloud.com/help/en/oss/developer-reference/install-ossutil) for every operating system, and the [ossutil overview](https://www.alibabacloud.com/help/en/oss/developer-reference/ossutil-overview/) for what it can do), then run `ossutil config` once. It asks five things, and only some of them need an answer:
 
 | Prompt | What to do |
 | --- | --- |
@@ -406,6 +406,8 @@ Putting LiteLLM in front of vLLM turns a pile of GPU deployments into a single, 
 ## References
 
 - [Alibaba Cloud ACK documentation](https://www.alibabacloud.com/help/en/container-service-for-kubernetes)
+- [Install ossutil](https://www.alibabacloud.com/help/en/oss/developer-reference/install-ossutil) (OSS documentation)
+- [ossutil overview](https://www.alibabacloud.com/help/en/oss/developer-reference/ossutil-overview/) (OSS documentation)
 - [ACK: Deploy a vLLM inference application](https://www.alibabacloud.com/help/en/ack/cloud-native-ai-suite/user-guide/deploy-a-vllm-inference-application)
 - [vLLM documentation](https://docs.vllm.ai/)
 - [vLLM Recipes](https://recipes.vllm.ai/): ready-to-run `vllm serve` commands per model and GPU
