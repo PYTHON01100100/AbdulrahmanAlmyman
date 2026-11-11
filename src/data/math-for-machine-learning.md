@@ -52,7 +52,7 @@ A neural network is a **differentiable** function, and calculus is how we train 
 - **The chain rule** gives the derivative of composed functions. It matters because a neural network is a long chain of composed functions.
 - **Integration** is the area under a curve. It comes back later in probability, because expected value, entropy and the KL divergence are all defined with integrals.
 
-My calculus summaries are in the [MATH_ksu repository](https://github.com/PYTHON01100100/MATH_ksu), which is also where my KSU math started. The algebra and equations foundation from **MATH 106 / MATH 111** is in [KSU_MATH_111_106](https://github.com/PYTHON01100100/KSU_MATH_111_106).
+My calculus summaries are in the [MATH_ksu repository](https://github.com/PYTHON01100100/MATH_ksu), which is also where my KSU math started. My **MATH 106 / MATH 111** integral calculus notes are in [KSU_MATH_111_106_INTEGRAL_CALCULUS](https://github.com/PYTHON01100100/KSU_MATH_111_106_INTEGRAL_CALCULUS).
 
 ## 3. Multivariable calculus
 
@@ -76,23 +76,23 @@ Probability is the mathematics of chance, and it is the language of predictions.
 - **The law of large numbers** says the average of many repetitions approaches the expected value. It is what makes stochastic gradient descent work.
 - **Information theory**: entropy measures the information in a distribution, and the **cross-entropy loss** used in classification, and the **KL divergence**, both come from it.
 
-My courses here don't map one to one to a single repository, but discrete mathematics gave me the base: events are sets, so set operations and counting are the language of probability. I studied it in **MATH 151** ([MATH151 repository](https://github.com/PYTHON01100100/MATH151_43_SEC_TERM_22)) and again from the computer science side in **CSC 281** ([CSC-281 repository](https://github.com/PYTHON01100100/CSC-281_KSU_44)). For probability and statistics themselves, the third course of the specialization I recommend below covers them directly.
+My courses here don't map one to one to a single repository, but discrete mathematics gave me the base: events are sets, so set operations and counting are the language of probability. I studied it in **MATH 151** ([MATH151 repository](https://github.com/PYTHON01100100/KSU_MATH151_Discrete_Mathematics)) and again from the computer science side in **CSC 281** ([CSC-281 repository](https://github.com/PYTHON01100100/KSU_CSC_281_Discrete_Mathematics_for_CS)). For probability and statistics themselves, the third course of the specialization I recommend below covers them directly.
 
 ## How my courses map to the roadmap
 
 | Roadmap step | My KSU courses | Notes on GitHub |
 |---|---|---|
 | Linear algebra | MATH 244 | [MATH244](https://github.com/PYTHON01100100/MATH244-Linear-Algebra-_44_KSU) |
-| Calculus | Calculus, MATH 106 / 111 | [MATH_ksu](https://github.com/PYTHON01100100/MATH_ksu), [KSU_MATH_111_106](https://github.com/PYTHON01100100/KSU_MATH_111_106) |
+| Calculus | Calculus, MATH 106 / 111 | [MATH_ksu](https://github.com/PYTHON01100100/MATH_ksu), [KSU_MATH_111_106_INTEGRAL_CALCULUS](https://github.com/PYTHON01100100/KSU_MATH_111_106_INTEGRAL_CALCULUS) |
 | Multivariable calculus | Builds on calculus and linear algebra | the two rows above |
-| Probability (foundations) | MATH 151, CSC 281 (discrete math) | [MATH151](https://github.com/PYTHON01100100/MATH151_43_SEC_TERM_22), [CSC-281](https://github.com/PYTHON01100100/CSC-281_KSU_44) |
+| Probability (foundations) | MATH 151, CSC 281 (discrete math) | [MATH151](https://github.com/PYTHON01100100/KSU_MATH151_Discrete_Mathematics), [CSC-281](https://github.com/PYTHON01100100/KSU_CSC_281_Discrete_Mathematics_for_CS) |
 
 ## Where to study further
 
 The roadmap recommends these for each pillar:
 
 - **Linear algebra:** *Linear Algebra Done Right* by Sheldon Axler, and the Linear Algebra course on MIT OpenCourseWare.
-- **Calculus:** MIT's Single Variable Calculus course and Gilbert Strang's *Calculus* book, which is free.
+- **Calculus:** MIT's Single Variable Calculus course and Gilbert Strang's *Calculus* book, which is free. I also like two free sites: [ValsCalc](https://valscalc.com/), which teaches calculus concepts clearly and visually, and [Paul's Online Notes](https://tutorial.math.lamar.edu/), with notes and worked examples for algebra, calculus I to III and differential equations. For theorems, proofs and definitions across all of mathematics, [Androma](https://androma.org/search?type=page) is a collaborative math wiki you can search.
 - **Multivariable calculus:** MIT's Multivariable Calculus course and Khan Academy.
 - **Probability:** MIT's *Introduction to Probability* by John Tsitsiklis.
 - **Everything in one place:** Tivadar Danka's book *The Mathematics of Machine Learning*.
@@ -115,7 +115,10 @@ University math courses can feel disconnected while you take them. Seen through 
 - [Mathematics for Machine Learning and Data Science](https://www.coursera.org/specializations/mathematics-for-machine-learning-and-data-science) by DeepLearning.AI on Coursera (paid): linear algebra, calculus, and probability & statistics
 - [The Deep Learning Road Map That I Took](https://medium.com/@ArianAmani/the-deep-learning-road-map-that-i-took-c29120b0f5e2) by Arian Amani on Medium: another learning path toward deep learning
 - [MATH 244 Linear Algebra (KSU)](https://github.com/PYTHON01100100/MATH244-Linear-Algebra-_44_KSU): notes, slides, quizzes and old homework
-- [MATH 151 (KSU)](https://github.com/PYTHON01100100/MATH151_43_SEC_TERM_22): discrete mathematics, with summaries and exams
-- [CSC 281 (KSU)](https://github.com/PYTHON01100100/CSC-281_KSU_44): discrete mathematics for computer science
+- [MATH 151 (KSU)](https://github.com/PYTHON01100100/KSU_MATH151_Discrete_Mathematics): discrete mathematics, with summaries and exams
+- [CSC 281 (KSU)](https://github.com/PYTHON01100100/KSU_CSC_281_Discrete_Mathematics_for_CS): discrete mathematics for computer science
 - [MATH_ksu](https://github.com/PYTHON01100100/MATH_ksu): calculus summaries, where my KSU math started (including MATH 106 / 111)
-- [KSU_MATH_111_106](https://github.com/PYTHON01100100/KSU_MATH_111_106): MATH 106 / 111, algebra and equations
+- [KSU_MATH_111_106_INTEGRAL_CALCULUS](https://github.com/PYTHON01100100/KSU_MATH_111_106_INTEGRAL_CALCULUS): MATH 106 / 111, integral calculus
+- [ValsCalc](https://valscalc.com/): free, accessible calculus lessons
+- [Paul's Online Notes](https://tutorial.math.lamar.edu/) by Paul Dawkins (Lamar University): free notes for algebra, calculus I to III and differential equations
+- [Androma](https://androma.org/search?type=page): a collaborative math wiki and study platform for theorems, proofs and definitions
