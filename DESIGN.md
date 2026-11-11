@@ -49,7 +49,7 @@ YoRHa hacking screen: teal-black bg `#0c1214`, parchment ink `#d8d2bc`, cyan acc
 | 13 | The Wired (Serial Experiments Lain) | `lain-wired` | `#07080a` | `#d8dee9` | `#63b3ed` | `#d24747` | `#7b8496` | `#101216` |
 | 14 | Phantom Thieves (Persona 5) | `persona5` | `#0d0d0d` | `#ffffff` | `#e60012` | `#f5d000` | `#b3b3b3` | `#1a1a1a` |
 | 15 | Pip-Boy 3000 (Fallout) | `fallout` | `#060d07` | `#18ff62` | `#18ff62` | `#ffb642` | `#0fa33e` | `#0b190d` |
-| 16 | Hylian Stone (Zelda: Ocarina of Time 3D) | `zelda-3ds` | `#161412` | `#f7f3e8` | `#e5b84b` | `#38bdf8` | `#bfb5a2` | `#221e1a` |
+| 16 | Zelda: Ocarina of Time (3D) | `zelda-3ds` | `#161412` | `#f7f3e8` | `#e5b84b` | `#38bdf8` | `#bfb5a2` | `#221e1a` |
 | 17 | Space Cowboy (Cowboy Bebop) | `bebop` | `#10141d` | `#f0ece1` | `#e09f3e` | `#d05940` | `#8c9bae` | `#181f2c` |
 
 Contrast rule: text tokens (ink, link, strong, comment) need at least 4.5:1 against the background, accents used on headings at least 3:1. To meet it, Lain's ink was lifted from the proposed `#6366f1` (4.1:1), Gruvbox's comment from `#928374` (4.0:1) and Catppuccin's comment from `#7f849c` (4.4:1). Akira, Cyberpunk and Ghost in the Shell had their comment colours lifted (from `#5a5552`, `#374151` and `#163e16`), and Cyberpunk's accent from `#7928ca`.

@@ -20,7 +20,7 @@ export const THEMES = [
   { id: "lain-wired", label: "The Wired" },
   { id: "persona5", label: "Phantom Thieves" },
   { id: "fallout", label: "Pip-Boy 3000" },
-  { id: "zelda-3ds", label: "Hylian Stone" },
+  { id: "zelda-3ds", label: "Zelda: Ocarina of Time" },
   { id: "bebop", label: "Space Cowboy" },
 ] as const;
 

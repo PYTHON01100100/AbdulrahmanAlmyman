@@ -271,7 +271,7 @@ html[data-theme="fallout"] {
   color-scheme: dark;
 }
 
-/* --- 16 // HYLIAN STONE (Zelda: Ocarina of Time 3D) --- flat, no glow */
+/* --- 16 // ZELDA: OCARINA OF TIME (3D) --- flat, no glow */
 html[data-theme="zelda-3ds"] {
   --nier-bg: #161412;
   --nier-ink: #f7f3e8;
