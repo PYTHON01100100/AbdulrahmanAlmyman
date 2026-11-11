@@ -90,7 +90,7 @@ export default function RootLayout({
       <body>
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem("theme");if(["light","dark","neon","lain","evangelion","mgs1","gruvbox","catppuccin","ubuntu","akira","cyberpunk","gits"].indexOf(t)<0)t="dark";document.documentElement.dataset.theme=t}catch(e){}`,
+            __html: `try{var t=localStorage.getItem("theme");if(["light","dark","neon","lain","evangelion","mgs1","gruvbox","catppuccin","ubuntu","akira","cyberpunk","gits","lain-wired","persona5","fallout","zelda-3ds","bebop"].indexOf(t)<0)t="dark";document.documentElement.dataset.theme=t}catch(e){}`,
           }}
         />
         <ThemeToggle />

@@ -17,6 +17,11 @@ export const THEMES = [
   { id: "akira", label: "Akira Neo-Tokyo" },
   { id: "cyberpunk", label: "Netrunner Cyberdeck" },
   { id: "gits", label: "Ghost in the Shell" },
+  { id: "lain-wired", label: "The Wired" },
+  { id: "persona5", label: "Phantom Thieves" },
+  { id: "fallout", label: "Pip-Boy 3000" },
+  { id: "zelda-3ds", label: "Hylian Stone" },
+  { id: "bebop", label: "Space Cowboy" },
 ] as const;
 
 type ThemeId = (typeof THEMES)[number]["id"];

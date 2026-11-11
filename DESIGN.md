@@ -1,6 +1,6 @@
 # DESIGN.md
 
-Design reference for the website: a calm **NieR:Automata** menu look, with twelve selectable themes. Tokens live in `src/app/globals.css`.
+Design reference for the website: a calm **NieR:Automata** menu look, with seventeen selectable themes. Tokens live in `src/app/globals.css`.
 
 ## Principles
 
@@ -33,7 +33,7 @@ The core palette inverted: bg `#26231d`, ink `#d1cbb7`, accent `#b5a47a`, link `
 
 YoRHa hacking screen: teal-black bg `#0c1214`, parchment ink `#d8d2bc`, cyan accent `#4fe3d7`, YoRHa red links `#ff6a5a`. The only theme with a glow, and it is limited to titles and `.nier-box`.
 
-### 04 – 12: flat themes (no glow)
+### 04 – 17: flat themes (no glow)
 
 | # | Name | `data-theme` | bg | ink | accent | link | comment | border |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -46,6 +46,11 @@ YoRHa hacking screen: teal-black bg `#0c1214`, parchment ink `#d8d2bc`, cyan acc
 | 10 | Akira Neo-Tokyo | `akira` | `#0d0c0c` | `#f4f2f0` | `#e51313` | `#ff4d4d` | `#817a75` | `#261212` |
 | 11 | Netrunner Cyberdeck (Cyberpunk) | `cyberpunk` | `#06090e` | `#38f2a6` | `#8432d6` | `#00b4d8` | `#697c99` | `#111827` |
 | 12 | Ghost in the Shell | `gits` | `#000200` | `#4af24a` | `#1e821e` | `#86efac` | `#318931` | `#092409` |
+| 13 | The Wired (Serial Experiments Lain) | `lain-wired` | `#07080a` | `#d8dee9` | `#63b3ed` | `#d24747` | `#7b8496` | `#101216` |
+| 14 | Phantom Thieves (Persona 5) | `persona5` | `#0d0d0d` | `#ffffff` | `#e60012` | `#f5d000` | `#b3b3b3` | `#1a1a1a` |
+| 15 | Pip-Boy 3000 (Fallout) | `fallout` | `#060d07` | `#18ff62` | `#18ff62` | `#ffb642` | `#0fa33e` | `#0b190d` |
+| 16 | Hylian Stone (Zelda: Ocarina of Time 3D) | `zelda-3ds` | `#161412` | `#f7f3e8` | `#e5b84b` | `#38bdf8` | `#bfb5a2` | `#221e1a` |
+| 17 | Space Cowboy (Cowboy Bebop) | `bebop` | `#10141d` | `#f0ece1` | `#e09f3e` | `#d05940` | `#8c9bae` | `#181f2c` |
 
 Contrast rule: text tokens (ink, link, strong, comment) need at least 4.5:1 against the background, accents used on headings at least 3:1. To meet it, Lain's ink was lifted from the proposed `#6366f1` (4.1:1), Gruvbox's comment from `#928374` (4.0:1) and Catppuccin's comment from `#7f849c` (4.4:1). Akira, Cyberpunk and Ghost in the Shell had their comment colours lifted (from `#5a5552`, `#374151` and `#163e16`), and Cyberpunk's accent from `#7928ca`.
 

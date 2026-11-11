@@ -223,6 +223,86 @@ html[data-theme="gits"] {
   color-scheme: dark;
 }
 
+/* --- 13 // THE WIRED (Serial Experiments Lain) --- flat, no glow */
+html[data-theme="lain-wired"] {
+  --nier-bg: #07080a;
+  --nier-ink: #d8dee9;
+  --nier-ink-rgb: 216, 222, 233;
+  --color-terminal-bg: #07080a;
+  --color-terminal-text: #d8dee9;
+  --color-terminal-accent: #63b3ed;
+  --color-terminal-link: #d24747;
+  --color-terminal-strong: #ffffff;
+  --color-terminal-comment: #7b8496;
+  --color-terminal-border: #101216;
+  --color-terminal-highlight: #ffffff;
+  color-scheme: dark;
+}
+
+/* --- 14 // PHANTOM THIEVES (Persona 5) --- flat, no glow */
+html[data-theme="persona5"] {
+  --nier-bg: #0d0d0d;
+  --nier-ink: #ffffff;
+  --nier-ink-rgb: 255, 255, 255;
+  --color-terminal-bg: #0d0d0d;
+  --color-terminal-text: #ffffff;
+  --color-terminal-accent: #e60012;
+  --color-terminal-link: #f5d000;
+  --color-terminal-strong: #f5d000;
+  --color-terminal-comment: #b3b3b3;
+  --color-terminal-border: #1a1a1a;
+  --color-terminal-highlight: #f5d000;
+  color-scheme: dark;
+}
+
+/* --- 15 // PIP-BOY 3000 (Fallout) --- flat, no glow */
+html[data-theme="fallout"] {
+  --nier-bg: #060d07;
+  --nier-ink: #18ff62;
+  --nier-ink-rgb: 24, 255, 98;
+  --color-terminal-bg: #060d07;
+  --color-terminal-text: #18ff62;
+  --color-terminal-accent: #18ff62;
+  --color-terminal-link: #ffb642;
+  --color-terminal-strong: #b6ffcb;
+  --color-terminal-comment: #0fa33e;
+  --color-terminal-border: #0b190d;
+  --color-terminal-highlight: #b6ffcb;
+  color-scheme: dark;
+}
+
+/* --- 16 // HYLIAN STONE (Zelda: Ocarina of Time 3D) --- flat, no glow */
+html[data-theme="zelda-3ds"] {
+  --nier-bg: #161412;
+  --nier-ink: #f7f3e8;
+  --nier-ink-rgb: 247, 243, 232;
+  --color-terminal-bg: #161412;
+  --color-terminal-text: #f7f3e8;
+  --color-terminal-accent: #e5b84b;
+  --color-terminal-link: #38bdf8;
+  --color-terminal-strong: #e5b84b;
+  --color-terminal-comment: #bfb5a2;
+  --color-terminal-border: #221e1a;
+  --color-terminal-highlight: #e5b84b;
+  color-scheme: dark;
+}
+
+/* --- 17 // SPACE COWBOY (Cowboy Bebop) --- flat, no glow */
+html[data-theme="bebop"] {
+  --nier-bg: #10141d;
+  --nier-ink: #f0ece1;
+  --nier-ink-rgb: 240, 236, 225;
+  --color-terminal-bg: #10141d;
+  --color-terminal-text: #f0ece1;
+  --color-terminal-accent: #e09f3e;
+  --color-terminal-link: #d05940;
+  --color-terminal-strong: #e09f3e;
+  --color-terminal-comment: #8c9bae;
+  --color-terminal-border: #181f2c;
+  --color-terminal-highlight: #e09f3e;
+  color-scheme: dark;
+}
+
 /* Code block palettes: the warm panel is the default (light and dark);
    every other theme gets its own panel and syntax colours (all text >= 4.5:1). */
 :root {
@@ -432,6 +512,101 @@ html[data-theme="gits"] {
   --syn-property: #4af24a;
   --syn-variable: #d1fae5;
   --syn-deleted: #f87171;
+}
+
+html[data-theme="lain-wired"] {
+  --code-bg: #101216;
+  --code-bar: #07080a;
+  --code-text: #d8dee9;
+  --code-label: #7b8496;
+  --code-action: #63b3ed;
+  --code-action-hover: #ffffff;
+  --syn-comment: #7b8496;
+  --syn-punctuation: #7b8496;
+  --syn-keyword: #63b3ed;
+  --syn-string: #d55151;
+  --syn-function: #ffffff;
+  --syn-number: #d55151;
+  --syn-operator: #d8dee9;
+  --syn-property: #63b3ed;
+  --syn-variable: #d8dee9;
+  --syn-deleted: #d55151;
+}
+
+html[data-theme="persona5"] {
+  --code-bg: #1a1a1a;
+  --code-bar: #0d0d0d;
+  --code-text: #ffffff;
+  --code-label: #b3b3b3;
+  --code-action: #f50013;
+  --code-action-hover: #ffffff;
+  --syn-comment: #b3b3b3;
+  --syn-punctuation: #b3b3b3;
+  --syn-keyword: #ff1a2c;
+  --syn-string: #f5d000;
+  --syn-function: #f5d000;
+  --syn-number: #f5d000;
+  --syn-operator: #ffffff;
+  --syn-property: #ff1a2c;
+  --syn-variable: #ffffff;
+  --syn-deleted: #f5d000;
+}
+
+html[data-theme="fallout"] {
+  --code-bg: #0b190d;
+  --code-bar: #060d07;
+  --code-text: #18ff62;
+  --code-label: #0fa33e;
+  --code-action: #18ff62;
+  --code-action-hover: #ffffff;
+  --syn-comment: #0fa33e;
+  --syn-punctuation: #0fa33e;
+  --syn-keyword: #18ff62;
+  --syn-string: #ffb642;
+  --syn-function: #b6ffcb;
+  --syn-number: #ffb642;
+  --syn-operator: #18ff62;
+  --syn-property: #18ff62;
+  --syn-variable: #18ff62;
+  --syn-deleted: #ffb642;
+}
+
+html[data-theme="zelda-3ds"] {
+  --code-bg: #221e1a;
+  --code-bar: #161412;
+  --code-text: #f7f3e8;
+  --code-label: #bfb5a2;
+  --code-action: #e5b84b;
+  --code-action-hover: #ffffff;
+  --syn-comment: #bfb5a2;
+  --syn-punctuation: #bfb5a2;
+  --syn-keyword: #e5b84b;
+  --syn-string: #38bdf8;
+  --syn-function: #e5b84b;
+  --syn-number: #38bdf8;
+  --syn-operator: #f7f3e8;
+  --syn-property: #e5b84b;
+  --syn-variable: #f7f3e8;
+  --syn-deleted: #38bdf8;
+}
+
+html[data-theme="bebop"] {
+  --code-bg: #181f2c;
+  --code-bar: #10141d;
+  --code-text: #f0ece1;
+  --code-label: #8c9bae;
+  --code-action: #e09f3e;
+  --code-action-hover: #ffffff;
+  --syn-comment: #8c9bae;
+  --syn-punctuation: #8c9bae;
+  --syn-keyword: #e09f3e;
+  --syn-string: #d4654e;
+  --syn-function: #e09f3e;
+  --syn-number: #d4654e;
+  --syn-operator: #f0ece1;
+  --syn-property: #e09f3e;
+  --syn-variable: #f0ece1;
+  --syn-deleted: #d4654e;
 }
 
 /* Theme menu: opaque so page content never shows through it */
