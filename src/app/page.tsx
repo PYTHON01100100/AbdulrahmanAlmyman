@@ -44,6 +44,14 @@ const contactData = [
 
 const certsData: Certification[] = [
   {
+    certification: "AWS Certified Cloud Practitioner",
+    provider: "AWS",
+    date: "Nov 2026",
+    order: 3,
+    wip: false,
+    url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/0d5dd0b9501f4d908c9ded78aef7d9d6",
+  },
+  {
     certification: "AWS ML Engineer - Associate",
     provider: "AWS",
     date: "Sep 2026",
