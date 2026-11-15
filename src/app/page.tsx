@@ -80,8 +80,6 @@ const dataLogs: DataLog[] = [
   { timestamp: "2022.01.06_00:00", text: "Anomaly resolved. After a prolonged struggle against hostile GPA readings, the unit has finally entered the Computer Science program. Objective re-aligned." },
   { timestamp: "2021.06.27_00:00", text: "Unit relocated to Egypt. Route deviation recorded. Duration: extended. Reason: classified." },
   { timestamp: "2019.09.02_00:00", text: "Record 001: unit enrolled at King Saud University. Initial deployment begins. All systems nominal." },
-  { timestamp: "2026.12.01_00:00", text: "Mission Log: Relocation protocol SUCCESSFUL. Current grid coordinated to the United Kingdom 🇬🇧. Initializing system integration with global tech nodes and sync complete." },
-  { timestamp: "2026.12.01_00:00", text: "SCHEDULED: Travel sequence initiated. Destination: United Kingdom 🇬🇧." },
   { timestamp: "2026.11.30_00:00", text: "SCHEDULED: Portfolio deployment in NieR interface." },
   { timestamp: "2026.10.10_00:00", text: "Playing Hollow Knight: Silksong. Learning Go." },
   { timestamp: "2026.10.01_00:00", text: "Learning Bifrost." },
@@ -126,7 +124,7 @@ export default function Home() {
   return (
     <Layout className="text-base sm:text-lg px-6 py-5 md:px-8 md:py-8">
       <LocationBadge
-        geo="London, UK"
+        geo="Riyadh, Saudi Arabia"
         hq="SCCC by stc"
       />
       {/* Large screen: centered container with max width */}

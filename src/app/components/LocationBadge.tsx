@@ -48,7 +48,7 @@ function readClock(timeZone: string): Clock {
 export default function LocationBadge({
   geo,
   hq,
-  timeZone = "Europe/London",
+  timeZone = "Asia/Riyadh",
 }: LocationBadgeProps) {
   const [scrolled, setScrolled] = useState(false);
   // Filled in after mount: the static HTML has no clock, so there is no hydration mismatch.
