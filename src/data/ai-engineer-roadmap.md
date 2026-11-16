@@ -117,6 +117,14 @@ AI moves every week. At the advanced level, you learn from papers, not only cour
 - [How to read research papers, in 5 minutes](https://masonjwang.com/writing/reading-research) by Mason Wang: a short guide to reading papers without getting lost. Read it before your first paper.
 - [The 2025 AI Engineer Reading List](https://latent.space/p/2025-papers/#%C2%A7section-agents) by Latent Space: the papers worth reading, grouped by topic: LLMs, benchmarks, prompting, RAG, agents, code generation, vision, voice, diffusion and fine-tuning.
 
+## For Arabic readers
+
+If Arabic is your first language, these resources explain the same ideas in Arabic. They are a great companion to the stages above:
+
+- [Namaa NLP course](https://www.namaa.space/course) (دورة نماء في معالجة اللغة الطبيعية): a course in Arabic on natural language processing. Take it alongside Stage 3 and Stage 4.
+- [The Annotated Transformer, English–Arabic version](https://huggingface.co/spaces/Omartificial-Intelligence-Space/The-Annotated-Transformer-En-Ar-Version): the transformer explained line by line with its code, in Arabic and English. Use it in Stage 3, next to Transformer Explainer.
+- [LLM Glossary](https://huggingface.co/spaces/Omartificial-Intelligence-Space/llm-glossary): how a language model learns, one term at a time, in Arabic and English. Keep it open in Stage 4 whenever a new term appears.
+
 ## My advice
 
 - **Build while you learn.** After every stage, make one small project and put it on GitHub. Projects teach you more than certificates, and they are what employers look at.
@@ -153,5 +161,8 @@ The path to AI engineering is long, but it is clear: foundations, classic ML, de
 - [Finetuning Transformer Models](https://www.codecademy.com/learn/finetuning-transformer-models) on Codecademy
 - [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) by Chip Huyen (O'Reilly)
 - [Google Cloud Skills Boost paths](https://www.skills.google/paths)
+- [Namaa NLP course](https://www.namaa.space/course) (دورة نماء في معالجة اللغة الطبيعية): NLP in Arabic
+- [The Annotated Transformer, English–Arabic version](https://huggingface.co/spaces/Omartificial-Intelligence-Space/The-Annotated-Transformer-En-Ar-Version) on Hugging Face Spaces
+- [LLM Glossary](https://huggingface.co/spaces/Omartificial-Intelligence-Space/llm-glossary) on Hugging Face Spaces: LLM terms in Arabic and English
 - [How to read research papers, in 5 minutes](https://masonjwang.com/writing/reading-research) by Mason Wang
 - [The 2025 AI Engineer Reading List](https://latent.space/p/2025-papers/#%C2%A7section-agents) by Latent Space
