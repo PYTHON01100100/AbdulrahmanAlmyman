@@ -95,6 +95,7 @@ const dataLogs: DataLog[] = [
 // In-memory Intel entries. Any order here: they are sorted newest first on render.
 // Add href to link to a case-study page.
 const intelData: IntelEntry[] = [
+  { id: "ai-engineer-roadmap", title: "The AI Engineer Roadmap: From Zero to Advanced", date: "2024-11-01", description: "Eight stages from programming and math to transformers, LLMs and production, with the resources I recommend at each one.", href: "/case-study/ai-engineer-roadmap" },
   { id: "learn-programming", title: "How to Start Learning Programming: A Practical Roadmap", date: "2020-01-01", description: "Pick one language, think in code, build small projects, choose a track, with Hello World in Python, Java and C++.", href: "/case-study/learn-programming" },
   { id: "math-for-machine-learning", title: "The Math Behind Machine Learning: My Roadmap from KSU Courses", date: "2024-09-01", description: "How the math I studied at KSU since 2021 maps to the roadmap of mathematics for machine learning, with my course notes as references.", href: "/case-study/math-for-machine-learning" },
   { id: "train-cv-model-oss", title: "Training an Image Classifier on Alibaba Cloud with Data in OSS", date: "2026-10-27", description: "Classifying 9 types of Saudi dates on CPU, pre-downloading vs. streaming the data from OSS, and when to use each.", href: "/case-study/train-cv-model-oss" },
