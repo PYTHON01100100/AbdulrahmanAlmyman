@@ -121,6 +121,7 @@ const archiveRepos: ExternalRepo[] = [
   { name: "a1s", href: "https://github.com/PYTHON01100100/a1s" },
   { name: "BucketOps", href: "https://github.com/PYTHON01100100/BucketOps" },
   { name: "ec2s", href: "https://github.com/PYTHON01100100/ec2s" },
+  { name: "PodFit", href: "https://github.com/PYTHON01100100/PodFit" },
 ];
 
 export default function Home() {
