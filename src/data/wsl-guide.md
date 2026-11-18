@@ -15,7 +15,7 @@ Publish date: `2026-10-16`
 
 # WSL: Use Linux on Windows Without a Virtual Machine
 
-![Ubuntu 24.04 running in WSL 2 inside Windows Terminal, with neofetch showing the WSL kernel](/wsl-guide/wsl-neofetch.png)
+![Ubuntu 24.04 running in WSL 2 inside Windows Terminal, with neofetch showing the WSL kernel, open over this article](/wsl-guide/wsl-neofetch.png)
 
 Salam Alaikum! [•_•]/
 
