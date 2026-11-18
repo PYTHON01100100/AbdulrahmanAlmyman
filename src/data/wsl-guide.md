@@ -15,6 +15,8 @@ Publish date: `2026-10-16`
 
 # WSL: Use Linux on Windows Without a Virtual Machine
 
+![Ubuntu 24.04 running in WSL 2 inside Windows Terminal, with neofetch showing the WSL kernel](/wsl-guide/wsl-neofetch.png)
+
 Salam Alaikum! [•_•]/
 
 Many people use Windows every day, but sooner or later a task needs Linux. A DevOps tool only has Linux instructions. An AI tutorial starts with `apt install`. A teacher says "open a terminal" and means a Linux one. Or you simply want to **try Linux for the first time** and learn its commands, without wiping your computer.
