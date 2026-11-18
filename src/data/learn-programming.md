@@ -138,7 +138,9 @@ These are resources I used myself or recommend. Most are in Arabic.
 
 - [Satr (Tuwaiq Academy): C++ course](https://satr.tuwaiq.edu.sa/course/vCmFYFdvRW/view?course_path_id=tHzXUtKlvK) (in Arabic)
 - [C++ basic to OOP, step by step](https://www.youtube.com/playlist?list=PLF8OvnCBlEY1bObRpU9p5Ioqt9Ckeeruj) by TheNewBaghdad (YouTube playlist, in Arabic): I used it in CSC 115, in my first term, when my major was still math
+- [CSC 115, C++ (KSU)](https://github.com/PYTHON01100100/CSC-115-115-_KSU): my course materials (in Arabic), with examples, slides, exams, quick tips and the course project
 
 ### All three languages
 
 - [W3Schools](https://www.w3schools.com/): I used it for all three languages while I was learning English at the same time. It was enough for me, so I can't recommend any English videos from YouTube.
+- [Harmash](https://harmash.com/) (in Arabic): I have used it since high school. It is where I learned Python and C++ before I went to university.
