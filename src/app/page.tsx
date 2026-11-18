@@ -71,7 +71,7 @@ const certsData: Certification[] = [
 // Rolling micro-updates. Any order: they are sorted newest first on render.
 const dataLogs: DataLog[] = [
   { timestamp: "2026.11.18_00:00", text: "SCHEDULED: Grand Theft Auto VI. Unit deploying into the Vice City virtual zone. Neon grid and coastal sectors queued for reconnaissance. Glory to mankind." },
-  { timestamp: "2026.11.15_00:00", text: "Game Log: The Legend of Zelda: Ocarina of Time, PC remake, now running natively on this unit. Hyrule data reconstructed in high resolution. Temporal anomaly confirmed: same quest, new hardware." },
+  { timestamp: "2026.11.15_00:00", text: "Game Log: The Legend of Zelda: Ocarina of Time, PC recompilation via Longshot, now running natively on this unit. Hyrule data recompiled and reconstructed in high resolution. Temporal anomaly confirmed: same quest, new hardware." },
   { timestamp: "2026.11.11_00:00", text: "Environment Log: Winter protocol activated across the Saudi Arabia node. Ambient temperature dropping. Current operation: The Legend of Zelda: Ocarina of Time, running on the Fritchii emulator." },
   { timestamp: "2026.11.30_12:00", text: "Field report archived: \"Beyond the Profile\". Visual records from the Italy expedition decoded: coastal route Santa Margherita Ligure → Portofino, and The School of Athens in Vatican City. Link to Cloud & AI research: confirmed.", href: "/case-study/beyond-the-profile" },
   // Timeline, recorded in the style of a 9S field report.
