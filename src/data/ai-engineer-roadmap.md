@@ -15,6 +15,8 @@ Publish date: `2024-11-01`
 
 # The AI Engineer Roadmap: From Zero to Advanced
 
+![The tools of an AI engineer: Python, scikit-learn, PyTorch, TensorFlow, Hugging Face, LangChain, vLLM, Ollama, SGLang, Bifrost, Docker, Kubernetes, AWS, Google Cloud, NVIDIA, Linux and open models like Qwen, Llama and DeepSeek](/ai-engineer-roadmap/ai-tools.jpg)
+
 Hello! People often ask me where to start if they want to work in AI. There are thousands of courses, videos and papers out there, and the hard part is not finding resources. It is knowing **which one to use, and when**.
 
 This is the roadmap I recommend. It goes from zero to advanced in seven stages, and every stage builds on the one before it. You don't need to finish every resource. Pick one or two per stage, go deep, build something small, and then move on.
@@ -29,7 +31,7 @@ This is the roadmap I recommend. It goes from zero to advanced in seven stages, 
 | 3. Transformers | The architecture behind LLMs | Transformer Explainer |
 | 4. Large language models | How LLMs are built and fine-tuned | *Hands-On Large Language Models*, Hugging Face Learn |
 | 5. AI engineering | Building real products on models | *AI Engineering* by Chip Huyen |
-| 6. Research | Reading papers and keeping up | The 2025 AI Engineer Reading List |
+| 6. Research | Reading papers and keeping up | How to read research papers |
 
 ## Stage 0: Foundations
 
@@ -115,7 +117,6 @@ Models are only useful when they run somewhere. For real examples, see my articl
 AI moves every week. At the advanced level, you learn from papers, not only courses.
 
 - [How to read research papers, in 5 minutes](https://masonjwang.com/writing/reading-research) by Mason Wang: a short guide to reading papers without getting lost. Read it before your first paper.
-- [The 2025 AI Engineer Reading List](https://latent.space/p/2025-papers/#%C2%A7section-agents) by Latent Space: the papers worth reading, grouped by topic: LLMs, benchmarks, prompting, RAG, agents, code generation, vision, voice, diffusion and fine-tuning.
 
 ## For Arabic readers
 
@@ -165,4 +166,3 @@ The path to AI engineering is long, but it is clear: foundations, classic ML, de
 - [The Annotated Transformer, English–Arabic version](https://huggingface.co/spaces/Omartificial-Intelligence-Space/The-Annotated-Transformer-En-Ar-Version) on Hugging Face Spaces
 - [LLM Glossary](https://huggingface.co/spaces/Omartificial-Intelligence-Space/llm-glossary) on Hugging Face Spaces: LLM terms in Arabic and English
 - [How to read research papers, in 5 minutes](https://masonjwang.com/writing/reading-research) by Mason Wang
-- [The 2025 AI Engineer Reading List](https://latent.space/p/2025-papers/#%C2%A7section-agents) by Latent Space
