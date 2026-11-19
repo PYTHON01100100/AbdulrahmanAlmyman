@@ -118,6 +118,23 @@ AI moves every week. At the advanced level, you learn from papers, not only cour
 
 - [How to read research papers, in 5 minutes](https://masonjwang.com/writing/reading-research) by Mason Wang: a short guide to reading papers without getting lost. Read it before your first paper.
 
+## From roadmap to career tracks
+
+You don't need to master every stage equally to get a job. Different roles focus on different parts of the roadmap.
+
+| Role | Focus | Key stages | Core tools |
+|---|---|---|---|
+| **Applied AI Engineer** (product) | Building apps, RAG, agents and evaluations | 0, 3, 4, 5 | Python, LangChain, Hugging Face, Ollama, Bifrost |
+| **ML Engineer** (training and fine-tuning) | Training models, fine-tuning, datasets and benchmarks | 0, 1, 2, 3, 4 | PyTorch, TensorFlow, scikit-learn, CUDA, Hugging Face |
+| **AI Solutions Architect / Infrastructure Engineer** | Cloud architecture, scalable model serving, latency and cost | 0, 4, 5, plus cloud and DevOps | vLLM, SGLang, Docker, Kubernetes, AWS, Google Cloud, NVIDIA, Linux |
+| **AI Research Scientist** | New architectures, reading and implementing papers, pushing model capabilities | All stages, 0 to 6 | PyTorch, CUDA, research papers |
+
+Three things I have learned about the job market:
+
+- **Most jobs are in application and deployment.** The large majority of industry roles today are Applied AI or infrastructure roles (Stage 5), not training foundation models from scratch.
+- **Engineering skills win interviews.** Strong software engineering, Linux, Docker and API skills, together with solid LLM knowledge, often beat pure theory in hiring.
+- **Tailor your portfolio project.** Build one concrete project for the track you choose: an evaluated RAG or agent app for Applied AI, a fine-tuned domain model for ML engineering, or a vLLM or SGLang deployment on Kubernetes for solutions architecture.
+
 ## For Arabic readers
 
 If Arabic is your first language, these resources explain the same ideas in Arabic. They are a great companion to the stages above:
