@@ -37,8 +37,9 @@ This is the roadmap I recommend. It goes from zero to advanced in seven stages, 
 
 Before AI, you need **programming** and **math**, and it helps a lot to understand how **GPUs** run code in parallel.
 
-- **Programming:** learn Python well. Variables, loops, functions, data structures and OOP. If you are new, start with my article [How to Start Learning Programming](/case-study/learn-programming).
+- **Programming:** learn Python well. Variables, loops, functions, data structures and OOP, plus working with **JSON** and calling **APIs**, because that is how you talk to models later. If you are new, start with my article [How to Start Learning Programming](/case-study/learn-programming).
 - **Math:** linear algebra, calculus and probability. My article [The Math Behind Machine Learning](/case-study/math-for-machine-learning) shows the order to learn them in, with my KSU course notes.
+- **Git and GitHub:** create a repository, push your work, write clear commit messages and use branches. Every project you build from here on should live on GitHub.
 - **GPU computing (CUDA):** deep learning is fast because GPUs run thousands of operations in parallel. Learning parallel programming and CUDA explains why models train on GPUs, and what is happening when you move a tensor to `cuda`. My notes from the **CSC 453 Parallel Processing** course at KSU are in the [CSC453 repository](https://github.com/PYTHON01100100/CSC453_68199_1_2024-Parallel-Processing_KSU).
 - **Practice:** [Brilliant](https://brilliant.org/) has short interactive lessons in math, data and computer science. It is a good way to keep your skills sharp a few minutes a day.
 
@@ -105,10 +106,25 @@ Now you know the architecture. This stage is about how LLMs are **built, trained
 
 ## Stage 5: AI engineering
 
-An AI engineer does not just train models. They **build products** on top of them: prompting, retrieval (RAG), agents, evaluation, serving, cost and latency.
+An AI engineer does not just train models. They **build products** on top of them: prompting, retrieval (RAG), agents, evaluation, serving, cost and latency. As Baraa puts it in his [AI Engineering Roadmap for 2026](https://www.blog.datawithbaraa.com/p/ai-engineering-roadmap-for-2026), it is **a builder role**: companies already have strong models, and the job is to connect them to the company's data and tools, and make the system safe, fast and reliable. That makes it closer to backend and data engineering than to research.
+
+The building blocks, in the order I would learn them:
+
+1. **Prompt engineering:** clear communication with the model: give it context, a task, a role and examples.
+2. **Model APIs:** call models from Python, both closed models through an API and open models from [Hugging Face](https://huggingface.co/models) that you run yourself. Knowing both makes you flexible: open models give you more control, privacy and lower cost.
+3. **Frameworks:** tools like LangChain connect models, prompts, memory, tools and multi-step logic.
+4. **RAG (retrieval-augmented generation):** split your documents into chunks, turn them into embeddings, store them in a vector database, search them by meaning, and add the best matches to the prompt. This is how a model answers from your own data.
+5. **Agents:** a chatbot gives you text, an agent takes actions: it calls APIs, queries databases and triggers workflows.
+6. **MCP (Model Context Protocol):** a standard way to connect agents to tools, where each tool decides what the agent is allowed to do. It gives you permission control and logging.
+7. **LLMOps:** monitoring, logging, testing your pipeline, tracking prompts and costs, and CI/CD. Without it, things break quietly.
+
+Resources:
 
 - [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) by Chip Huyen (O'Reilly): the book for this stage. It covers how to build applications with foundation models, from evaluation to fine-tuning to deployment.
 - [Google Cloud Skills Boost paths](https://www.skills.google/paths): learning paths for machine learning and generative AI on Google Cloud. Cloud skills matter, because real models run in the cloud.
+- [DeepLearning.AI](https://www.deeplearning.ai/): courses and short courses on machine learning, deep learning and generative AI, including LLM apps, RAG and agents. A good reference for every stage of this roadmap.
+
+Three projects worth building here, also from Baraa's roadmap: a **"talk to your documents"** assistant (RAG over PDFs, with citations), a **"talk to your data"** app (natural language to SQL, with a table or chart as the answer), and an **email agent** that reads incoming mail and drafts replies. Build one or two of them well and document them.
 
 Models are only useful when they run somewhere. For real examples, see my articles on [serving LLMs with LiteLLM and vLLM on Alibaba Cloud ACK](/case-study/llm-serving-litellm-vllm-ack) and [training an image classifier with data in OSS](/case-study/train-cv-model-oss).
 
@@ -179,6 +195,8 @@ The path to AI engineering is long, but it is clear: foundations, classic ML, de
 - [Finetuning Transformer Models](https://www.codecademy.com/learn/finetuning-transformer-models) on Codecademy
 - [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) by Chip Huyen (O'Reilly)
 - [Google Cloud Skills Boost paths](https://www.skills.google/paths)
+- [DeepLearning.AI](https://www.deeplearning.ai/): courses on ML, deep learning and generative AI
+- [AI Engineering Roadmap for 2026](https://www.blog.datawithbaraa.com/p/ai-engineering-roadmap-for-2026) by Baraa (Data with Baraa): AI engineering as a builder role, the building blocks from prompts to LLMOps, and project ideas
 - [Namaa NLP course](https://www.namaa.space/course) (دورة نماء في معالجة اللغة الطبيعية): NLP in Arabic
 - [The Annotated Transformer, English–Arabic version](https://huggingface.co/spaces/Omartificial-Intelligence-Space/The-Annotated-Transformer-En-Ar-Version) on Hugging Face Spaces
 - [LLM Glossary](https://huggingface.co/spaces/Omartificial-Intelligence-Space/llm-glossary) on Hugging Face Spaces: LLM terms in Arabic and English
