@@ -15,6 +15,8 @@ Publish date: `2024-09-01`
 
 # The Math Behind Machine Learning: My Roadmap from KSU Courses
 
+![Visual summary of the three mathematical pillars of machine learning: Linear Algebra (z = Wx + b), Calculus gradient descent, and Probability integration.](/math-for-machine-learning/math-pillars.jpg)
+
 Since 2021 I have been studying mathematics at **King Saud University (KSU)**: calculus, linear algebra, discrete mathematics and more. For a long time these felt like separate courses to pass. Then I read [The Roadmap of Mathematics for Machine Learning](https://thepalindrome.org/p/the-roadmap-of-mathematics-for-machine-learning) by **Tivadar Danka** (The Palindrome), and the pieces started to connect.
 
 His main idea is simple: machine learning stands on **three pillars**.
@@ -29,14 +31,14 @@ He also gives one piece of advice that I like a lot: don't read the roadmap in o
 
 ## 1. Linear algebra
 
-A neural network is a function, but it is **described** with linear algebra: every layer is a matrix multiplication plus a vector, `f(x) = σ(Ax + b)`. The roadmap says that for engineers working on real problems, linear algebra is the most important topic of all.
+A neural network is a function, but it is **described** with linear algebra: every layer is a matrix multiplication plus a vector, `f(x) = σ(Wx + b)`. The roadmap says that for engineers working on real problems, linear algebra is the most important topic of all.
 
 The order it suggests:
 
 1. **Vectors and vector spaces.** Think of vectors as arrows from the origin that you can add and scale.
 2. **Normed spaces.** How to measure length and distance: the Euclidean norm (Pythagoras in disguise), the Manhattan norm, and inner products, which also tell you when two vectors are **orthogonal**.
 3. **Basis.** A small set of vectors that can build every other vector, and orthonormal bases, which make everything simpler.
-4. **Linear transformations.** Functions like rotations that keep addition and scaling. The `Ax` in a neural network layer is one.
+4. **Linear transformations.** Functions like rotations that keep addition and scaling. The `Wx` in a neural network layer is one.
 5. **Matrices.** Matrix multiplication is defined the way it is because it **composes** linear transformations.
 6. **Determinants.** How much a transformation scales volume, and whether it flips orientation.
 7. **Eigenvalues, eigenvectors and decompositions.** When `Ax = λx`, the matrix just scales `x`. The **singular value decomposition (SVD)** is behind **PCA**, a classic way to reduce dimensions.
