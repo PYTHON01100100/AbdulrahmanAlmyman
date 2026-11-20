@@ -11,7 +11,7 @@ math-for-machine-learning:
   type: "blog"
 ---
 
-Publish date: `2024-09-01`
+Publish date: `2024-09-01` · Last updated: `2026-11-20`
 
 # The Math Behind Machine Learning: My Roadmap from KSU Courses
 
