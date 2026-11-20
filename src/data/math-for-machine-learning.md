@@ -93,9 +93,9 @@ My courses here don't map one to one to a single repository, but discrete mathem
 
 The roadmap recommends these for each pillar:
 
-- **Linear algebra:** *Linear Algebra Done Right* by Sheldon Axler, and the Linear Algebra course on MIT OpenCourseWare.
-- **Calculus:** MIT's Single Variable Calculus course and Gilbert Strang's *Calculus* book, which is free. I also like two free sites: [ValsCalc](https://valscalc.com/), which teaches calculus concepts clearly and visually, and [Paul's Online Notes](https://tutorial.math.lamar.edu/), with notes and worked examples for algebra, calculus I to III and differential equations. For theorems, proofs and definitions across all of mathematics, [Androma](https://androma.org/search?type=page) is a collaborative math wiki you can search.
-- **Multivariable calculus:** MIT's Multivariable Calculus course and Khan Academy.
+- **Linear algebra:** *Linear Algebra Done Right* by Sheldon Axler, and the Linear Algebra course on MIT OpenCourseWare: [MIT 18.06 Linear Algebra, Spring 2005](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) with Gilbert Strang (there is also [another playlist of his lectures](https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D)). For a more applied start, [Stanford ENGR108: Introduction to Applied Linear Algebra](https://www.youtube.com/playlist?list=PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9) covers vectors, matrices and least squares, which is exactly the linear algebra machine learning uses most.
+- **Calculus:** MIT's Single Variable Calculus course ([MIT 18.01, Fall 2006](https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1)) and Gilbert Strang's *Calculus* book, which is free. I also like two free sites: [ValsCalc](https://valscalc.com/), which teaches calculus concepts clearly and visually, and [Paul's Online Notes](https://tutorial.math.lamar.edu/), with notes and worked examples for algebra, calculus I to III and differential equations. For theorems, proofs and definitions across all of mathematics, [Androma](https://androma.org/search?type=page) is a collaborative math wiki you can search. If you prefer long video lectures, [Professor Leonard's Calculus 1](https://www.youtube.com/playlist?list=PLF797E961509B4EB5) has full-length classroom lectures, and freeCodeCamp's [Calculus 1 - Full College Course](https://youtu.be/HfACrKJ_Y2w) puts a whole course in one video.
+- **Multivariable calculus:** MIT's Multivariable Calculus course ([MIT 18.02, Fall 2007](https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38)) and Khan Academy.
 - **Probability:** MIT's *Introduction to Probability* by John Tsitsiklis.
 - **Everything in one place:** Tivadar Danka's book *The Mathematics of Machine Learning*.
 
@@ -124,3 +124,10 @@ University math courses can feel disconnected while you take them. Seen through 
 - [ValsCalc](https://valscalc.com/): free, accessible calculus lessons
 - [Paul's Online Notes](https://tutorial.math.lamar.edu/) by Paul Dawkins (Lamar University): free notes for algebra, calculus I to III and differential equations
 - [Androma](https://androma.org/search?type=page): a collaborative math wiki and study platform for theorems, proofs and definitions
+- [MIT 18.06 Linear Algebra, Spring 2005](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) by MIT OpenCourseWare, with Gilbert Strang
+- [Gilbert Strang lectures on Linear Algebra (MIT)](https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D): another playlist of the same lecturer
+- [Stanford ENGR108: Introduction to Applied Linear Algebra](https://www.youtube.com/playlist?list=PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9) by Stanford Online: vectors, matrices and least squares
+- [MIT 18.01 Single Variable Calculus, Fall 2006](https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1) by MIT OpenCourseWare
+- [MIT 18.02 Multivariable Calculus, Fall 2007](https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38) by MIT OpenCourseWare
+- [Calculus 1 (Full Length Videos)](https://www.youtube.com/playlist?list=PLF797E961509B4EB5) by Professor Leonard
+- [Calculus 1 - Full College Course](https://youtu.be/HfACrKJ_Y2w) by freeCodeCamp.org
