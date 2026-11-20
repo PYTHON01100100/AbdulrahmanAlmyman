@@ -93,9 +93,9 @@ My courses here don't map one to one to a single repository, but discrete mathem
 
 The roadmap recommends these for each pillar:
 
-- **Linear algebra:** *Linear Algebra Done Right* by Sheldon Axler, and the Linear Algebra course on MIT OpenCourseWare: [MIT 18.06 Linear Algebra, Spring 2005](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) with Gilbert Strang (there is also [another playlist of his lectures](https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D)). For a more applied start, [Stanford ENGR108: Introduction to Applied Linear Algebra](https://www.youtube.com/playlist?list=PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9) covers vectors, matrices and least squares, which is exactly the linear algebra machine learning uses most.
+- **Linear algebra:** *Linear Algebra Done Right* by Sheldon Axler, and the Linear Algebra course on MIT OpenCourseWare: [MIT 18.06 Linear Algebra, Spring 2005](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8) with Gilbert Strang (there is also [another playlist of his lectures](https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D)). For a more applied start, [Stanford ENGR108: Introduction to Applied Linear Algebra](https://www.youtube.com/playlist?list=PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9) covers vectors, matrices and least squares, which is exactly the linear algebra machine learning uses most. In Arabic, [الجبر الخطي في التعلم الآلي](https://www.youtube.com/playlist?list=PL-2-nnWlNR_B4stbIh70Ldee3SGPB2mrg) (Linear Algebra in Machine Learning) by Riyadh Haitham teaches linear algebra for machine learning with Python. [الجبر الخطي Linear Algebra](https://www.youtube.com/playlist?list=PL2jXoCmw1KK0uwF74vMx-w6hITlrMHeVD) by Rasool Hasan is another Arabic playlist that works through linear algebra in Python.
 - **Calculus:** MIT's Single Variable Calculus course ([MIT 18.01, Fall 2006](https://www.youtube.com/playlist?list=PL590CCC2BC5AF3BC1)) and Gilbert Strang's *Calculus* book, which is free. I also like two free sites: [ValsCalc](https://valscalc.com/), which teaches calculus concepts clearly and visually, and [Paul's Online Notes](https://tutorial.math.lamar.edu/), with notes and worked examples for algebra, calculus I to III and differential equations. For theorems, proofs and definitions across all of mathematics, [Androma](https://androma.org/search?type=page) is a collaborative math wiki you can search. If you prefer long video lectures, [Professor Leonard's Calculus 1](https://www.youtube.com/playlist?list=PLF797E961509B4EB5) has full-length classroom lectures, and freeCodeCamp's [Calculus 1 - Full College Course](https://youtu.be/HfACrKJ_Y2w) puts a whole course in one video.
-- **Multivariable calculus:** MIT's Multivariable Calculus course ([MIT 18.02, Fall 2007](https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38)) and Khan Academy.
+- **Multivariable calculus:** MIT's Multivariable Calculus course ([MIT 18.02, Fall 2007](https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38)) and [Khan Academy](https://www.youtube.com/@khanacademy).
 - **Probability:** MIT's *Introduction to Probability* by John Tsitsiklis.
 - **Everything in one place:** Tivadar Danka's book *The Mathematics of Machine Learning*.
 
@@ -131,3 +131,18 @@ University math courses can feel disconnected while you take them. Seen through 
 - [MIT 18.02 Multivariable Calculus, Fall 2007](https://www.youtube.com/playlist?list=PL4C4C8A7D06566F38) by MIT OpenCourseWare
 - [Calculus 1 (Full Length Videos)](https://www.youtube.com/playlist?list=PLF797E961509B4EB5) by Professor Leonard
 - [Calculus 1 - Full College Course](https://youtu.be/HfACrKJ_Y2w) by freeCodeCamp.org
+- [الجبر الخطي في التعلم الآلي](https://www.youtube.com/playlist?list=PL-2-nnWlNR_B4stbIh70Ldee3SGPB2mrg) (Linear Algebra in Machine Learning) by Riyadh Haitham: in Arabic, with Python
+- [الجبر الخطي Linear Algebra](https://www.youtube.com/playlist?list=PL2jXoCmw1KK0uwF74vMx-w6hITlrMHeVD) by Rasool Hasan: in Arabic, with Python
+- [Khan Academy](https://www.youtube.com/@khanacademy) on YouTube
+
+More full lecture courses, if you want to go further:
+
+- [Student Lectures - Linear Algebra](https://www.youtube.com/playlist?list=PL4d5ZtfQonW3OCE1lEmYS-6d7LEDz8zby) by Oxford Mathematics
+- [Oxford Calculus](https://www.youtube.com/playlist?list=PLMCRxGutHqflZoTY8JCm1GRzCdGXvZ3_S) by Tom Rocks Maths
+- [Lectures - Mathematics](https://www.youtube.com/playlist?list=PL1D3EF3169B3E7CB2) by the University of Oxford
+- [Math 2B: Calculus](https://www.youtube.com/playlist?list=PLqOZ6FD_RQ7mxsWrqTwndCBFXAKC0Xho9) by UCI Open
+- [Introduction to Probability and Statistics 131B](https://www.youtube.com/playlist?list=PLqOZ6FD_RQ7k-j-86QUC2_0nEu0QOP-Wy) by UCI Open
+- [Mathematical Statistics I (Course 481)](https://www.youtube.com/playlist?list=PL9520222F814EE9B6) by UCCS MathOnline
+- [MIT 6.042J Mathematics for Computer Science, Fall 2010](https://www.youtube.com/playlist?list=PLB7540DEDD482705B) by MIT OpenCourseWare: discrete math and probability for computer science
+- [MIT Mathematics](https://www.youtube.com/playlist?list=PLm0X8hqw4lIotQB9ep0MKVkT2447Lk2ue): a playlist of MIT math lectures, collected by Hassan Ahmadi
+- [Math 70 Beginning Algebra](https://www.youtube.com/playlist?list=PL367nn10rv0sBKcmndvD9sqBbftcE5udD) by California Community Colleges: if you need to refresh basic algebra first
