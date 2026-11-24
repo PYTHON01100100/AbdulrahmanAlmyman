@@ -11,7 +11,7 @@ devices-and-programs-i-use:
   type: "blog"
 ---
 
-Publish date: `2025-01-01`
+Publish date: `2025-01-01` · Last updated: `2026-11-24`
 
 # Devices and Programs I Use
 
@@ -50,11 +50,17 @@ Built for coding, AI/ML, game dev and high-performance tasks.
 
 - Ubuntu and Linux Mint
 
-### Devices I want
+### Handheld consoles
 
 - **Nintendo Switch 2:** to play during breaks at work
+- **Nintendo 3DS:** running custom firmware, because Nintendo ended its support
+- **PS Vita (OLED):** running custom firmware, because Sony ended its support
+
+### Devices I want
+
 - **Steam Deck:** to play my Steam library, like Elden Ring, away from my desk at work
 - **MacBook Pro 14-inch (M5 Max):** 18-core CPU, 40-core GPU, 128 GB unified memory and 2 to 4 TB of storage, for office work and AI inference only
+- **NVIDIA DGX Spark:** a small desktop AI computer from NVIDIA, to run and fine-tune AI models locally
 - **Mac Studio (M5 Ultra):** 36-core CPU, 80-core GPU, 512 GB unified memory and 8 TB of storage
 - **A new super PC (2029 or 2030):** a custom build that can run 4 operating systems on the same machine
 
