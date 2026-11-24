@@ -52,9 +52,9 @@ Built for coding, AI/ML, game dev and high-performance tasks.
 
 ### Handheld consoles
 
-- **Nintendo Switch 2:** to play during breaks at work
-- **Nintendo 3DS:** running custom firmware, because Nintendo ended its support
-- **PS Vita (OLED):** running custom firmware, because Sony ended its support
+- **Nintendo Switch 2:** my favorite console. I love Nintendo games because they put fun first, and the Switch 2 lets me take them anywhere: it fits in my bag, so it comes with me to the office, and a short session during a break is the best way to reset my head before I go back to work.
+- **Nintendo 3DS:** running custom firmware, because Nintendo ended its support. It keeps the 3DS library alive for me, and it is where I play **The Legend of Zelda: Ocarina of Time 3D** and **Metroid**.
+- **PS Vita (OLED):** running custom firmware, because Sony ended its support. It turned the Vita into a small retro machine: besides Vita games, I play **PSP** and **PS1** games on it, and fan ports of bigger games like **Bully**.
 
 ### Devices I want
 
