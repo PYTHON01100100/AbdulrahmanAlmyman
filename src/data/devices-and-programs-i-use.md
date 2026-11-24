@@ -81,7 +81,6 @@ Built for coding, AI/ML, game dev and high-performance tasks.
 - WSL
 - Distrobox
 - Ollama
-- OpenCode
 
 ### Agentic AI harnesses
 
