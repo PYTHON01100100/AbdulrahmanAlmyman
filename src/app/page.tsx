@@ -70,6 +70,7 @@ const certsData: Certification[] = [
 
 // Rolling micro-updates. Any order: they are sorted newest first on render.
 const dataLogs: DataLog[] = [
+  { timestamp: "2026.11.25_23:11", text: "Game Log: The Legend of Zelda: Ocarina of Time — Journey completed. Unexpected post-game emptiness detected after leaving a vivid, living world behind. Every melody played on the Ocarina left a lasting emotional imprint. Link's quiet path felt deeply personal. Archive sealed." },
   { timestamp: "2026.11.18_00:00", text: "SCHEDULED: Grand Theft Auto VI. Unit deploying into the Vice City virtual zone. Neon grid and coastal sectors queued for reconnaissance. Glory to mankind." },
   { timestamp: "2026.11.15_00:00", text: "Game Log: The Legend of Zelda: Ocarina of Time, PC recompilation via Longshot, now running natively on this unit. Hyrule data recompiled and reconstructed in high resolution. Temporal anomaly confirmed: same quest, new hardware." },
   { timestamp: "2026.11.11_00:00", text: "Environment Log: Winter protocol activated across the Saudi Arabia node. Ambient temperature dropping. Current operation: The Legend of Zelda: Ocarina of Time, running on the Fritchii emulator." },
